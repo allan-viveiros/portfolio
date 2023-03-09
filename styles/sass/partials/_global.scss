@@ -7,9 +7,19 @@ html { box-sizing: border-box;}
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* *** GLOBAL STYLES *** */
+// Colors
+// #08E7B9
+// #0EE6B8
+// #72D8FE
+// #7EDCFF
+// #B0C8DD
+
+
+
 html {
-    font-size: 125%;  
-    @include bodyStyle($blackTwo);
+    font-size: 125%; 
+    background-color: #11162B;
+    color: #B0C8DD;
 }
 
 img {
@@ -34,11 +44,10 @@ figure {
 }
 
 .wrapper {
-    background-color: white;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 0;
 
-    /* border: 1px solid greenyellow; */
+    border: 1px solid greenyellow; 
 }
