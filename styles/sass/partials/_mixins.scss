@@ -1,0 +1,73 @@
+// Colors
+// #08E7B9
+// #0EE6B8
+// #72D8FE
+// #7EDCFF
+// #B0C8DD
+// #08FDD8
+
+// Colors  to random update my name on home
+$text-yellow: #eece1a;
+$text-green: #4ae54a;
+$text-orange: #ff7400;
+$text-pink: #ff5f5f;
+$text-blue: #2876f8;
+
+// Mixin for the html tag showing on the page
+@mixin htmlStyle($text) {
+    content: $text;
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 1rem;
+    color: #b0c8dd38;
+}
+
+@keyframes text-flicker {
+    0% {
+      opacity: 0.1;
+    }
+  
+    2% {
+      opacity: 1;
+    }
+  
+    8% {
+      opacity: 0.1;
+    }
+  
+    9% {
+      opacity: 1;
+    }
+  
+    12% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.3;
+    }
+    30% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+    72% {
+      opacity: 0.2;
+    }
+  
+    77% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0.9;
+    }
+  }
+
+@mixin hoverButton {
+    color: #08FDD8;
+    text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
+    animation: text-flicker 3s linear infinite;
+}

@@ -4,58 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Allan Viveiros</title>
 
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="icon" href="./images/icons/favicon.ico">
+    <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/41f308cf0c.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animation.css"> -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Golos+Text:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <main id="home">        
-        <div class="wrapper">
-            <div class="sideBar">
-                <div class="logo">Picture</div>
-                <div class="sideMenu">
-                    <ul>
-                        <li>About Me</li>
-                        <li>My projects</li>
-                        <li>Contact</li>
-                    </ul>
-                    <div class="icons"> 
-                        <a href="https://www.linkedin.com/in/viveirosallan" target="_blank"> <i class="fab fa-linkedin"  aria-label="LinkedIn"></i> </a>           
-                        <a href="https://github.com/allan-viveiros" target="_blank"> <i class="fab fa-github" aria-label="GitHub"></i> </a>            
-                        <a href="#!"> <i class="fab fa-facebook"></i> </a>
-                        <a href="#!"> <i class="fab fa-instagram"></i> </a>
-                    </div>
+    <!-- <main>         -->
+    <header>
+        <div class="menuBtn">
+            <div class="btnLine"></div>
+            <div class="btnLine"></div>
+            <div class="btnLine"></div>
+        </div>
+        <!-- Side Menu -->
+        <div class="sideBar">
+            <div class="logo">
+                <p>
+                    HOME              
+                </p>
+                <p>Web Developer</p>
+            </div>
+            <div class="sideMenu">
+                <ul class="menuUL">
+                    <li>
+                        <a href="#home" id="btnHome" class="active"> Home <span class="arrow"> ></span>
+                        </a>  
+                    </li>
+                    <li>
+                        <a href="#about" id="btnAbout">About Me <span class="arrow"> ></span></a>                        
+                    </li>
+                    <li>
+                        <a href="#works" id="btnWorks"> My Works <span class="arrow"> ></span></a>   
+                    </li>
+                    <li>
+                        <a href="#contact" id="btnContact"> Contact Me <span class="arrow"> ></span></a>
+                    </li>
+                </ul>
+                <div class="icons"> 
+                    <a href="https://www.linkedin.com/in/viveirosallan" target="_blank"> <i class="fab fa-linkedin"  aria-label="LinkedIn"></i> </a>           
+                    <a href="https://github.com/allan-viveiros" target="_blank"> <i class="fab fa-github" aria-label="GitHub"></i> </a>            
+                    <!-- <a href="#!"> <i class="fab fa-facebook"></i> </a> -->
+                    <a href="#!"> <i class="fab fa-instagram" aria-label="instagram"></i> </a>
                 </div>
             </div>
-        
-            <div class="homeContent">            
+        </div>
+    </header>
+
+    <main>    
+        <!-- HOME -->        
+        <section class="wrapper home" id="home">      
+            <p><span class="testHTML"></span></p>
+            <p><span class="testBody"></span></p>  
+
+            <div class="homeContent">          
                 <div class="text">
-                    <h1 class="lg-heading"> 
+                    <h1 class="lgHeading"> 
                         <p>Hello, <span>I'm</span> </p>         
                         <span class="letter">A</span>
                         <span class="letter">l</span>
                         <span class="letter">l</span>
                         <span class="letter">a</span>
                         <span class="letter">n </span>                
-                        <span class="text-secondary"> Viveiros </span> 
+                        <span class="textSecondary"> Viveiros </span> 
                     </h1>
                 </div>
                 
-                <h2 class="sm-heading"> 
-                    Web Developer 
-                    <p class="home-skills"> HTML / JavaScript / SASS / React-js / Firebase </p>
-                </h2> 
-            </div>    
-            
-            
-            <h2 class="sm-heading"> Let me tell you a few things about me.  </h2>
+                <div class="styleHTML">
+                    <h2 class="smHeading"> 
+                        Web Developer 
+                        <p class="homeSkills"> HTML / JavaScript / SASS / React-js / Firebase </p>
+                    </h2> 
+                </div>
+            </section> 
+        </div>
 
-            <div class="about-info">
+        <!-- ABOUT ME -->
+        <div class="wrapper">        
+            <section class="about-info" id="about">       
+                <h2 class="lg-heading"> 
+                    About <span class="text-secondary"> Me </span> 
+                </h2>
+        
+                <h3 class="sm-heading"> Let me tell you a few things about me.  </h3>
+
                 <img src="images/DeadpoolShocked_2.jpg" alt="Allan Romero" class="bio-image">
     
                 <div class="bio">
@@ -90,8 +130,237 @@
                     <button> Donload resume </button>
                     <button> Conntact Me </button>
                 </div>
+
+                <div class="education">
+
+                    <!-- Timeline cards -->                
+                    <div class="timeline">
+                        <div class="timeline-body">                        
+                            <div class="timeline-item">
+                                <p class="time">  2014 - 2019 </p>
+                                <div class="content">
+                                    <h2 class="title"> Business System Analyst </h2>
+                                    <p> Industria de produtos alimentícios Piraque, Brazil, Rio de Janeiro. 
+                                    </p>
+                                </div>
+                            </div>
+    
+                            <div class="timeline-item">
+                                <p class="time">  2010 - 2014 </p>
+                                <div class="content">
+                                    <h2 class="title"> Oracle analyst and PL/SQL developer </h2>
+                                    <p> Industria de produtos alimentícios Piraque, Brazil, Rio de Janeiro. 
+                                    </p>
+                                </div>
+                            </div>
+    
+                            <div class="timeline-item">
+                                <p class="time">  2006 - 2009 </p>
+                                <div class="content">
+                                    <h2 class="title"> Sales assistant </h2>
+                                    <p> Industria de produtos alimentícios Piraque, Brazil, Rio de Janeiro. 
+                                    </p>
+                                </div>
+                            </div>
+    
+                            <div class="timeline-item">
+                                <p class="time">  2005 - 2006 </p>
+                                <div class="content">
+                                    <h2 class="title"> Administrative auxiliary </h2>
+                                    <p> Industria de produtos alimentícios Piraque, Brazil, Rio de Janeiro. 
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                   
+                </div>
+                
+                <div class="job job1">
+                    <h3> MIT- Data base management </h3>
+                    <h6> Post-graduate 2013 - 2015 </h6>
+                    <p> Instituto Infet - Brazil, Rio de Janeiro.</p>
+                    <p> Oracle database management system and others SGBD.</p>
+                </div>
+    
+                <div class="job job2">
+                    <h3> Information Systems </h3>
+                    <h6> Bachelor degree 2006 - 2011 </h6>
+                    <p> Faculdade de informatica Lemos de Castro - Brazil, Rio de Janeiro. </p>
+                    <p> System analysis and development. </p>
+                </div>
+    
+                <div class="job job3">
+                    <h3> Job 3 </h3>
+                    <h6> Job position </h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus 
+                        eum fugit architecto asperiores illo nihil impedit eaque quibusdam 
+                        ducimus tempora.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <section class="myWorks" id="works">
+                <h1 class="lg-heading"> 
+                    My <span class="text-secondary"> Works </span> 
+                </h1>
+        
+                <h2 class="sm-heading"> Check out some of my projects.  </h2>
+                
+                <div class="main-projects">   
+        
+                    <!-- Super Clothing -->
+                    <div class="item">                 
+                        <div class="container">  
+        
+                            <div class="front">   
+                                <div class="img-container">
+                                    
+                                    <img src="images/projects/super-clothing.PNG">
+                                    
+                                    <div class="card-text">
+                                        <p> e-Commerce </br> 
+                                            Project
+                                        </p>                       
+                                                  
+                                        <span>Super Clothing</span>
+                                    </div>                           
+                                </div>
+        
+                               
+        
+                                <div class="text-container">                            
+                                    <p> Website using firebase, 
+                                        google authentication and integrated with stripe system 
+                                        to make payments. </p>
+                                </div>                        
+                            </div>
+                
+                            <div class="back">   
+                                <div class="text-back">                     
+                                    <h3> Technologies </h3>
+                                    <p>Responsive website using HTML5, Sass, JavaScript, React, React Hooks, 
+                                       Firebase.
+                                    </p>
+                                    <span> Publish on Heroku </span>
+                                </div>
+        
+                                <div class="btn-back">
+                                    <a href="https://super-clothing.herokuapp.com/" class="btn-light" target="_blank">
+                                        <i class="fas fa-eye"></i> Project
+                                    </a>
+                                    
+                                    <a href="https://github.com/allan-viveiros/super-clothing" class="btn-dark" target="_blank">
+                                        <i class="fab fa-github"></i> Github
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                
+                    </div>
+        
+                    <!-- Monster search -->
+                    <div class="item">                 
+                        <div class="container">  
+        
+                            <div class="front">   
+                                <div class="img-container">
+                                    <img src="images/projects/monster.PNG">
+                                    <div class="card-text">
+                                        <p> Frontend </br> 
+                                            Development
+                                        </p> 
+                                        <span> Monster search </span>
+                                    </div>
+                                </div>
+        
+                                <div class="text-container">                            
+                                    <p> Responsive Frontend project to search cards by the name in real time.</p>
+                                </div>                        
+                            </div>
+                
+                            <div class="back">   
+                                <div class="text-back">                     
+                                    <h3> Technologies </h3>
+                                    <p>HTML5, CSS3, JavaScript, React.
+                                    </p>
+                                    <span> Publish on Github </span>
+                                </div>
+        
+                                <div class="btn-back">
+                                    <a href="https://allan-viveiros.github.io/monsters-rolodex/" class="btn-light" target="_blank">
+                                        <i class="fas fa-eye"></i> Project
+                                    </a>
+                                    
+                                    <a href="https://github.com/allan-viveiros/monsters-rolodex" class="btn-dark" target="_blank">
+                                        <i class="fab fa-github"></i> Github
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                
+                    </div>
+        
+                    <!-- Codvid-19 Tracker -->
+                    <div class="item">                 
+                        <div class="container">  
+        
+                            <div class="front">   
+                                <div class="img-container">
+                                    <img src="images/projects/covid-tracker.PNG">
+                                    <div class="card-text">
+                                        <p> Web </br> 
+                                            Development
+                                        </p> 
+                                        <span> COVID-19 Tracker </span>
+                                    </div>
+                                </div>
+        
+                                <div class="text-container">                            
+                                    <p> Responsive website consuming API with real information about COVID-19. </p>
+                                </div>                        
+                            </div>
+                
+                            <div class="back">   
+                                <div class="text-back">                     
+                                    <h3> Technologies </h3>
+                                    <p>HTML5, CSS3, JavaScript, React , React Hooks, 
+                                        Material UI, Charts.js, API data fetching
+                                    </p>
+                                    <span class="oi"> Publish on Heroku </span>
+                                </div>
+        
+                                <div class="btn-back">
+                                    <a href="https://covid19-tckr.herokuapp.com/" class="btn-light" target="_blank">
+                                        <i class="fas fa-eye"></i> Project
+                                    </a>
+                                    
+                                    <a href="https://github.com/allan-viveiros/covid19-tracker" class="btn-dark" target="_blank">
+                                        <i class="fab fa-github"></i> Github
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                
+                    </div> 
+                </div>
+
+            </section>
+        </div>
+
+        <div class="wrapper">
+            <section id="contact">
+                <h2>How to reach Me</h2>
+            </section>
         </div>
     </main>
     
+    <footer>
+        <div class="wrapper">
+            <p>Developed by Allan Viveiros</p>
+        </div>        
+    </footer>
+    <script src="./js/scripts.js"></script>
 </body>
 </html>

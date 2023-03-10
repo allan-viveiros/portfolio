@@ -255,75 +255,398 @@ figure {
 }
 
 .wrapper {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+  max-width: 1100px;
   padding: 0;
+  margin-left: 180px;
   border: 1px solid greenyellow;
 }
 
-#home {
+@-webkit-keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  8% {
+    opacity: 0.1;
+  }
+  9% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  8% {
+    opacity: 0.1;
+  }
+  9% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+header {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
-#home .sideBar {
-  border: 1px solid red;
-  width: 10%;
+header .sideBar {
+  background-color: #0e1222;
+  min-width: 180px;
   height: 100%;
   position: fixed;
   padding-top: 10px;
+  justify-items: center;
 }
-#home .sideBar .logo {
+header .sideBar .logo {
   width: 100%;
   height: 20%;
+  margin-bottom: 150px;
+  text-align: center;
 }
-#home .sideBar ul {
+header .sideBar .logo .active span {
+  color: #08FDD8;
+  color: #08FDD8;
+  text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
+  -webkit-animation: text-flicker 3s linear infinite;
+          animation: text-flicker 3s linear infinite;
+}
+header .sideBar ul {
+  width: 100%;
+  margin-bottom: 20px;
+}
+header .sideBar ul li {
+  border-top: 1px solid rgba(176, 200, 221, 0.3019607843);
   width: 100%;
 }
-#home .sideBar ul li {
-  margin: 0 auto;
-  border: 1px dashed orange;
+header .sideBar ul li:last-child {
+  border-bottom: 1px solid rgba(176, 200, 221, 0.3019607843);
+}
+header .sideBar ul li a {
+  display: inline-block;
+  color: #B0C8DD;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
   text-align: center;
 }
-#home .sideBar .icons {
+header .sideBar ul li a:hover {
+  color: #08FDD8;
+  text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
+  -webkit-animation: text-flicker 3s linear infinite;
+          animation: text-flicker 3s linear infinite;
+}
+header .sideBar ul li a .arrow {
+  text-align: right;
+  float: right;
+}
+header .sideBar ul li .active span {
+  color: #08FDD8;
+  color: #08FDD8;
+  text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
+  -webkit-animation: text-flicker 3s linear infinite;
+          animation: text-flicker 3s linear infinite;
+}
+header .sideBar .icons {
   text-align: center;
 }
-#home .homeContent {
-  border: 1px solid aqua;
-  width: 85%;
+header .sideBar .icons a {
+  color: #B0C8DD;
+  margin: 5px;
+}
+header .sideBar .icons a:hover {
+  color: #08FDD8;
+  text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
+  -webkit-animation: text-flicker 3s linear infinite;
+          animation: text-flicker 3s linear infinite;
+}
+
+main .home p {
+  margin: 5px;
+  padding: 5px;
+}
+main .home p .testHTML::before {
+  content: "<html>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .home p .testBody::before {
+  padding-left: 10px;
+  content: "<body>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .home .homeContent {
+  margin-top: 200px;
+  width: 100%;
   height: 100vh;
-  padding: 200px 0 0 10px;
-  margin-left: 15%;
+  padding: 0 20px;
 }
-#home .homeContent .text .lg-heading {
+main .home .homeContent .text {
+  font-family: "Golos Text", sans-serif;
+}
+main .home .homeContent .text::before {
+  content: "<h1>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .home .homeContent .text::after {
+  content: "</h1>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .home .homeContent .text .lgHeading {
   margin: 0;
-  font-weight: 500;
+  padding-top: 5px;
+  font-weight: normal;
   font-size: 3.5rem;
 }
-#home .homeContent .text .lg-heading p {
-  color: #08E7B9;
+main .home .homeContent .text .lgHeading p {
+  color: #08FDD8;
   margin: 0;
   line-height: 40px;
 }
-#home .homeContent .text .lg-heading p span {
+main .home .homeContent .text .lgHeading p span {
   color: #B0C8DD;
 }
-#home .homeContent .text .lg-heading span {
+main .home .homeContent .text .lgHeading .letter {
   display: inline-block;
-  margin-right: -12px;
-  cursor: pointer;
+  font-weight: bold;
+  margin-right: -15px;
 }
-#home .homeContent .sm-heading {
+main .home .homeContent .text .lgHeading .textSecondary {
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 20px;
+  color: #ff5f5f;
+}
+main .home .homeContent .styleHTML::before {
+  content: "<p>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .home .homeContent .styleHTML::after {
+  content: "</p>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .home .homeContent .styleHTML .smHeading {
   margin: 0;
   font-weight: 500;
-  margin-bottom: 4rem;
-  padding: 1px 1px;
   background: rgba(255, 255, 255, 0.01);
   font-size: 2rem;
   color: #72D8FE;
 }
-#home .homeContent .sm-heading .home-skills {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.7);
+main .home .homeContent .styleHTML .smHeading .homeSkills {
+  font-size: 15px;
+  color: #B0C8DD;
+  margin: 0;
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .wrapper {
+    margin: 0;
+  }
+  header .menuBtn {
+    position: fixed;
+    z-index: 3;
+    right: 20px;
+    top: 35px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+  header .menuBtn .btnLine {
+    width: 23px;
+    height: 2px;
+    margin: 0 0 5px 0;
+    background: #B0C8DD;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+  header .menuBtn.close {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  header .menuBtn.close .btnLine:nth-child(1) {
+    background: #ff0000;
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 5px);
+    width: 20px;
+  }
+  header .menuBtn.close .btnLine:nth-child(2) {
+    visibility: hidden;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #ff0000;
+    width: 20px;
+  }
+  header .menuBtn.close .btnLine:nth-child(3) {
+    background: #ff0000;
+    -webkit-transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(5px, -5px);
+    width: 20px;
+  }
+  header .sideBar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+  }
+  header .sideBar .logo {
+    margin: 0;
+  }
+  header .sideBar .icons {
+    margin-bottom: 20px;
+  }
+  header .sideBar.show {
+    visibility: visible;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  main .homeHTML .homeContent .text .lgHeading .letter {
+    margin-top: 10px;
+  }
+  main .homeHTML .homeContent .text .lgHeading .textSecondary {
+    margin: 0;
+  }
+}
+/*!
+ * animate.css -https://daneden.github.io/animate.css/
+ * Version - 3.7.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ */
+/* rubberBand animation */
+@-webkit-keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
