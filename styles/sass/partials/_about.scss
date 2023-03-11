@@ -1,0 +1,115 @@
+@use "./mixins" as *;
+
+main .wrapper .aboutInfo {
+    margin: 0;
+    padding: 0 20px;
+    font-family: 'Golos Text', sans-serif;
+   
+    
+    .lgHeading {
+        margin: 0;
+        padding-top: 5px;
+        font-weight: normal;
+        font-size: 3.5rem;  
+
+        .textSecondary {
+            color: #08FDD8;
+        }
+    }
+
+    .smHeading {
+        margin: 0;
+        font-weight: 500;   
+        background: rgba(255, 255, 255, 0.010); 
+        font-size: 2rem; 
+        color:#72D8FE;          
+
+    }
+
+    .flexContainer {
+        display: flex;
+
+        .personalCard {
+            min-width: 300px;
+            height: fit-content;
+            border-radius: 10px;
+            border: 1px solid black;
+            background-color: #1A203B;
+            // #2F375D
+            margin: 10px;
+            padding: 5px;
+    
+            .bioImageContainer {
+                border-radius: 10px;
+                overflow: hidden;
+                margin: 5px 5px 0 5px;
+            }
+    
+            .personalInfo {
+                font-size: 0.7rem; 
+    
+                .introduction {
+                    color: #999;
+                    border-top: 1px dashed rgba(255, 255, 255, 0.363);
+                    padding: 10px 0 0 0;
+                    margin: 10px 0 5px 0;
+                }
+    
+                .details {
+                    color: #e42dad;
+                    font-weight: bold;
+                    padding: 0 10px 10px 10px;
+    
+                    .const {
+                        color: #08FDD8;
+                        font-weight: normal;
+                        
+                    }
+                    .key {
+                        color: #72D8FE;
+                        margin-left: 10px;
+                        font-weight: normal;
+                    }
+                    .value {
+                        color: rgb(221, 221, 221);
+                        font-weight: normal;
+                    }
+                }
+    
+                .buttons {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 10px;
+    
+                    button {
+                        width: 100%;
+                        margin: 5px 0;
+                        height: 30px;
+                        border: 0;
+                        background-color: #0e1222;
+                        color: #B0C8DD;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #08FDD8;
+                            background-color: black;
+                        }
+                    }                    
+                }
+            }            
+        }
+
+        .bio {
+            .textSecondary {
+                display: inline-block;
+                font-weight: bold;
+                margin-left: 20px;
+                color: $text-pink;
+            }
+
+            p {
+                margin: 10px;
+            }
+        }
+    }    
+}

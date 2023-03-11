@@ -1,0 +1,28 @@
+@use "./mixins" as *;
+
+footer {    
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 10px;
+
+    .textBody::before {
+        @include htmlStyle("</body>");
+        margin: 0 0 0 200px;
+        padding: 0;        
+    }
+
+    .textHTML::before {        
+        @include htmlStyle("</html>");
+        margin: 0 0 0 180px;
+        padding: 0;        
+    }
+
+    .wrapper p {
+        background-color: rgba(0, 0, 0, 0.13);
+        font-family: 'Golos Text', sans-serif;
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+}

@@ -11,26 +11,29 @@ spans.forEach(span =>
     })
 );
 
-// Handle active class on sidebar
-const btnHome = document.querySelector("#btnHome");
-const btnAbout = document.querySelector("#btnAbout");
-const btnWorks = document.querySelector("#btnWorks");
-const btnContact = document.querySelector("#btnContact");
+// // Handle active class on sidebar
+// const btnHome = document.querySelector("#btnHome");
+// const btnAbout = document.querySelector("#btnAbout");
+// const btnWorks = document.querySelector("#btnWorks");
+// const btnContact = document.querySelector("#btnContact");
 
-function toggleActiveClass(button) {
-    btnHome.classList.remove("active");
-    btnWorks.classList.remove("active");
-    btnContact.classList.remove("active");
-    btnAbout.classList.remove("active");
+// function toggleActiveClass(button) {
+//     btnHome.classList.remove("active");
+//     btnWorks.classList.remove("active");
+//     btnContact.classList.remove("active");
+//     btnAbout.classList.remove("active");
 
-    button.classList.add("active");
-}
+//     button.classList.add("active");
+// }
 
-const sideMenu = document.querySelector(".sideBar");
-sideMenu.addEventListener("click", function(e) {    
-    toggleActiveClass(e.target);    
-    location.reload();
-});
+
+// const sideMenu = document.querySelector(".sideBar");
+// sideMenu.addEventListener("click", function(e) {    
+//     // toggleActiveClass(e.target);  
+//     console.log("reload");
+      
+//     // location.reload();
+// });
 
 
 
@@ -107,6 +110,8 @@ element.addEventListener("mouseover", function() {
 //     })
 // })
 
+
+// Active link on scrolling
 const sections = document.querySelectorAll("section");
 const aLinks = document.querySelectorAll(".sideBar a");
 // console.log(aLinks);
@@ -128,8 +133,8 @@ window.addEventListener("scroll", () => {
 
 
 
-
-//Initial state of main menu (Vanilla-js)
+// Hamburger menu
+//Initial state of Menu
 let showMenu = false;
 const menuBtn = document.querySelector(".menuBtn");
 const sideBar = document.querySelector(".sideBar")
@@ -148,6 +153,22 @@ menuBtn.addEventListener("click", () => {
 
         //The menu has been closed
         showMenu = false;
-
     }
 });
+
+// Handle click on links into hamburger menu 
+const sideMenu = document.querySelector(".sideBar");
+sideMenu.addEventListener("click", function() {    
+    if(showMenu) {
+        menuBtn.classList.remove("close");
+        sideBar.classList.remove("show");
+
+        showMenu = false;
+    }
+});
+
+// Copyright year update
+const currentYear = document.getElementById("copyRight");
+let currentDate = new Date().toString();
+currentYear.textContent = currentDate.slice(11, 15);
+       

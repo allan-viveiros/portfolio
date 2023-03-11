@@ -258,7 +258,6 @@ figure {
   max-width: 1100px;
   padding: 0;
   margin-left: 180px;
-  border: 1px solid greenyellow;
 }
 
 @-webkit-keyframes text-flicker {
@@ -418,18 +417,23 @@ main .home p {
   margin: 5px;
   padding: 5px;
 }
-main .home p .testHTML::before {
+main .home p .textHTML::before {
   content: "<html>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
   color: rgba(176, 200, 221, 0.2196078431);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: -10px;
 }
-main .home p .testBody::before {
-  padding-left: 10px;
+main .home p .textBody::before {
   content: "<body>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
   color: rgba(176, 200, 221, 0.2196078431);
+  margin: 0;
+  padding: 0 0 0 10px;
 }
 main .home .homeContent {
   margin-top: 200px;
@@ -495,6 +499,7 @@ main .home .homeContent .styleHTML .smHeading {
   background: rgba(255, 255, 255, 0.01);
   font-size: 2rem;
   color: #72D8FE;
+  font-family: "Golos Text";
 }
 main .home .homeContent .styleHTML .smHeading .homeSkills {
   font-size: 15px;
@@ -503,11 +508,14 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
 }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media (max-width: 940px) {
   .wrapper {
     margin: 0;
   }
   header .menuBtn {
+    background-color: rgba(14, 18, 34, 0.3490196078);
+    padding: 10px 5px 5px 5px;
+    border-radius: 5px;
     position: fixed;
     z-index: 3;
     right: 20px;
@@ -520,7 +528,7 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
     width: 23px;
     height: 2px;
     margin: 0 0 5px 0;
-    background: #B0C8DD;
+    background: #72D8FE;
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
   }
@@ -563,14 +571,45 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
   header .sideBar.show {
     visibility: visible;
   }
+  footer p .textBody::before {
+    content: "</body>";
+    font-family: "Mr Dafoe", cursive;
+    font-size: 1rem;
+    color: rgba(176, 200, 221, 0.2196078431);
+    margin: 0 0 0 20px;
+    padding: 0;
+  }
+  footer p .textHTML::before {
+    content: "</html>";
+    font-family: "Mr Dafoe", cursive;
+    font-size: 1rem;
+    color: rgba(176, 200, 221, 0.2196078431);
+    margin: 0;
+    padding: 0;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  main .aboutInfo .flexContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  main .homeHTML .homeContent .text .lgHeading .letter {
+  main .home .homeContent .text .lgHeading .letter {
     margin-top: 10px;
   }
-  main .homeHTML .homeContent .text .lgHeading .textSecondary {
+  main .home .homeContent .text .lgHeading .textSecondary {
     margin: 0;
+  }
+  main .wrapper .aboutInfo h3.smHeading {
+    font-size: 1rem;
   }
 }
 /*!
@@ -649,4 +688,140 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+
+main .wrapper .aboutInfo {
+  margin: 0;
+  padding: 0 20px;
+  font-family: "Golos Text", sans-serif;
+}
+main .wrapper .aboutInfo .lgHeading {
+  margin: 0;
+  padding-top: 5px;
+  font-weight: normal;
+  font-size: 3.5rem;
+}
+main .wrapper .aboutInfo .lgHeading .textSecondary {
+  color: #08FDD8;
+}
+main .wrapper .aboutInfo .smHeading {
+  margin: 0;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.01);
+  font-size: 2rem;
+  color: #72D8FE;
+}
+main .wrapper .aboutInfo .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard {
+  min-width: 300px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: #1A203B;
+  margin: 10px;
+  padding: 5px;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .bioImageContainer {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 5px 5px 0 5px;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo {
+  font-size: 0.7rem;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .introduction {
+  color: #999;
+  border-top: 1px dashed rgba(255, 255, 255, 0.363);
+  padding: 10px 0 0 0;
+  margin: 10px 0 5px 0;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details {
+  color: #e42dad;
+  font-weight: bold;
+  padding: 0 10px 10px 10px;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .const {
+  color: #08FDD8;
+  font-weight: normal;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .key {
+  color: #72D8FE;
+  margin-left: 10px;
+  font-weight: normal;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .value {
+  color: rgb(221, 221, 221);
+  font-weight: normal;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .buttons button {
+  width: 100%;
+  margin: 5px 0;
+  height: 30px;
+  border: 0;
+  background-color: #0e1222;
+  color: #B0C8DD;
+  cursor: pointer;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .buttons button:hover {
+  color: #08FDD8;
+  background-color: black;
+}
+main .wrapper .aboutInfo .flexContainer .bio .textSecondary {
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 20px;
+  color: #ff5f5f;
+}
+main .wrapper .aboutInfo .flexContainer .bio p {
+  margin: 10px;
+}
+
+main .wrapper #contact {
+  height: 100vh;
+}
+
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 10px;
+}
+footer .textBody::before {
+  content: "</body>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  color: rgba(176, 200, 221, 0.2196078431);
+  margin: 0 0 0 200px;
+  padding: 0;
+}
+footer .textHTML::before {
+  content: "</html>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  color: rgba(176, 200, 221, 0.2196078431);
+  margin: 0 0 0 180px;
+  padding: 0;
+}
+footer .wrapper p {
+  background-color: rgba(0, 0, 0, 0.13);
+  font-family: "Golos Text", sans-serif;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
 }

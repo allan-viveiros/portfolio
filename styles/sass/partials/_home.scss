@@ -84,41 +84,35 @@ header {
     }
 }
 
-main {
-    
-    .home {
-        
+main {    
+    .home {        
         p {
             margin: 5px;
             padding: 5px;            
             // line-height: 10px;            
 
-            .testHTML::before {
+            .textHTML::before {
                 @include htmlStyle("<html>");
+                margin: 0;
+                padding: 0;
+                position: relative;
+                left: -10px;
             }
-            .testBody::before {
-                padding-left: 10px;
+            .textBody::before {                
                 @include htmlStyle("<body>");
+                margin: 0;
+                padding: 0 0 0 10px;
             }
         }        
             
         .homeContent {
-            // border: 1px solid aqua;
             margin-top: 200px;
             width: 100%;
             height: 100vh;
             padding: 0 20px;
-            // display: inline-block;
-            // margin-left:  15%; 
-            // display: flex;
-            // flex-direction: column;  
-            
-            // &::before {
-            //     @include htmlStyle("<body>");
-            // }
            
             .text {
-                font-family: 'Golos Text', sans-serif;
+                font-family: "Golos Text", sans-serif;
 
                 &::before {
                     @include htmlStyle("<h1>");
@@ -168,13 +162,12 @@ main {
                 }
 
                 .smHeading {
-                    // width: fit-content;
                     margin: 0;
                     font-weight: 500;   
                     background: rgba(255, 255, 255, 0.010); 
                     font-size: 2rem; 
-                    // line-height: 30px;
-                    color:#72D8FE;                
+                    color:#72D8FE;    
+                    font-family: "Golos Text";            
     
                     .homeSkills {
                         font-size: 15px;
@@ -187,19 +180,17 @@ main {
     }    
 }
 
-
-// /* Portrait tablet and small desktops */
-// @media (max-width: 940px) {
-// }
-
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media (max-width: 940px) {
     .wrapper {
         margin: 0;
     }
 
     header {
         .menuBtn {
+            background-color: #0e122259;
+            padding: 10px 5px 5px 5px;
+            border-radius: 5px;
             position: fixed;
             z-index: 3;
             right: 20px;
@@ -212,7 +203,7 @@ main {
                 width: 23px;
                 height: 2px;
                 margin: 0 0 5px 0;
-                background: #B0C8DD;
+                background: #72D8FE;
                 -webkit-transition: all 0.5s ease-out;
                 transition: all 0.5s ease-out;
             }
@@ -248,14 +239,8 @@ main {
         .sideBar {
             width: 100%;
             height: auto;
-            // position: relative;
-            // display: flex;
-            // flex-direction: column;
-
             position: fixed;
-            top: 0;
-            // width: 100%;
-            // opacity: 0.9;
+            top: 0; 
             visibility: hidden;
 
             .logo {
@@ -271,25 +256,55 @@ main {
             visibility: visible;
         }
     }
+
+    footer {
+        p {
+            .textBody::before {
+                @include htmlStyle("</body>");
+                margin: 0 0 0 20px;
+                padding: 0;        
+            }
+        
+            .textHTML::before {        
+                @include htmlStyle("</html>");
+                margin: 0;
+                padding: 0;        
+            }
+        }        
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    main {
+        .aboutInfo {
+
+            .flexContainer {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-    main .homeHTML .homeContent .text .lgHeading {
-        .letter {
-            margin-top: 10px;
+    main { 
+        .home .homeContent .text .lgHeading {
+            .letter {
+                margin-top: 10px;
+            }
+            .textSecondary {
+                margin: 0;
+            }        
+        }       
+        
+        .wrapper .aboutInfo {
+            h3.smHeading {
+                font-size: 1rem;
+            }            
         }
-        .textSecondary {
-            margin: 0;
-        }
-    } 
+    }
 }
 
-// .sidebar {
-//     width: 100%;
-//     height: auto;
-//     position: relative;
-//   }
-//   .sidebar a {float: left;}
-//   div.content {margin-left: 0;}
-// }
