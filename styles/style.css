@@ -694,6 +694,7 @@ main .wrapper .aboutInfo {
   margin: 0;
   padding: 0 20px;
   font-family: "Golos Text", sans-serif;
+  border: 1px solid orangered;
 }
 main .wrapper .aboutInfo .lgHeading {
   margin: 0;
@@ -725,12 +726,13 @@ main .wrapper .aboutInfo .flexContainer .personalCard {
   border: 1px solid black;
   background-color: #1A203B;
   margin: 10px;
-  padding: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 10px 30px black;
+          box-shadow: 2px 10px 30px black;
 }
 main .wrapper .aboutInfo .flexContainer .personalCard .bioImageContainer {
-  border-radius: 10px;
   overflow: hidden;
-  margin: 5px 5px 0 5px;
+  width: 100%;
 }
 main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo {
   font-size: 0.7rem;
@@ -738,7 +740,7 @@ main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo {
 main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .introduction {
   color: #999;
   border-top: 1px dashed rgba(255, 255, 255, 0.363);
-  padding: 10px 0 0 0;
+  padding: 10px 0 0 5px;
   margin: 10px 0 5px 0;
 }
 main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details {
@@ -767,7 +769,9 @@ main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .buttons {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px;
+  margin: 0;
+  background-color: #B0C8DD;
+  padding: 10px;
 }
 main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .buttons button {
   width: 100%;
@@ -790,6 +794,155 @@ main .wrapper .aboutInfo .flexContainer .bio .textSecondary {
 }
 main .wrapper .aboutInfo .flexContainer .bio p {
   margin: 10px;
+}
+
+main .wrapper .myWorks {
+  margin: 20px 0;
+  padding: 20px;
+  font-family: "Golos Text", sans-serif;
+  border: 1px solid yellow;
+}
+main .wrapper .myWorks .lgHeading .textSecondary {
+  color: #08FDD8;
+}
+main .wrapper .myWorks .smHeading {
+  color: #72D8FE;
+}
+main .wrapper .myWorks .mainProjects .projectContainer {
+  border: 1px solid green;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #1A203B;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  -webkit-transition: 0.6s ease-in;
+  transition: 0.6s ease-in;
+}
+main .wrapper .myWorks .mainProjects .projectContainer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -15px;
+  background: whitesmoke;
+  height: 100%;
+  width: 25px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:hover {
+  color: black;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription h2 {
+  color: #1eb6ee;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription .skills {
+  color: #686868;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription .projectButtons a {
+  visibility: visible;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:hover::before {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transform: scale(60);
+          transform: scale(60);
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription h2 {
+  color: #08FDD8;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .skills {
+  font-size: 0.8rem;
+  color: White;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a {
+  background-color: #1A203B;
+  margin: 0 10px;
+  padding: 2px 30px;
+  border-radius: 10px;
+  color: whitesmoke;
+  float: right;
+  visibility: hidden;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a:hover {
+  color: #1eb6ee;
+  background-color: black;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+main .wrapper .myWorks .mainProjects #card {
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(0 5px 10px 0 #ffffff);
+          filter: drop-shadow(0 5px 10px 0 #ffffff);
+  width: 400px;
+  height: 180px;
+  background-color: #ffffff;
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  -webkit-transition: 0.6s ease-in;
+  transition: 0.6s ease-in;
+}
+main .wrapper .myWorks .mainProjects #card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -15px;
+  right: -15px;
+  background: #7952b3;
+  height: 220px;
+  width: 25px;
+  border-radius: 32px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+main .wrapper .myWorks .mainProjects #card:hover::before {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transform: scale(40);
+          transform: scale(40);
+}
+main .wrapper .myWorks .mainProjects #card:hover {
+  color: #ffffff;
 }
 
 main .wrapper #contact {

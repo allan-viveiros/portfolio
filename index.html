@@ -97,7 +97,7 @@
                 <h3 class="smHeading"> Let me tell you a few things about me.  </h3>
 
                 <div class="flexContainer">                
-                    <div class="personalCard">
+                    <div class="personalCard" data-tilt>
                         <div class="bioImageContainer">
                             <img src="./images/Me-2_small.png" alt="Allan Viveiros" class="bioImage">
                         </div> 
@@ -211,145 +211,42 @@
 
         <div class="wrapper">
             <section class="myWorks" id="works">
-                <h1 class="lg-heading"> 
-                    My <span class="text-secondary"> Works </span> 
+                <h1 class="lgHeading"> 
+                    My <span class="textSecondary"> Works </span> 
                 </h1>
         
-                <h2 class="sm-heading"> Check out some of my projects.  </h2>
+                <h2 class="smHeading"> Check out some of my projects.  </h2>
                 
-                <div class="main-projects">   
-        
-                    <!-- Super Clothing -->
-                    <div class="item">                 
-                        <div class="container">  
-        
-                            <div class="front">   
-                                <div class="img-container">
-                                    
-                                    <img src="images/projects/super-clothing.PNG">
-                                    
-                                    <div class="card-text">
-                                        <p> e-Commerce </br> 
-                                            Project
-                                        </p>                       
-                                                  
-                                        <span>Super Clothing</span>
-                                    </div>                           
-                                </div>
-        
-                               
-        
-                                <div class="text-container">                            
-                                    <p> Website using firebase, 
-                                        google authentication and integrated with stripe system 
-                                        to make payments. </p>
-                                </div>                        
+                <div class="mainProjects">   
+
+                    <!-- Project BikerLand -->
+                    <div class="projectContainer">
+                        <div class="projectFlex">                            
+                            <div class="imgContainer">
+                                <img src="./images/project-delicious-big.png" alt="Project Delicious">
                             </div>
-                
-                            <div class="back">   
-                                <div class="text-back">                     
-                                    <h3> Technologies </h3>
-                                    <p>Responsive website using HTML5, Sass, JavaScript, React, React Hooks, 
-                                       Firebase.
-                                    </p>
-                                    <span> Publish on Heroku </span>
-                                </div>
-        
-                                <div class="btn-back">
-                                    <a href="https://super-clothing.herokuapp.com/" class="btn-light" target="_blank">
-                                        <i class="fas fa-eye"></i> Project
+                            <div class="projectDescription">
+                                <h2> Project Delicious </h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum vel hic, sunt eos maxime cupiditate. Eveniet accusantium itaque, amet quis sint ducimus molestiae eos, expedita similique nemo eligendi corrupti blanditiis?</p>
+
+                                <p class="skills">Html | SASS | JavaScript </p>
+
+                                <div class="projectButtons">                           
+                                    <a href="#">
+                                        <i class="fab fa-github"></i>
+                                        GitHub
                                     </a>
-                                    
-                                    <a href="https://github.com/allan-viveiros/super-clothing" class="btn-dark" target="_blank">
-                                        <i class="fab fa-github"></i> Github
+                                    <a href="#">
+                                        <i class="fas fa-eye"></i>
+                                        Live link
                                     </a>
                                 </div>
-                            </div>
-                        </div>                
-                    </div>
-        
-                    <!-- Monster search -->
-                    <div class="item">                 
-                        <div class="container">  
-        
-                            <div class="front">   
-                                <div class="img-container">
-                                    <img src="images/projects/monster.PNG">
-                                    <div class="card-text">
-                                        <p> Frontend </br> 
-                                            Development
-                                        </p> 
-                                        <span> Monster search </span>
-                                    </div>
-                                </div>
-        
-                                <div class="text-container">                            
-                                    <p> Responsive Frontend project to search cards by the name in real time.</p>
-                                </div>                        
-                            </div>
-                
-                            <div class="back">   
-                                <div class="text-back">                     
-                                    <h3> Technologies </h3>
-                                    <p>HTML5, CSS3, JavaScript, React.
-                                    </p>
-                                    <span> Publish on Github </span>
-                                </div>
-        
-                                <div class="btn-back">
-                                    <a href="https://allan-viveiros.github.io/monsters-rolodex/" class="btn-light" target="_blank">
-                                        <i class="fas fa-eye"></i> Project
-                                    </a>
-                                    
-                                    <a href="https://github.com/allan-viveiros/monsters-rolodex" class="btn-dark" target="_blank">
-                                        <i class="fab fa-github"></i> Github
-                                    </a>
-                                </div>
-                            </div>
-                        </div>                
-                    </div>
-        
-                    <!-- Codvid-19 Tracker -->
-                    <div class="item">                 
-                        <div class="container">  
-        
-                            <div class="front">   
-                                <div class="img-container">
-                                    <img src="images/projects/covid-tracker.PNG">
-                                    <div class="card-text">
-                                        <p> Web </br> 
-                                            Development
-                                        </p> 
-                                        <span> COVID-19 Tracker </span>
-                                    </div>
-                                </div>
-        
-                                <div class="text-container">                            
-                                    <p> Responsive website consuming API with real information about COVID-19. </p>
-                                </div>                        
-                            </div>
-                
-                            <div class="back">   
-                                <div class="text-back">                     
-                                    <h3> Technologies </h3>
-                                    <p>HTML5, CSS3, JavaScript, React , React Hooks, 
-                                        Material UI, Charts.js, API data fetching
-                                    </p>
-                                    <span class="oi"> Publish on Heroku </span>
-                                </div>
-        
-                                <div class="btn-back">
-                                    <a href="https://covid19-tckr.herokuapp.com/" class="btn-light" target="_blank">
-                                        <i class="fas fa-eye"></i> Project
-                                    </a>
-                                    
-                                    <a href="https://github.com/allan-viveiros/covid19-tracker" class="btn-dark" target="_blank">
-                                        <i class="fab fa-github"></i> Github
-                                    </a>
-                                </div>
-                            </div>
-                        </div>                
-                    </div> 
+                            </div>                              
+                        </div>
+                        
+                    </div>    
+                  
+
                 </div>
 
             </section>
@@ -370,5 +267,6 @@
         </div>        
     </footer>
     <script src="./js/scripts.js"></script>
+    <script type="text/javascript" src="./js/vanilla-tilt.min.js"></script>
 </body>
 </html>
