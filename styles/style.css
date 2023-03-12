@@ -349,6 +349,7 @@ header .sideBar {
   position: fixed;
   padding-top: 10px;
   justify-items: center;
+  z-index: 10;
 }
 header .sideBar .logo {
   width: 100%;
@@ -535,6 +536,7 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
   header .menuBtn.close {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
+    z-index: 20;
   }
   header .menuBtn.close .btnLine:nth-child(1) {
     background: #ff0000;
@@ -567,6 +569,9 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
   }
   header .sideBar .icons {
     margin-bottom: 20px;
+  }
+  header .sideBar .icons a {
+    margin: 0 10px;
   }
   header .sideBar.show {
     visibility: visible;
@@ -602,6 +607,12 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  main .home .homeContent {
+    margin-top: 80px;
+  }
+  main .home .homeContent .text .lgHeading p {
+    line-height: 70px;
+  }
   main .home .homeContent .text .lgHeading .letter {
     margin-top: 10px;
   }
@@ -610,6 +621,166 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
   }
   main .wrapper .aboutInfo h3.smHeading {
     font-size: 1rem;
+  }
+  main .wrapper #works .mainProjects .projectContainer {
+    height: 80vh;
+  }
+  main .wrapper #works .mainProjects .projectContainer::before {
+    content: "";
+    position: absolute;
+    top: calc(80vh - 20px);
+    right: 0;
+    background: rgb(255, 255, 255);
+    height: 25px;
+    width: 100%;
+  }
+  main .wrapper #works .mainProjects .projectContainer:hover {
+    color: black;
+  }
+  main .wrapper #works .mainProjects .projectContainer:hover .projectFlex .projectDescription h2 {
+    color: #0093c9;
+    font-weight: bold;
+    -webkit-transition-delay: 0.6s;
+            transition-delay: 0.6s;
+  }
+  main .wrapper #works .mainProjects .projectContainer:hover .projectFlex .projectDescription .skills {
+    color: #686868;
+    -webkit-transition-delay: 0.6s;
+            transition-delay: 0.6s;
+  }
+  main .wrapper #works .mainProjects .projectContainer:hover .projectFlex .projectDescription .projectButtons a {
+    visibility: visible;
+  }
+  main .wrapper #works .mainProjects .projectContainer:hover::before {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+    -webkit-transform: scale(60);
+            transform: scale(60);
+  }
+  main .wrapper #works .mainProjects .projectContainer:nth-child(even)::before {
+    content: "";
+    position: absolute;
+    top: calc(80vh - 20px);
+    left: 0;
+    height: 25px;
+    width: 100%;
+    background: rgb(0, 105, 146);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    transition: -webkit-transform 0.25s ease-out;
+    transition: transform 0.25s ease-out;
+    transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  }
+  main .wrapper #works .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription h2 {
+    color: #08FDD8;
+  }
+  main .wrapper #works .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .skills {
+    color: white;
+  }
+  main .wrapper #works .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .projectButtons a:hover {
+    color: #08FDD8;
+  }
+  main .wrapper #works .mainProjects .projectContainer:nth-child(even):hover::before {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+    -webkit-transform: scale(60);
+            transform: scale(60);
+  }
+  main .wrapper #works .mainProjects .projectContainer:nth-child(even) .projectFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .wrapper #works .mainProjects .projectContainer .projectFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .wrapper #works .mainProjects .projectContainer .projectFlex .imgContainer {
+    border-radius: 10px;
+    overflow: hidden;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
+  }
+  main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription h2 {
+    color: #08FDD8;
+  }
+  main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription p {
+    padding: 0 10px;
+    margin: 0;
+  }
+  main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription .skills {
+    font-size: 0.8rem;
+    color: White;
+    margin: 20px 0;
+  }
+  main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+    margin: 20px 0 10px 0;
+    position: relative;
+    bottom: 20px;
+  }
+  main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a {
+    background-color: #1A203B;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: whitesmoke;
+    visibility: visible;
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a:hover {
+    color: #72D8FE;
+    background-color: black;
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+  }
+  footer .wrapper p {
+    font-size: 0.7rem;
   }
 }
 /*!
@@ -694,7 +865,6 @@ main .wrapper .aboutInfo {
   margin: 0;
   padding: 0 20px;
   font-family: "Golos Text", sans-serif;
-  border: 1px solid orangered;
 }
 main .wrapper .aboutInfo .lgHeading {
   margin: 0;
@@ -726,20 +896,24 @@ main .wrapper .aboutInfo .flexContainer .personalCard {
   border: 1px solid black;
   background-color: #1A203B;
   margin: 10px;
+  padding-top: 10px;
   overflow: hidden;
   -webkit-box-shadow: 2px 10px 30px black;
           box-shadow: 2px 10px 30px black;
 }
 main .wrapper .aboutInfo .flexContainer .personalCard .bioImageContainer {
+  border-radius: 50%;
   overflow: hidden;
-  width: 100%;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border: 3px solid #08FDD8;
 }
 main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo {
   font-size: 0.7rem;
 }
 main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .introduction {
   color: #999;
-  border-top: 1px dashed rgba(255, 255, 255, 0.363);
   padding: 10px 0 0 5px;
   margin: 10px 0 5px 0;
 }
@@ -779,6 +953,7 @@ main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .buttons but
   height: 30px;
   border: 0;
   background-color: #0e1222;
+  border-radius: 10px;
   color: #B0C8DD;
   cursor: pointer;
 }
@@ -800,7 +975,6 @@ main .wrapper .myWorks {
   margin: 20px 0;
   padding: 20px;
   font-family: "Golos Text", sans-serif;
-  border: 1px solid yellow;
 }
 main .wrapper .myWorks .lgHeading .textSecondary {
   color: #08FDD8;
@@ -809,11 +983,10 @@ main .wrapper .myWorks .smHeading {
   color: #72D8FE;
 }
 main .wrapper .myWorks .mainProjects .projectContainer {
-  border: 1px solid green;
-  margin: 10px 0;
+  margin: 20px 0 40px 0;
   padding: 10px;
   border-radius: 10px;
-  background-color: #1A203B;
+  background-color: #11162B;
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -826,7 +999,7 @@ main .wrapper .myWorks .mainProjects .projectContainer::before {
   z-index: -1;
   top: 0;
   right: -15px;
-  background: whitesmoke;
+  background: rgb(255, 255, 255);
   height: 100%;
   width: 25px;
   -webkit-transform: scale(1);
@@ -842,7 +1015,8 @@ main .wrapper .myWorks .mainProjects .projectContainer:hover {
   color: black;
 }
 main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription h2 {
-  color: #1eb6ee;
+  color: #0093c9;
+  font-weight: bold;
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
 }
@@ -860,10 +1034,75 @@ main .wrapper .myWorks .mainProjects .projectContainer:hover::before {
   -webkit-transform: scale(60);
           transform: scale(60);
 }
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -15px;
+  background: rgb(0, 105, 146);
+  height: 100%;
+  width: 25px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription h2 {
+  color: #08FDD8;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .skills {
+  color: white;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .projectButtons a:hover {
+  color: #08FDD8;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover::before {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transform: scale(60);
+          transform: scale(60);
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even) .projectFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even) .projectFlex .imgContainer {
+  -webkit-box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.596);
+          box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.596);
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even) .projectFlex .projectDescription .projectButtons a {
+  float: left;
+}
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .imgContainer {
+  border-radius: 10px;
+  overflow: hidden;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
+          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
 }
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription {
   margin-left: 10px;
@@ -881,6 +1120,9 @@ main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDesc
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription h2 {
   color: #08FDD8;
 }
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription p {
+  padding: 0 10px;
+}
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .skills {
   font-size: 0.8rem;
   color: White;
@@ -897,52 +1139,10 @@ main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDesc
           transition-delay: 0ms;
 }
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a:hover {
-  color: #1eb6ee;
+  color: #72D8FE;
   background-color: black;
   -webkit-transition-delay: 0ms;
           transition-delay: 0ms;
-}
-main .wrapper .myWorks .mainProjects #card {
-  border-radius: 10px;
-  -webkit-filter: drop-shadow(0 5px 10px 0 #ffffff);
-          filter: drop-shadow(0 5px 10px 0 #ffffff);
-  width: 400px;
-  height: 180px;
-  background-color: #ffffff;
-  padding: 20px;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-  -webkit-transition: 0.6s ease-in;
-  transition: 0.6s ease-in;
-}
-main .wrapper .myWorks .mainProjects #card::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -15px;
-  right: -15px;
-  background: #7952b3;
-  height: 220px;
-  width: 25px;
-  border-radius: 32px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transition: -webkit-transform 0.25s ease-out;
-  transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
-}
-main .wrapper .myWorks .mainProjects #card:hover::before {
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-  -webkit-transform: scale(40);
-          transform: scale(40);
-}
-main .wrapper .myWorks .mainProjects #card:hover {
-  color: #ffffff;
 }
 
 main .wrapper #contact {
@@ -972,9 +1172,9 @@ footer .textHTML::before {
   padding: 0;
 }
 footer .wrapper p {
-  background-color: rgba(0, 0, 0, 0.13);
   font-family: "Golos Text", sans-serif;
   margin: 0;
-  padding: 10px 0;
+  padding: 10px;
   text-align: center;
+  color: rgba(176, 200, 221, 0.5960784314);
 }

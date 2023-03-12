@@ -1,5 +1,5 @@
 // Give a class to the animation
-const spans = document.querySelectorAll('h1 span')
+const spans = document.querySelectorAll('h1 .letter')
 spans.forEach(span => 
     span.addEventListener('mouseover', function(e) {
         span.classList.add('animated', 'rubberBand')
