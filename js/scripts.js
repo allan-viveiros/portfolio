@@ -172,3 +172,19 @@ const currentYear = document.getElementById("copyRight");
 let currentDate = new Date().toString();
 currentYear.textContent = currentDate.slice(11, 15);
        
+
+
+
+// Change the page theme (switch Button)
+const switchButton = document.getElementById("switchCheck");
+switchButton.addEventListener("change", () => {
+    const switchText = document.getElementsByClassName("switchText");
+    // console.log(switchText[0].textContent);
+    if(switchText[0].textContent === "Dark Mode") {
+        switchText[0].textContent = "Light Mode";
+    }
+    else {
+        switchText[0].textContent = "Dark Mode"
+    }
+    
+})

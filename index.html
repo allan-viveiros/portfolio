@@ -28,10 +28,15 @@
         <!-- Side Menu -->
         <div class="sideBar">
             <div class="logo">
-                <p>
-                    HOME              
-                </p>
-                <p>Web Developer</p>
+                <div class="switch">
+                    <input type="checkbox" class="switchCheck" id="switchCheck" checked />
+                    <label class="switchLabel" for="switchCheck">
+                        <i class="fas fa-moon" aria-label="Dark mode"></i>
+                        <i class="fas fa-sun"  aria-label="Light mode"></i>
+                        <div class="switchButton"></div>
+                    </label>
+                </div>
+                <p class="switchText">Dark Mode</p>
             </div>
             <div class="sideMenu">
                 <ul class="menuUL">
@@ -306,7 +311,28 @@
 
         <div class="wrapper">
             <section id="contact">
-                <h2>How to reach Me</h2>
+                <h2>How to reach <span>Me</span></h2>
+                <div class="contactContainer">
+                    <div class="contactForm">
+                        <form action="">
+                            <input type="text">
+                            <input type="email">
+                            <textarea></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+
+                    <div class="personalLinks">
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                            <li>Item 5</li>
+                        </ul>
+                    </div>
+
+                </div>
             </section>
         </div>
     </main>
@@ -319,6 +345,7 @@
         </div>        
     </footer>
     <script src="./js/scripts.js"></script>
+    <!-- Vanilla tilt animation (https://micku7zu.github.io/vanilla-tilt.js/) -->
     <script type="text/javascript" src="./js/vanilla-tilt.min.js"></script>
 </body>
 </html>
