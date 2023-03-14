@@ -58,7 +58,7 @@
                     <a href="https://www.linkedin.com/in/viveirosallan" target="_blank"> <i class="fab fa-linkedin"  aria-label="LinkedIn"></i> </a>           
                     <a href="https://github.com/allan-viveiros" target="_blank"> <i class="fab fa-github" aria-label="GitHub"></i> </a>            
                     <!-- <a href="#!"> <i class="fab fa-facebook"></i> </a> -->
-                    <a href="#!"> <i class="fab fa-instagram" aria-label="instagram"></i> </a>
+                    <a href="#"> <i class="fab fa-instagram" aria-label="instagram"></i> </a>
                 </div>
             </div>
         </div>
@@ -311,24 +311,60 @@
 
         <div class="wrapper">
             <section id="contact">
-                <h2>How to reach <span>Me</span></h2>
+                <h2>How to reach <span>Me</span></h2>                
                 <div class="contactContainer">
                     <div class="contactForm">
-                        <form action="">
-                            <input type="text">
-                            <input type="email">
-                            <textarea></textarea>
-                            <button type="submit">Submit</button>
+                        <form action="" class="flexForm">
+                            <label for="formName" class="sr-only">Name</label>
+                            <input type="text" id="formName" name="formName" placeholder="Name">
+
+                            <label for="formEmail" class="sr-only">Email</label>
+                            <input type="email" id="formEmail" name="formEmail" placeholder="Email">
+
+                            <label for="formMessage" class="sr-only">Leave your message</label>
+                            <textarea id="formMessage" name="formMessage" placeholder="Leave your message"></textarea>
+
+                            <button type="submit">
+                                Send message
+                                <i class="fa fa-paper-plane" aria-label="location"></i>                                
+                            </button>
                         </form>
                     </div>
 
                     <div class="personalLinks">
                         <ul>
-                            <li>Item 1</li>
-                            <li>Item 2</li>
-                            <li>Item 3</li>
-                            <li>Item 4</li>
-                            <li>Item 5</li>
+                            <li>
+                                <i class="fa fa-user" aria-label="name"></i>
+                                Allan Romero de Souza Viveiros
+                            </li>
+                            <li>
+                                <i class="fa fa-map-marker" aria-label="location"></i>
+                                London, ON, Canada
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-calendar" aria-label="calendar" ></i>
+                                    Book a 15min talk
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/viveirosallan" target="_blank"> 
+                                    <i class="fab fa-linkedin"  aria-label="LinkedIn"></i> 
+                                    LinkedIn 
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="https://github.com/allan-viveiros" target="_blank"> 
+                                    <i class="fab fa-github" aria-label="GitHub"></i> 
+                                    GitHub 
+                                </a>   
+                            </li>
+                            <li>
+                                <a href="#"> 
+                                    <i class="fab fa-instagram" aria-label="instagram"></i> 
+                                    Instagram 
+                                </a>
+                            </li>
                         </ul>
                     </div>
 

@@ -837,6 +837,15 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
     -webkit-transition-delay: 0ms;
             transition-delay: 0ms;
   }
+  .contactContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   footer .wrapper p {
     font-size: 0.7rem;
   }
@@ -1205,9 +1214,121 @@ main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDesc
 
 main .wrapper #contact {
   height: 100vh;
-  margin: 0;
-  padding: 0 20px;
+  margin: 20px 0;
+  padding: 20px;
   font-family: "Golos Text", sans-serif;
+}
+main .wrapper #contact h2 span {
+  color: #08FDD8;
+}
+main .wrapper #contact .contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+}
+main .wrapper #contact .contactContainer .contactForm {
+  width: 70%;
+  height: 50vh;
+  padding: 20px;
+  background-color: #0e1222;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 10px 10px black;
+          box-shadow: 5px 10px 10px black;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm input, main .wrapper #contact .contactContainer .contactForm .flexForm button, main .wrapper #contact .contactContainer .contactForm .flexForm textarea {
+  width: 80%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #08FDD8;
+  color: #fff;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm textarea {
+  height: 200px;
+  resize: none;
+  border: 2px solid #08FDD8;
+  border-radius: 10px;
+  padding: 10px;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm button {
+  color: #B0C8DD;
+  border: 1px solid #B0C8DD;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #0e1222;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm button:hover {
+  border-color: #08FDD8;
+  color: #08FDD8;
+  background-color: black;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm button:hover i {
+  color: #08FDD8;
+  text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
+  -webkit-animation: text-flicker 3s linear infinite;
+          animation: text-flicker 3s linear infinite;
+}
+main .wrapper #contact .contactContainer .personalLinks {
+  background-color: #FCA311;
+  width: 30%;
+  height: 55%;
+  padding: 20px;
+  position: relative;
+  right: 55px;
+  top: 35px;
+  border-radius: 10px;
+  -webkit-box-shadow: -10px 10px 10px black;
+          box-shadow: -10px 10px 10px black;
+}
+main .wrapper #contact .contactContainer .personalLinks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #000;
+  width: 100%;
+}
+main .wrapper #contact .contactContainer .personalLinks ul li {
+  width: 100%;
+}
+main .wrapper #contact .contactContainer .personalLinks ul li a {
+  font-family: "Golos Text", sans-serif;
+  color: #0e1222;
+  padding: 5px 0;
+}
+main .wrapper #contact .contactContainer .personalLinks ul li a:hover {
+  color: #08FDD8;
+}
+main .wrapper #contact .contactContainer .personalLinks ul li a:hover i {
+  color: white;
 }
 
 footer {
