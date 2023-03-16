@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- <main>         -->
+    <!-- Header -->
     <header>
         <div class="menuBtn">
             <div class="btnLine"></div>
@@ -29,14 +29,14 @@
         <div class="sideBar">
             <div class="logo">
                 <div class="switch">
-                    <input type="checkbox" class="switchCheck" id="switchCheck" checked />
+                    <input type="checkbox" class="switchCheck" id="switchCheck" checked >
                     <label class="switchLabel" for="switchCheck">
                         <i class="fas fa-moon" aria-label="Dark mode"></i>
                         <i class="fas fa-sun"  aria-label="Light mode"></i>
                         <div class="switchButton"></div>
                     </label>
                 </div>
-                <p class="switchText">Dark Mode</p>
+                <p class="switchText"></p>
             </div>
             <div class="sideMenu">
                 <ul class="menuUL">
@@ -57,7 +57,6 @@
                 <div class="icons"> 
                     <a href="https://www.linkedin.com/in/viveirosallan" target="_blank"> <i class="fab fa-linkedin"  aria-label="LinkedIn"></i> </a>           
                     <a href="https://github.com/allan-viveiros" target="_blank"> <i class="fab fa-github" aria-label="GitHub"></i> </a>            
-                    <!-- <a href="#!"> <i class="fab fa-facebook"></i> </a> -->
                     <a href="#"> <i class="fab fa-instagram" aria-label="instagram"></i> </a>
                 </div>
             </div>
@@ -112,19 +111,14 @@
                             <div class="details">
                                 const <span class="const">me</span> = {                            
                                     <p> <span class="key">firstName:</span> <span class="value">'Allan Romero',</span> </p>
-                                    <p> <span class="key">lastName:</span> <span class="value">'De Souza Viveiros',</span> </p>
-                                    <p> <span class="key">birth:</span> <span class="value">'09-09-1986',</span> </p>
+                                    <p> <span class="key">lastName:</span> <span class="value">'De Souza Viveiros',</span> </p>  
                                     <p> <span class="key">country:</span> <span class="value">'Canada',</span> </p>
-                                    <p> <span class="key">city:</span> <span class="value">'London, ON', </span> </p>
                                     <p> <span class="key">role:</span> <span class="value">'Web Developer',</span> </p>
-                                    <p> <span class="key">skills:</span> <span class="value">['JavaScript', 'CSS', 'HTML', 'SASS', 'React', 'Firebase', 'SQL', 'GitHub']</span> </p>
+                                    <p> <span class="key">skills:</span> <span class="value">['JavaScript', 'CSS', 'HTML', 'SASS', 'React', 'Firebase', 'SQL', 'GitHub', 'REST API']</span> </p>
                                 }            
                             </div>
                                 
-                            <div class="buttons">
-                                <button> Download resume </button>
-                                <button> Contact Me </button>
-                            </div>                        
+                            <div class="buttons"></div>                        
                         </div>
                     </div>
 
@@ -139,78 +133,7 @@
                         
                         <p>After a journey of long hours reading and coding I can say that I feel comfortable building projects using technologies such as HTML5, CSS3, Sass, Javascript, React-js, Node-js, Hooks. It is possible to check some of my projects here.</p>
                     </div>    
-                </div>
-                
-
-                <div class="education">
-
-                    <!-- Timeline cards -->                
-                    <!-- <div class="timeline">
-                        <div class="timelineBody">                        
-                            <div class="timelineItem">
-                                <p class="time">  2014 - 2019 </p>
-                                <div class="content">
-                                    <h2 class="title"> Business System Analyst </h2>
-                                    <p> Industria de produtos alimentícios Piraque, Brazil, Rio de Janeiro. 
-                                    </p>
-                                </div>
-                            </div>
-    
-                            <div class="timelineItem">
-                                <p class="time">  2010 - 2014 </p>
-                                <div class="content">
-                                    <h2 class="title"> Oracle analyst and PL/SQL developer </h2>
-                                    <p> Industria de produtos alimentícios Piraque, Brazil, Rio de Janeiro. 
-                                    </p>
-                                </div>
-                            </div>
-    
-                            <div class="timelineItem">
-                                <p class="time">  2006 - 2009 </p>
-                                <div class="content">
-                                    <h2 class="title"> Sales assistant </h2>
-                                    <p> Industria de produtos alimentícios Piraque, Brazil, Rio de Janeiro. 
-                                    </p>
-                                </div>
-                            </div>
-    
-                            <div class="timelineItem">
-                                <p class="time">  2005 - 2006 </p>
-                                <div class="content">
-                                    <h2 class="title"> Administrative auxiliary </h2>
-                                    <p> Industria de produtos alimentícios Piraque, Brazil, Rio de Janeiro. 
-                                    </p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                   
-                </div>
-                
-                <div class="job job1">
-                    <h3> MIT- Data base management </h3>
-                    <h6> Post-graduate 2013 - 2015 </h6>
-                    <p> Instituto Infet - Brazil, Rio de Janeiro.</p>
-                    <p> Oracle database management system and others SGBD.</p>
-                </div>
-    
-                <div class="job job2">
-                    <h3> Information Systems </h3>
-                    <h6> Bachelor degree 2006 - 2011 </h6>
-                    <p> Faculdade de informatica Lemos de Castro - Brazil, Rio de Janeiro. </p>
-                    <p> System analysis and development. </p>
-                </div>
-    
-                <div class="job job3">
-                    <h3> Job 3 </h3>
-                    <h6> Job position </h6>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus 
-                        eum fugit architecto asperiores illo nihil impedit eaque quibusdam 
-                        ducimus tempora.
-                    </p>
-                </div> -->
-                
+                </div>                
             </div>
         </div>
 
@@ -312,21 +235,23 @@
         <div class="wrapper">
             <section id="contact">
                 <h2>How to reach <span>Me</span></h2>                
-                <div class="contactContainer">
+                <div class="contactContainer" id="contactContainer">
                     <div class="contactForm">
-                        <form action="" class="flexForm">
+                        <form action="https://formspree.io/f/xrgvlvgv"
+                        method="POST" class="flexForm" id="formContact">
+                            <p>* All fields are required</p>
                             <label for="formName" class="sr-only">Name</label>
-                            <input type="text" id="formName" name="formName" placeholder="Name">
+                            <input type="text" id="formName" name="name" placeholder="Name" required>
 
                             <label for="formEmail" class="sr-only">Email</label>
-                            <input type="email" id="formEmail" name="formEmail" placeholder="Email">
+                            <input type="email" id="formEmail" name="email" placeholder="Email" required>
 
                             <label for="formMessage" class="sr-only">Leave your message</label>
-                            <textarea id="formMessage" name="formMessage" placeholder="Leave your message"></textarea>
+                            <textarea id="formMessage" name="message" placeholder="Leave your message" required></textarea>
 
-                            <button type="submit">
+                            <button type="submit" id="submitForm">
                                 Send message
-                                <i class="fa fa-paper-plane" aria-label="location"></i>                                
+                                <i class="fa fa-paper-plane" aria-label="send"></i>                                
                             </button>
                         </form>
                     </div>

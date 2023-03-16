@@ -176,15 +176,62 @@ currentYear.textContent = currentDate.slice(11, 15);
 
 
 // Change the page theme (switch Button)
-const switchButton = document.getElementById("switchCheck");
-switchButton.addEventListener("change", () => {
+const body = document.querySelector("body");  
+const main = document.querySelector("main"); 
+
+//// TODO
+// Check if is a good practice to use the same variable in the case of 
+// sideBar and menuBtn
+
+const switchTheme = () => {
+    const switchCheck = document.getElementById("switchCheck");
     const switchText = document.getElementsByClassName("switchText");
-    // console.log(switchText[0].textContent);
-    if(switchText[0].textContent === "Dark Mode") {
-        switchText[0].textContent = "Light Mode";
+    // console.log(switchText[0].textContent);  
+    
+    if(switchCheck.checked) {
+        // console.log("is checked");
+        switchText[0].textContent = "Good Night!"
+        body.classList.remove("light");  
+        sideBar.classList.remove("light");       
+        menuBtn.classList.remove("light");
+        main.classList.remove("light"); 
     }
     else {
-        switchText[0].textContent = "Dark Mode"
+        // console.log("not checked");
+        switchText[0].textContent = "Morning!";
+        body.classList.add("light");        
+        sideBar.classList.add("light"); 
+        menuBtn.classList.add("light");
+        main.classList.add("light");               
     }
-    
-})
+}
+
+
+const switchButton = document.getElementById("switchCheck");
+switchButton.addEventListener("change", (e) => {
+    // console.log(e);
+    switchTheme();      
+});
+
+switchTheme();
+
+
+// Form submission
+const formContact = document.getElementById("formContact");
+formContact.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("formName");
+    const email = document.getElementById("formEmail");
+    const message = document.getElementById("formMessage");
+
+    if(name.value.trim() && email.value.trim() && message.value.trim()){
+        formContact.submit();
+        formContact.reset();
+    }
+    else {
+        alert("Please, fill all fields!");
+    }    
+});
+
+
+

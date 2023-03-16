@@ -229,9 +229,16 @@ html {
 /* *** GLOBAL STYLES *** */
 html {
   font-size: 125%;
-  background-color: #11162B;
   color: #B0C8DD;
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+html body {
+  background-color: #11162B;
+}
+html body.light {
+  background-color: #EBEBD3;
 }
 
 img {
@@ -429,6 +436,7 @@ header .sideBar ul {
 }
 header .sideBar ul li {
   border-top: 1px solid rgba(176, 200, 221, 0.3019607843);
+  padding-right: 2px;
   width: 100%;
 }
 header .sideBar ul li:last-child {
@@ -471,6 +479,12 @@ header .sideBar .icons a:hover {
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
   -webkit-animation: text-flicker 3s linear infinite;
           animation: text-flicker 3s linear infinite;
+}
+header .sideBar.light {
+  background-color: #083D77;
+}
+header .sideBar.light .logo .switchText {
+  color: white;
 }
 
 main .home p {
@@ -567,6 +581,34 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
   margin: 0;
 }
 
+main.light {
+  color: black;
+}
+main.light #home p .textHTML::before, main.light #home p .textBody::before {
+  color: rgba(0, 0, 0, 0.13);
+}
+main.light #home .homeContent .text::before, main.light #home .homeContent .text::after {
+  color: rgba(0, 0, 0, 0.13);
+}
+main.light #home .homeContent .text .lgHeading p {
+  color: #2F9C95;
+}
+main.light #home .homeContent .text .lgHeading .letter {
+  color: #6290C8;
+}
+main.light #home .homeContent .text .lgHeading .letter.textSecondary {
+  color: #FF331F;
+}
+main.light #home .homeContent .styleHTML::before, main.light #home .homeContent .styleHTML::after {
+  color: rgba(0, 0, 0, 0.13);
+}
+main.light #home .homeContent .styleHTML .smHeading {
+  color: #9593D9;
+}
+main.light #home .homeContent .styleHTML .homeSkills {
+  color: #868586;
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 940px) {
   .wrapper {
@@ -615,6 +657,15 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
     -webkit-transform: rotate(-45deg) translate(5px, -5px);
     transform: rotate(-45deg) translate(5px, -5px);
     width: 20px;
+  }
+  header .menuBtn.light {
+    background-color: rgba(255, 255, 255, 0.322);
+  }
+  header .menuBtn.light .btnLine {
+    background-color: black;
+  }
+  header .menuBtn.light.close {
+    background-color: transparent;
   }
   header .sideBar {
     width: 100%;
@@ -665,6 +716,37 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  main .wrapper #contact #contactContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 90vh;
+  }
+  main .wrapper #contact #contactContainer .contactForm {
+    width: 90%;
+    height: 50vh;
+    padding: 10px;
+  }
+  main .wrapper #contact #contactContainer .contactForm .flexForm {
+    width: 100%;
+  }
+  main .wrapper #contact #contactContainer .contactForm .flexForm input, main .wrapper #contact #contactContainer .contactForm .flexForm button, main .wrapper #contact #contactContainer .contactForm .flexForm textarea {
+    width: 100%;
+  }
+  main .wrapper #contact #contactContainer .personalLinks {
+    background-color: #FCA311;
+    width: 80%;
+    height: 40%;
+    position: relative;
+    right: 0;
+    top: -50px;
+  }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
@@ -684,12 +766,12 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
     font-size: 1rem;
   }
   main .wrapper #works .mainProjects .projectContainer {
-    height: 80vh;
+    height: 90vh;
   }
   main .wrapper #works .mainProjects .projectContainer::before {
     content: "";
     position: absolute;
-    top: calc(80vh - 20px);
+    top: calc(90vh - 20px);
     right: 0;
     background: rgb(255, 255, 255);
     height: 25px;
@@ -721,7 +803,7 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
   main .wrapper #works .mainProjects .projectContainer:nth-child(even)::before {
     content: "";
     position: absolute;
-    top: calc(80vh - 20px);
+    top: calc(90vh - 20px);
     left: 0;
     height: 25px;
     width: 100%;
@@ -836,15 +918,6 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
     background-color: black;
     -webkit-transition-delay: 0ms;
             transition-delay: 0ms;
-  }
-  .contactContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   footer .wrapper p {
     font-size: 0.7rem;

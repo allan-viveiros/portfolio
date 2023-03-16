@@ -85,7 +85,7 @@ header {
 
             li {               
                 border-top: 1px solid #b0c8dd4d;
-                // padding: 10px 5px;
+                padding-right: 2px;
                 width: 100%;
      
                 &:last-child {
@@ -130,6 +130,15 @@ header {
                     @include hoverButton();
                 }
             }            
+        }
+    }
+
+    .sideBar.light {
+        // background-color: #791E94; 
+        background-color: #083D77;
+
+        .logo .switchText {
+            color: white;
         }
     }
 }
@@ -230,6 +239,53 @@ main {
     }    
 }
 
+main.light {
+    color: black;
+
+    #home {
+        p .textHTML::before, p .textBody::before {
+            color: rgba(0, 0, 0, 0.13);
+        } 
+
+        .homeContent {            
+            .text {
+                &::before, &::after {
+                    color: rgba(0, 0, 0, 0.13);
+                }
+
+                .lgHeading {
+                    p {
+                        // color: #6290C8;
+                        color: #2F9C95;
+                    }
+    
+                    .letter {
+                        color: #6290C8;
+                    }
+    
+                    .letter.textSecondary {
+                        color: #FF331F;
+                    }
+                }
+            }
+            
+
+            .styleHTML {
+                &::before , &::after {
+                    color: rgba(0, 0, 0, 0.13);
+                }
+                .smHeading {
+                    color: #9593D9;
+                }
+
+                .homeSkills {
+                    color: #868586;
+                }
+            }
+        }
+    }
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 940px) {
     .wrapper {
@@ -287,6 +343,17 @@ main {
             }
         }
 
+        .menuBtn.light {
+            background-color: rgba(255, 255, 255, 0.322);
+            .btnLine {
+                background-color: black;
+            }
+        }
+
+        .menuBtn.light.close {
+            background-color: transparent;
+        }
+
         .sideBar {
             width: 100%;
             height: auto;
@@ -342,6 +409,36 @@ main {
         }
     }
 
+    main .wrapper #contact #contactContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // align-items: center;
+        height: 90vh;
+
+        .contactForm {
+            width: 90%;            
+            height: 50vh;
+            padding: 10px;            
+
+            .flexForm {
+                width: 100%;
+
+                input, button, textarea {
+                    width: 100%;
+                }
+            }
+        }
+
+        .personalLinks {
+            background-color: #FCA311;
+            width: 80%;
+            height: 40%;
+            position: relative;
+            right: 0;
+            top: -50px;           
+        }
+    }
 }
 
 /* Landscape phones and down */
@@ -381,13 +478,13 @@ main {
                 // z-index: 0;
                 // overflow: hidden;
                 // transition: 0.6s ease-in;
-                height: 80vh;
+                height: 90vh;
         
                 &::before {
                     content: "";
                     position: absolute;
                     // z-index: -1;
-                    top: calc(80vh - 20px);
+                    top: calc(90vh - 20px);
                     right: 0;
                     background: rgb(255, 255, 255);
                     height: 25px;
@@ -433,7 +530,7 @@ main {
                         content: "";
                         position: absolute;
                         // z-index: -1;
-                        top: calc(80vh - 20px);
+                        top: calc(90vh - 20px);
                         left: 0;                   
                         height: 25px;
                         width: 100%;                        
@@ -550,118 +647,7 @@ main {
     }
 
 
-    .contactContainer {
-        display: flex;
-        flex-direction: column;
-        // justify-content: space-around;
-        // align-items: center;
-        // height: 70vh;
-
-        // // border: 1px solid red;
-
-        // .contactForm {
-        //     width: 70%;
-        //     height: 50vh;
-        //     padding: 20px;
-        //     background-color: #0e1222;
-        //     // background-color: #14213D;
-
-        //     // border: 1px solid blue;
-        //     border-radius: 10px;
-        //     box-shadow: 5px 10px 10px black;
-
-        //     .flexForm {
-        //         display: flex;
-        //         flex-direction: column;
-        //         height: 100%;
-        //         // align-items: center;
-        //         // justify-items: center;
-        //         // align-content: center;
-        //         justify-content: center;
-        //         // border: 5px solid green;
-
-        //         input, button, textarea {
-        //             width: 80%;
-        //             height: 40px;
-        //             margin-bottom: 20px;
-        //             padding-left: 10px;
-        //             background-color: transparent;
-        //             border: none;
-        //             border-bottom: 2px solid #08FDD8;
-        //             color: #fff;
-        //         }
-
-        //         textarea {
-        //             height: 200px;
-        //             resize: none;
-        //             border: 2px solid #08FDD8;
-        //             border-radius: 10px;
-        //             padding: 10px;
-        //         }
-
-        //         button {
-        //             color: #B0C8DD;
-        //             border: 1px solid #B0C8DD;
-        //             border-radius: 10px;
-        //             padding: 5px;
-        //             background-color: #0e1222;
-
-        //             &:hover {
-        //                 border-color: #08FDD8;
-        //                 color: #08FDD8;
-        //                 background-color: black;
-
-        //                 i {                            
-        //                     @include hoverButton();
-        //                 }
-        //             }
-        //         }
-                
-        //     }
-        // }
-
-        // .personalLinks {
-        //     background-color: #FCA311;
-        //     width: 30%;
-        //     height: 55%;
-        //     padding: 20px;
-        //     position: relative;
-        //     right: 55px;
-        //     top: 35px;
-
-        //     // border: 1px solid yellow;
-        //     border-radius: 10px;
-        //     box-shadow: -10px 10px 10px black;
-
-        //     ul {
-        //         display: flex;
-        //         flex-direction: column;
-        //         height: 100%;
-        //         justify-content: space-between;
-        //         color: #000;
-        //         width: 100%;
-
-        //         li {
-        //             width: 100%;
-        //             // margin: 10px 0;
-        //             // padding: 0;
-        //             a {
-        //                 font-family: "Golos Text", sans-serif;
-        //                 color: #0e1222;                         
-        //                 padding: 5px 0;
-                        
-        //                 &:hover {
-        //                     color:#08FDD8;
-
-        //                     i {
-        //                         color: white;
-        //                     }
-        //                 }
-        //             }                    
-        //         }
-        //     }             
-        // }
-    }
+    
 
     footer {
         .wrapper p {
