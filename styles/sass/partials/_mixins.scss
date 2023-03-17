@@ -1,17 +1,15 @@
-// Colors
-// #08E7B9
-// #0EE6B8
-// #72D8FE
-// #7EDCFF
-// #B0C8DD
-// #08FDD8
+//Dark mode colors
+$dmTextGreen: #08FDD8;
+$dmTextBlue: #B0C8DD;
+$dmSmallHeading: #72D8FE;
+$dmDarkBlue: #0e1222;
 
-// Colors  to random update my name on home
-$text-yellow: #eece1a;
-$text-green: #4ae54a;
-$text-orange: #ff7400;
-$text-pink: #ff5f5f;
-$text-blue: #2876f8;
+//Light mode colors
+$lmPurple: #7760fa;
+$lmPink: #ff5f5f;
+$lmBlue: #2876f8;
+$lmDarkBlue: #083D77;
+$lmHTML: rgba(0, 0, 0, 0.13);
 
 // Mixin for the html tag showing on the page
 @mixin htmlStyle($text) {

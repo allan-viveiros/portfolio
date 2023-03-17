@@ -7,7 +7,6 @@ header {
     
     .sideBar {
         background-color: #0e1222;
-        // border: 1px solid red;
         min-width: 180px;
         height: 100%;
         position: fixed;
@@ -23,9 +22,7 @@ header {
             justify-content: center;
             width: 100%;
             height: 20%;
-            // border: 1px solid green;
-            margin-bottom: 150px;
-            
+            margin-bottom: 150px;            
             
             .switch {
                 .switchCheck {
@@ -73,7 +70,7 @@ header {
 
             .active {                    
                 span {
-                    color:#08FDD8;
+                    color:$dmTextGreen;
                     @include hoverButton();
                 }
             }
@@ -94,7 +91,7 @@ header {
                 
                 a {                  
                     display: inline-block;  
-                    color: #B0C8DD;
+                    color: $dmTextBlue;
                     width: 100%;
                     height: 100%;
                     padding: 10px 0;
@@ -112,7 +109,7 @@ header {
                 
                 .active {                    
                     span {
-                        color:#08FDD8;
+                        color:$dmTextGreen;
                         @include hoverButton();
                     }
                 }
@@ -123,7 +120,7 @@ header {
             text-align: center;
 
             a {
-                color: #B0C8DD;
+                color: $dmTextBlue;
                 margin: 5px;
 
                 &:hover {
@@ -132,24 +129,13 @@ header {
             }            
         }
     }
-
-    // *********************************
-    // .sideBar.light {
-    //     // background-color: #791E94; 
-    //     background-color: #083D77;
-
-    //     .logo .switchText {
-    //         color: white;
-    //     }
-    // }
 }
 
 main {    
     .home {        
         p {
             margin: 5px;
-            padding: 5px;            
-            // line-height: 10px;            
+            padding: 5px;     
 
             .textHTML::before {
                 @include htmlStyle("<html>");
@@ -188,12 +174,12 @@ main {
                     font-size: 3.5rem;  
 
                     p {
-                        color: #08FDD8;
+                        color: $dmTextGreen;
                         margin: 0;       
                         line-height: 40px;             
 
                         span {
-                            color: #B0C8DD;                       
+                            color: $dmTextBlue;                       
                         }
                     }
 
@@ -201,14 +187,13 @@ main {
                         display: inline-block;
                         font-weight: bold;
                         margin-right: -15px;
-                        // cursor: pointer;
                     }
 
                     .textSecondary {
                         display: inline-block;
                         font-weight: bold;
                         margin-left: 20px;
-                        color: $text-pink;
+                        color: $lmPink;
                     }
                 }
             }
@@ -223,16 +208,14 @@ main {
 
                 .smHeading {
                     margin: 0;
-                    font-weight: 500;   
-                    // background: rgba(255, 255, 255, 0.010); 
+                    font-weight: 500;  
                     font-size: 2rem; 
-                    color:#72D8FE;    
-                    font-family: "Golos Text";   
-                    // width: fit-content;         
+                    color:$dmSmallHeading;    
+                    font-family: "Golos Text";  
     
                     .homeSkills {
                         font-size: 15px;
-                        color: #B0C8DD;  
+                        color: $dmTextBlue;  
                         margin: 0;
                     }
                 }
@@ -240,53 +223,3 @@ main {
         }
     }    
 }
-
-///*******************************
-// main.light {
-//     color: black;
-
-//     #home {
-//         p .textHTML::before, p .textBody::before {
-//             color: rgba(0, 0, 0, 0.13);
-//         } 
-
-//         .homeContent {            
-//             .text {
-//                 &::before, &::after {
-//                     color: rgba(0, 0, 0, 0.13);
-//                 }
-
-//                 .lgHeading {
-//                     p {
-//                         // color: #6290C8;
-//                         color: #2F9C95;
-//                     }
-    
-//                     .letter {
-//                         color: #6290C8;
-//                     }
-    
-//                     .letter.textSecondary {
-//                         color: #FF331F;
-//                     }
-//                 }
-//             }
-            
-
-//             .styleHTML {
-//                 &::before , &::after {
-//                     color: rgba(0, 0, 0, 0.13);
-//                 }
-//                 .smHeading {
-//                     color: #9593D9;
-//                 }
-
-//                 .homeSkills {
-//                     color: #868586;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-

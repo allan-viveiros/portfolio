@@ -5,8 +5,6 @@ main .wrapper .aboutInfo {
     padding: 5px 20px;
     font-family: 'Golos Text', sans-serif;
     min-height: 100vh;
-
-    // border: 1px solid orangered;
    
     &::before {
         @include htmlStyle("<section>");
@@ -22,7 +20,7 @@ main .wrapper .aboutInfo {
         font-size: 3.5rem;  
 
         .textSecondary {
-            color: #08FDD8;
+            color: $dmTextGreen;
         }
 
         &::before {
@@ -37,9 +35,7 @@ main .wrapper .aboutInfo {
         margin: 0;
         font-weight: 500;   
         background: rgba(255, 255, 255, 0.010); 
-        // font-size: 2rem; 
-        color:#72D8FE;          
-
+        color:$dmSmallHeading;      
     }
 
     .flexContainer {
@@ -64,9 +60,7 @@ main .wrapper .aboutInfo {
                 margin: 0 auto;
                 width: 200px;
                 height: 200px;
-                border: 3px solid #72D8FE;
-                // width: 100%;
-                // box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.589);
+                border: 3px solid $dmSmallHeading;
             }
     
             .personalInfo {
@@ -84,20 +78,17 @@ main .wrapper .aboutInfo {
                     color: #e42dad;
                     font-weight: bold;
                     padding: 10px;
-
-                    // border: 1px inset black;
                     margin: 0 10px 10px 10px;
                     background-color: #0e1222;
                     border-radius: 10px;
-
     
                     .const {
-                        color: #08FDD8;
+                        color: $dmTextGreen;
                         font-weight: normal;
                         
                     }
                     .key {
-                        color: #72D8FE;
+                        color: $dmSmallHeading;
                         margin-left: 10px;
                         font-weight: normal;
                     }
@@ -108,28 +99,9 @@ main .wrapper .aboutInfo {
                 }
     
                 .bottomBar {
-                    // display: flex;
-                    // flex-direction: column;
                     margin: 0;
-                    // background-color: #B0C8DD;
-                    background-color: #08FDD8;
-                    padding: 10px;
-    
-                    // button {
-                    //     width: 100%;
-                    //     margin: 5px 0;
-                    //     height: 30px;
-                    //     border: 0;
-                    //     background-color: #0e1222;
-                    //     border-radius: 10px;
-                    //     color: #B0C8DD;
-                    //     cursor: pointer;
-
-                    //     &:hover {
-                    //         color: #08FDD8;
-                    //         background-color: black;
-                    //     }
-                    // }                    
+                    background-color: $dmTextGreen;
+                    padding: 10px;                
                 }
             }            
         }
@@ -139,12 +111,16 @@ main .wrapper .aboutInfo {
                 display: inline-block;
                 font-weight: bold;
                 margin: 0 0 0 20px;
-                color: $text-pink;
+                color: $lmPink;
             }
 
             .aboutParagraph {
                 p {
                     margin: 10px;
+
+                    &:nth-child(even) {
+                        color: white;
+                    }
                 }               
 
                 &::before {
@@ -152,7 +128,7 @@ main .wrapper .aboutInfo {
                 }
                 &::after {
                     @include htmlStyle("</p>");
-                }
+                }                
             }
         }
     }    

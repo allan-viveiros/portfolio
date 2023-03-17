@@ -779,6 +779,9 @@ main .wrapper .aboutInfo .flexContainer .bio .textSecondary {
 main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph p {
   margin: 10px;
 }
+main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph p:nth-child(even) {
+  color: white;
+}
 main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::before {
   content: "<p>";
   font-family: "Mr Dafoe", cursive;
@@ -1599,11 +1602,17 @@ body.light main .wrapper .aboutInfo .lgHeading .textSecondary {
 body.light main .wrapper .aboutInfo .lgHeading::before, body.light main .wrapper .aboutInfo .lgHeading::after {
   color: rgba(0, 0, 0, 0.13);
 }
+body.light main .wrapper .aboutInfo .flexContainer .personalCard {
+  background-color: #083D77;
+}
 body.light main .wrapper .aboutInfo .flexContainer .bio .textSecondary {
   color: #7760fa;
 }
 body.light main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::before, body.light main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::after {
   color: rgba(0, 0, 0, 0.13);
+}
+body.light main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph p:nth-child(even) {
+  color: #023770;
 }
 body.light main .wrapper .myWorks::before, body.light main .wrapper .myWorks::after {
   color: rgba(0, 0, 0, 0.13);

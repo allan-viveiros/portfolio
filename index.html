@@ -20,7 +20,7 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="menuBtn">
+        <div class="menuBtn" aria-label="Menu">
             <div class="btnLine"></div>
             <div class="btnLine"></div>
             <div class="btnLine"></div>
@@ -30,9 +30,9 @@
             <div class="logo">
                 <div class="switch">
                     <input type="checkbox" class="switchCheck" id="switchCheck" checked >
-                    <label class="switchLabel" for="switchCheck">
-                        <i class="fas fa-moon" aria-label="Dark mode"></i>
-                        <i class="fas fa-sun"  aria-label="Light mode"></i>
+                    <label class="switchLabel" for="switchCheck" aria-label="Toggles light & dark">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
                         <div class="switchButton"></div>
                     </label>
                 </div>
@@ -85,7 +85,7 @@
                 <div class="styleHTML">
                     <h2 class="smHeading"> 
                         Web Developer 
-                        <p class="homeSkills"> HTML / JavaScript / SASS / React-js / Firebase </p>
+                        <p class="homeSkills"> HTML | JavaScript | SASS | React-js | Firebase | GitHub | Responsive Design</p>
                     </h2> 
                 </div>
             </section> 
@@ -97,8 +97,6 @@
                 <h2 class="lgHeading"> 
                     About <span class="textSecondary"> Me </span> 
                 </h2>
-        
-                <!-- <h4 class="smHeading"> Let me tell you a few things about me.  </h4> -->
 
                 <div class="flexContainer">                
                     <div class="personalCard">
@@ -126,15 +124,16 @@
                         <h3 class="textSecondary"> Let me tell you a few things about me. </h3>
         
                         <div class="aboutParagraph">
-                            <p>Hi, my name is Allan Romero de Souza Viveiros. I graduated in information systems and post-graduated in database development. I've been working in the IT sector for about 10 years in different areas such as Oracle developer and analyst, and business system analyst.</p>
+                            <p>Hello, I'm Allan Romero de Souza Viveiros, an IT professional with a passion for web development. I hold a degree in Information Systems and have spent the past decade working in various roles, including Oracle developer and System Analyst.</p>
                             
-                            <p>At present, I live in London Ontario, and I'm trying to expand my knowledge in web development considering that it is not only a current platform but also it is on continuous expansion for the future.</p>
+                            <p>Currently based in Ontario, Canada, I am enrolled in the Juno College Bootcamp to enhance my web development skills. I am dedicated to staying up-to-date on the latest trends and technologies in this constantly evolving field.</p>
                             
-                            <p>Regarding the current search I made about the programming languages for web development around the world, I became so attracted by the JavaScript language that it gave to me the motivation to study, and then I achieved tools like React-js and Node-js.</p>
+                            <p>When I'm not working or studying, I enjoy a range of hobbies. I love watching movies, reading comics, and playing video games, which allow me to unwind and escape into different worlds. These hobbies keep me entertained and mentally stimulated, which is essential for maintaining a healthy work-life balance.</p>
                             
-                            <p>After a journey of long hours reading and coding I can say that I feel comfortable building projects using technologies such as HTML5, CSS3, Sass, Javascript, React-js, Node-js, Hooks. It is possible to check some of my projects here.</p>
-                        </div>
-                        
+                            <p>In addition to my indoor hobbies, I also love to get outside and stay active. Hiking and biking are two of my favorite outdoor activities, allowing me to explore nature and challenge myself physically. These activities help me stay in shape and maintain a healthy lifestyle, which is crucial for my productivity and focus.</p>
+
+                            <p>Thank you for taking the time to learn a bit about me, and I invite you to browse through my portfolio to see some of my recent web development projects. As a dedicated and passionate IT professional, I am always striving to learn and improve, and I am excited to see where my journey in web development will take me next.</p>
+                        </div>                        
                     </div>    
                 </div>                
             </div>
@@ -149,26 +148,52 @@
         
                 <h3 class="smHeading">Check out some of my projects.</h3>
                 
-                <div class="mainProjects">   
-
-                    <!-- Project BikerLand -->
+                <div class="mainProjects">  
+                    
+                    <!-- Project Tips for Trips -->
                     <div class="projectContainer">
                         <div class="projectFlex">                            
                             <div class="imgContainer">
-                                <img src="./images/project-delicious-big.png" alt="Project Delicious">
+                                <img src="./images/tipsForTrips.png" alt="Project Tips for Trips image demo">
                             </div>
                             <div class="projectDescription">
-                                <h2> Project Delicious </h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum vel hic, sunt eos maxime cupiditate. Eveniet accusantium itaque, amet quis sint ducimus molestiae eos, expedita similique nemo eligendi corrupti blanditiis?</p>
+                                <h2> Tips for Trips </h2>
+                                <p>This project was built in pair programming, the design and the code was made from scratch by My partner and me based on a MVP approved by Juno College. We used Firebase to persist the data coming from user comments</p>
 
-                                <p class="skills">Html | SASS | JavaScript </p>
+                                <p class="skills">HTML | SASS | JavaScript | Firebase | Full Responsive</p>
 
                                 <div class="projectButtons">                           
-                                    <a href="#">
+                                    <a href="https://github.com/allan-viveiros/project-2" target="_blank">
                                         <i class="fab fa-github"></i>
                                         GitHub
                                     </a>
-                                    <a href="#">
+                                    <a href="https://tips-for-trips.netlify.app/" target="_blank">
+                                        <i class="fas fa-eye"></i>
+                                        Live link
+                                    </a>
+                                </div>
+                            </div>                              
+                        </div>                        
+                    </div>
+
+                    <!-- Project Delicious -->
+                    <div class="projectContainer">
+                        <div class="projectFlex">                            
+                            <div class="imgContainer">
+                                <img src="./images/delicious.png" alt="Project Delicious image demo">
+                            </div>
+                            <div class="projectDescription">
+                                <h2> Project Delicious </h2>
+                                <p>A restaurant web page made from scratch based on a previous design offered by Juno College. The technologies used to build this page were HTML, SASS and Vanilla JavaScript</p>
+
+                                <p class="skills">HTML | SASS | JavaScript | Full Responsive </p>
+
+                                <div class="projectButtons">                           
+                                    <a href="https://github.com/allan-viveiros/project-delicious" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        GitHub
+                                    </a>
+                                    <a href="https://project1-delicious.netlify.app/" target="_blank">
                                         <i class="fas fa-eye"></i>
                                         Live link
                                     </a>
@@ -177,51 +202,24 @@
                         </div>                        
                     </div>   
                     
-                    <!-- Project Delicious -->
-                    <div class="projectContainer">
-                        <div class="projectFlex">                            
-                            <div class="imgContainer">
-                                <img src="./images/project-delicious-big.png" alt="Project Delicious">
-                            </div>
-                            <div class="projectDescription">
-                                <h2> Project Delicious </h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum vel hic, sunt eos maxime cupiditate. Eveniet accusantium itaque, amet quis sint ducimus molestiae eos, expedita similique nemo eligendi corrupti blanditiis?</p>
-
-                                <p class="skills">Html | SASS | JavaScript </p>
-
-                                <div class="projectButtons">                           
-                                    <a href="#">
-                                        <i class="fab fa-github"></i>
-                                        GitHub
-                                    </a>
-                                    <a href="#">
-                                        <i class="fas fa-eye"></i>
-                                        Live link
-                                    </a>
-                                </div>
-                            </div>                              
-                        </div>                        
-                    </div> 
-
-
-                     <!-- Project Delicious -->
+                     <!-- Project Bikerland -->
                      <div class="projectContainer">
                         <div class="projectFlex">                            
                             <div class="imgContainer">
-                                <img src="./images/project-delicious-big.png" alt="Project Delicious">
+                                <img src="./images/bikerland.png" alt="Project bikerland image demo">
                             </div>
                             <div class="projectDescription">
-                                <h2> Project Delicious </h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum vel hic, sunt eos maxime cupiditate. Eveniet accusantium itaque, amet quis sint ducimus molestiae eos, expedita similique nemo eligendi corrupti blanditiis?</p>
+                                <h2> Project Bikerland </h2>
+                                <p>This was my first project on Bootcamp, the design was given to me by Juno College, and I used just HTML and CSS to build</p>
 
-                                <p class="skills">Html | SASS | JavaScript </p>
+                                <p class="skills">HTML | CSS | Full Responsive</p>
 
                                 <div class="projectButtons">                           
-                                    <a href="#">
+                                    <a href="https://github.com/allan-viveiros/juno-bikerland" target="_blank">
                                         <i class="fab fa-github"></i>
                                         GitHub
                                     </a>
-                                    <a href="#">
+                                    <a href="https://bikerland-project.netlify.app/" target="_blank">
                                         <i class="fas fa-eye"></i>
                                         Live link
                                     </a>
@@ -229,10 +227,7 @@
                             </div>                              
                         </div>                        
                     </div> 
-                  
-
                 </div>
-
             </section>
         </div>
 
@@ -297,7 +292,6 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </section>
         </div>
@@ -312,6 +306,6 @@
     </footer>
     <script src="./js/scripts.js"></script>
     <!-- Vanilla tilt animation (https://micku7zu.github.io/vanilla-tilt.js/) -->
-    <script type="text/javascript" src="./js/vanilla-tilt.min.js"></script>
+    <!-- <script type="text/javascript" src="./js/vanilla-tilt.min.js"></script> -->
 </body>
 </html>

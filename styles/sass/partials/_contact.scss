@@ -24,7 +24,7 @@ main .wrapper #contact {
         }
 
         span {
-            color: #08FDD8;
+            color: $dmTextGreen;
         }
     }    
 
@@ -34,16 +34,11 @@ main .wrapper #contact {
         align-items: center;
         height: 70vh;
 
-        // border: 1px solid red;
-
         .contactForm {
             width: 70%;
             height: 50vh;
             padding: 5px 20px;
-            background-color: #0e1222;
-            // background-color: #14213D;
-
-            // border: 1px solid blue;
+            background-color: $dmDarkBlue;
             border-radius: 10px;
             box-shadow: 5px 10px 10px black;
 
@@ -62,11 +57,6 @@ main .wrapper #contact {
                 display: flex;
                 flex-direction: column;
                 height: 100%;
-                // align-items: center;
-                // justify-items: center;
-                // align-content: center;
-                // justify-content: center;
-                // border: 5px solid green;
 
                 P {
                     margin: 0;
@@ -83,28 +73,28 @@ main .wrapper #contact {
                     padding-left: 10px;
                     background-color: transparent;
                     border: none;
-                    border-bottom: 2px solid #08FDD8;
+                    border-bottom: 2px solid $dmTextGreen;
                     color: #fff;
                 }
 
                 textarea {
                     height: 200px;
                     resize: none;
-                    border: 2px solid #08FDD8;
+                    border: 2px solid $dmTextGreen;
                     border-radius: 10px;
                     padding: 10px;
                 }
 
                 button {
-                    color: #B0C8DD;
-                    border: 1px solid #B0C8DD;
+                    color: $dmTextBlue;
+                    border: 1px solid $dmTextBlue;
                     border-radius: 10px;
                     padding: 5px;
-                    background-color: #0e1222;
+                    background-color: $dmDarkBlue;
 
                     &:hover {
-                        border-color: #08FDD8;
-                        color: #08FDD8;
+                        border-color: $dmTextGreen;
+                        color: $dmTextGreen;
                         background-color: black;
 
                         i {                            
@@ -123,8 +113,6 @@ main .wrapper #contact {
             position: relative;
             right: 60px;
             top: 30px;
-
-            // border: 1px solid yellow;
             border-radius: 10px;
             box-shadow: -10px 10px 10px black;
 
@@ -138,15 +126,13 @@ main .wrapper #contact {
 
                 li {
                     width: 100%;
-                    // margin: 10px 0;
-                    // padding: 0;
                     a {
                         font-family: "Golos Text", sans-serif;
-                        color: #0e1222;                         
+                        color: $dmDarkBlue;                         
                         padding: 5px 0;
                         
                         &:hover {
-                            color:#08FDD8;
+                            color:$dmTextGreen;
 
                             i {
                                 color: white;

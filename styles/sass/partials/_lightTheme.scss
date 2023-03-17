@@ -1,10 +1,10 @@
+@use "./mixins" as * ;
 
 body.light {
     background-color: #EBEBD3;
     header {
         .sideBar {
-            // background-color: #791E94; 
-            background-color: #083D77;
+            background-color: $lmDarkBlue;
 
             .logo .switchText {
                 color: white;
@@ -17,34 +17,30 @@ body.light {
 
         #home {
             p .textHTML::before, p .textBody::before {
-                color: rgba(0, 0, 0, 0.13);
+                color: $lmHTML;
             } 
     
             .homeContent {            
                 .text {
                     &::before, &::after {
-                        color: rgba(0, 0, 0, 0.13);
+                        color: $lmHTML;
                     }
     
                     .lgHeading {
                         p {
-                            color: #7760fa;
-                            //color: #2F9C95;
+                            color: $lmPurple;
 
                             span {
-                                // color: #6290C8;
-                                color: #2876f8;
+                                color: $lmBlue;
                             }
                         }
         
                         .letter {
-                            // color: #6290C8;
-                            color: #2876f8;
+                            color: $lmBlue;
                         }
         
-                        .letter.textSecondary {
-                            // color: #FF331F;
-                            color: #ff5f5f;
+                        .letter.textSecondary { 
+                            color: $lmPink;
                         }
                     }
                 }
@@ -52,7 +48,7 @@ body.light {
     
                 .styleHTML {
                     &::before , &::after {
-                        color: rgba(0, 0, 0, 0.13);
+                        color: $lmHTML;
                     }
                     .smHeading {
                         color: #2F9C95;
@@ -67,31 +63,41 @@ body.light {
 
         .wrapper .aboutInfo {
             &::before, &::after {
-                color: rgba(0, 0, 0, 0.13);
+                color: $lmHTML;
             }
 
             .lgHeading {
-                color: #2876f8;
+                color: $lmBlue;
 
                 .textSecondary {
-                    color: #ff5f5f;
+                    color: $lmPink;
                 }
 
                 &::before, &::after {
-                    color: rgba(0, 0, 0, 0.13);
+                    color: $lmHTML;
                 }
             }
 
             .flexContainer {
+                .personalCard {
+                    background-color: $lmDarkBlue;
+                }
+
                 .bio {
                     .textSecondary {
-                        color: #7760fa;
+                        color: $lmPurple;
                     }
 
                     .aboutParagraph {
                         &::before, &::after {
-                            color: rgba(0, 0, 0, 0.13);
+                            color: $lmHTML;
                         }
+
+                        p {
+                            &:nth-child(even) {
+                                color: #023770;
+                            }
+                        }                        
                     }
                 } 
             }
@@ -99,23 +105,23 @@ body.light {
 
         .wrapper .myWorks {
             &::before, &::after {
-                color: rgba(0, 0, 0, 0.13);
+                color: $lmHTML;
             }
 
             .lgHeading {
-                color: #2876f8;
+                color: $lmBlue;
 
                 &::before, &::after {
-                    color: rgba(0, 0, 0, 0.13);
+                    color: $lmHTML;
                 }
 
                 .textSecondary {
-                    color: #ff5f5f;
+                    color: $lmPink;
                 }
             }
 
             .smHeading {
-                color: #7760fa;
+                color: $lmPurple;
             }
 
             .mainProjects .projectContainer {
@@ -123,18 +129,18 @@ body.light {
 
                 &:nth-child(even) {
                     &::before {
-                        background-color: #083D77;
+                        background-color: $lmDarkBlue;
                     }
 
                     &:hover {
-                        color: #B0C8DD;
+                        color: $dmTextBlue;
                     }
                 }
 
                 .projectFlex {
                     .projectDescription {
                         h2 {
-                            color: #2876f8;
+                            color: $lmBlue;
                         }
 
                         .skills {
@@ -146,7 +152,7 @@ body.light {
                                 background-color: black;
 
                                 &:hover {
-                                    color: #2876f8;
+                                    color: $lmBlue;
                                 }
                             }
                         }
@@ -157,18 +163,18 @@ body.light {
 
         .wrapper #contact {
             &::before, &::after {
-                color: rgba(0, 0, 0, 0.13);
+                color: $lmHTML;
             }
 
             h2 {
                 &::before, &::after {
-                    color: rgba(0, 0, 0, 0.13);
+                    color: $lmHTML;
                 }
             }
 
             .contactContainer .contactForm {
                 &::before, &::after {
-                    color: rgba(0, 0, 0, 0.13);
+                    color: $lmHTML;
                 }
             }
         }
@@ -176,19 +182,19 @@ body.light {
 
     .wrapper #contact {
         h2 {
-            color: #2876f8;
+            color: $lmBlue;
 
             span {
-                color: #ff5f5f;
+                color: $lmPink;
             }
         }
 
         .contactContainer .contactForm {
-            background-color: #083D77;
+            background-color: $lmDarkBlue;
 
             .flexForm {
                 button {
-                    background-color: #083D77;
+                    background-color: $lmDarkBlue;
                 }
             }
         }
@@ -196,15 +202,15 @@ body.light {
 
     footer {
         .textBody::before {
-            color: rgba(0, 0, 0, 0.13);
+            color: $lmHTML;
         } 
 
         p .textHTML::before {
-            color: rgba(0, 0, 0, 0.13);
+            color: $lmHTML;
         }
 
         .wrapper p {
-            color: rgba(0, 0, 0, 0.13);
+            color: $lmHTML;
         }
     }
 }
