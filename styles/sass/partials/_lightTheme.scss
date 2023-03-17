@@ -1,0 +1,210 @@
+
+body.light {
+    background-color: #EBEBD3;
+    header {
+        .sideBar {
+            // background-color: #791E94; 
+            background-color: #083D77;
+
+            .logo .switchText {
+                color: white;
+            }
+        }
+    }
+
+    main {
+        color: black;
+
+        #home {
+            p .textHTML::before, p .textBody::before {
+                color: rgba(0, 0, 0, 0.13);
+            } 
+    
+            .homeContent {            
+                .text {
+                    &::before, &::after {
+                        color: rgba(0, 0, 0, 0.13);
+                    }
+    
+                    .lgHeading {
+                        p {
+                            color: #7760fa;
+                            //color: #2F9C95;
+
+                            span {
+                                // color: #6290C8;
+                                color: #2876f8;
+                            }
+                        }
+        
+                        .letter {
+                            // color: #6290C8;
+                            color: #2876f8;
+                        }
+        
+                        .letter.textSecondary {
+                            // color: #FF331F;
+                            color: #ff5f5f;
+                        }
+                    }
+                }
+                
+    
+                .styleHTML {
+                    &::before , &::after {
+                        color: rgba(0, 0, 0, 0.13);
+                    }
+                    .smHeading {
+                        color: #2F9C95;
+                    }
+    
+                    .homeSkills {
+                        color: #868586;
+                    }
+                }
+            }
+        }
+
+        .wrapper .aboutInfo {
+            &::before, &::after {
+                color: rgba(0, 0, 0, 0.13);
+            }
+
+            .lgHeading {
+                color: #2876f8;
+
+                .textSecondary {
+                    color: #ff5f5f;
+                }
+
+                &::before, &::after {
+                    color: rgba(0, 0, 0, 0.13);
+                }
+            }
+
+            .flexContainer {
+                .bio {
+                    .textSecondary {
+                        color: #7760fa;
+                    }
+
+                    .aboutParagraph {
+                        &::before, &::after {
+                            color: rgba(0, 0, 0, 0.13);
+                        }
+                    }
+                } 
+            }
+        }
+
+        .wrapper .myWorks {
+            &::before, &::after {
+                color: rgba(0, 0, 0, 0.13);
+            }
+
+            .lgHeading {
+                color: #2876f8;
+
+                &::before, &::after {
+                    color: rgba(0, 0, 0, 0.13);
+                }
+
+                .textSecondary {
+                    color: #ff5f5f;
+                }
+            }
+
+            .smHeading {
+                color: #7760fa;
+            }
+
+            .mainProjects .projectContainer {
+                background-color: #EBEBD3;
+
+                &:nth-child(even) {
+                    &::before {
+                        background-color: #083D77;
+                    }
+
+                    &:hover {
+                        color: #B0C8DD;
+                    }
+                }
+
+                .projectFlex {
+                    .projectDescription {
+                        h2 {
+                            color: #2876f8;
+                        }
+
+                        .skills {
+                            color: #868586;
+                        }
+
+                        .projectButtons {
+                            a {
+                                background-color: black;
+
+                                &:hover {
+                                    color: #2876f8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .wrapper #contact {
+            &::before, &::after {
+                color: rgba(0, 0, 0, 0.13);
+            }
+
+            h2 {
+                &::before, &::after {
+                    color: rgba(0, 0, 0, 0.13);
+                }
+            }
+
+            .contactContainer .contactForm {
+                &::before, &::after {
+                    color: rgba(0, 0, 0, 0.13);
+                }
+            }
+        }
+    }
+
+    .wrapper #contact {
+        h2 {
+            color: #2876f8;
+
+            span {
+                color: #ff5f5f;
+            }
+        }
+
+        .contactContainer .contactForm {
+            background-color: #083D77;
+
+            .flexForm {
+                button {
+                    background-color: #083D77;
+                }
+            }
+        }
+    }
+
+    footer {
+        .textBody::before {
+            color: rgba(0, 0, 0, 0.13);
+        } 
+
+        p .textHTML::before {
+            color: rgba(0, 0, 0, 0.13);
+        }
+
+        .wrapper p {
+            color: rgba(0, 0, 0, 0.13);
+        }
+    }
+}

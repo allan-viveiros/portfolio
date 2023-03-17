@@ -12,12 +12,16 @@ footer {
         padding: 0;        
     }
 
-    .textHTML::before {        
-        @include htmlStyle("</html>");
-        margin: 0 0 0 180px;
-        padding: 0;        
-    }
+    p{
+        margin-bottom: 0;
 
+        .textHTML::before {        
+            @include htmlStyle("</html>");
+            margin: 0 0 0 180px;
+            padding: 0;        
+        }
+    }
+    
     .wrapper p {
         // background-color: rgba(0, 0, 0, 0.13);
         font-family: 'Golos Text', sans-serif;

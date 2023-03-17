@@ -237,9 +237,6 @@ html {
 html body {
   background-color: #11162B;
 }
-html body.light {
-  background-color: #EBEBD3;
-}
 
 img {
   width: 100%;
@@ -480,12 +477,6 @@ header .sideBar .icons a:hover {
   -webkit-animation: text-flicker 3s linear infinite;
           animation: text-flicker 3s linear infinite;
 }
-header .sideBar.light {
-  background-color: #083D77;
-}
-header .sideBar.light .logo .switchText {
-  color: white;
-}
 
 main .home p {
   margin: 5px;
@@ -495,6 +486,7 @@ main .home p .textHTML::before {
   content: "<html>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
+  font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
   margin: 0;
   padding: 0;
@@ -505,6 +497,7 @@ main .home p .textBody::before {
   content: "<body>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
+  font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
   margin: 0;
   padding: 0 0 0 10px;
@@ -522,12 +515,14 @@ main .home .homeContent .text::before {
   content: "<h1>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
+  font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .home .homeContent .text::after {
   content: "</h1>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
+  font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .home .homeContent .text .lgHeading {
@@ -559,18 +554,19 @@ main .home .homeContent .styleHTML::before {
   content: "<p>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
+  font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .home .homeContent .styleHTML::after {
   content: "</p>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
+  font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .home .homeContent .styleHTML .smHeading {
   margin: 0;
   font-weight: 500;
-  background: rgba(255, 255, 255, 0.01);
   font-size: 2rem;
   color: #72D8FE;
   font-family: "Golos Text";
@@ -581,32 +577,629 @@ main .home .homeContent .styleHTML .smHeading .homeSkills {
   margin: 0;
 }
 
-main.light {
+/*!
+ * animate.css -https://daneden.github.io/animate.css/
+ * Version - 3.7.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ */
+/* rubberBand animation */
+@-webkit-keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+main .wrapper .aboutInfo {
+  margin: 0;
+  padding: 5px 20px;
+  font-family: "Golos Text", sans-serif;
+  min-height: 100vh;
+}
+main .wrapper .aboutInfo::before {
+  content: "<section>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .wrapper .aboutInfo::after {
+  content: "</section>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .wrapper .aboutInfo .lgHeading {
+  margin: 0;
+  padding-top: 5px;
+  font-weight: normal;
+  font-size: 3.5rem;
+}
+main .wrapper .aboutInfo .lgHeading .textSecondary {
+  color: #08FDD8;
+}
+main .wrapper .aboutInfo .lgHeading::before {
+  content: "<h2>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .wrapper .aboutInfo .lgHeading::after {
+  content: "</h2>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .wrapper .aboutInfo .smHeading {
+  margin: 0;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.01);
+  color: #72D8FE;
+}
+main .wrapper .aboutInfo .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard {
+  min-width: 300px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: #1A203B;
+  margin: 20px 10px;
+  padding-top: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 10px 30px black;
+          box-shadow: 2px 10px 30px black;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .bioImageContainer {
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border: 3px solid #72D8FE;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo {
+  font-size: 0.7rem;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .introduction {
+  color: #999;
+  border-top: 1px dashed rgba(255, 255, 255, 0.199);
+  padding: 10px 0 0 5px;
+  margin: 10px 10px 5px 10px;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details {
+  color: #e42dad;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0 10px 10px 10px;
+  background-color: #0e1222;
+  border-radius: 10px;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .const {
+  color: #08FDD8;
+  font-weight: normal;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .key {
+  color: #72D8FE;
+  margin-left: 10px;
+  font-weight: normal;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .value {
+  color: rgb(221, 221, 221);
+  font-weight: normal;
+}
+main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .bottomBar {
+  margin: 0;
+  background-color: #08FDD8;
+  padding: 10px;
+}
+main .wrapper .aboutInfo .flexContainer .bio .textSecondary {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 0 0 20px;
+  color: #ff5f5f;
+}
+main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph p {
+  margin: 10px;
+}
+main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::before {
+  content: "<p>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::after {
+  content: "</p>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+
+main .wrapper .myWorks {
+  margin: 20px 0;
+  padding: 5px 20px;
+  font-family: "Golos Text", sans-serif;
+}
+main .wrapper .myWorks::before {
+  content: "<section>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .wrapper .myWorks::after {
+  content: "</section>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .wrapper .myWorks .lgHeading .textSecondary {
+  color: #08FDD8;
+}
+main .wrapper .myWorks .lgHeading::before {
+  content: "<h2>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .wrapper .myWorks .lgHeading::after {
+  content: "</h2";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .wrapper .myWorks .smHeading {
+  color: #72D8FE;
+}
+main .wrapper .myWorks .mainProjects .projectContainer {
+  margin: 20px 0 40px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #11162B;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  -webkit-transition: 0.6s ease-in;
+  transition: 0.6s ease-in;
+}
+main .wrapper .myWorks .mainProjects .projectContainer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -15px;
+  background: rgb(255, 255, 255);
+  height: 100%;
+  width: 30px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:hover {
   color: black;
 }
-main.light #home p .textHTML::before, main.light #home p .textBody::before {
-  color: rgba(0, 0, 0, 0.13);
+main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription h2 {
+  color: #0093c9;
+  font-weight: bold;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
-main.light #home .homeContent .text::before, main.light #home .homeContent .text::after {
-  color: rgba(0, 0, 0, 0.13);
+main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription .skills {
+  color: #686868;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
-main.light #home .homeContent .text .lgHeading p {
-  color: #2F9C95;
+main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription .projectButtons a {
+  visibility: visible;
 }
-main.light #home .homeContent .text .lgHeading .letter {
-  color: #6290C8;
+main .wrapper .myWorks .mainProjects .projectContainer:hover::before {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transform: scale(60);
+          transform: scale(60);
 }
-main.light #home .homeContent .text .lgHeading .letter.textSecondary {
-  color: #FF331F;
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -15px;
+  background-color: rgb(0, 105, 146);
+  height: 100%;
+  width: 30px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
-main.light #home .homeContent .styleHTML::before, main.light #home .homeContent .styleHTML::after {
-  color: rgba(0, 0, 0, 0.13);
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription h2 {
+  color: #08FDD8;
 }
-main.light #home .homeContent .styleHTML .smHeading {
-  color: #9593D9;
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .skills {
+  color: white;
 }
-main.light #home .homeContent .styleHTML .homeSkills {
-  color: #868586;
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .projectButtons a:hover {
+  color: #08FDD8;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover::before {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transform: scale(60);
+          transform: scale(60);
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even) .projectFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even) .projectFlex .imgContainer {
+  -webkit-box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.596);
+          box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.596);
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even) .projectFlex .projectDescription .projectButtons a {
+  float: left;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .imgContainer {
+  border-radius: 10px;
+  overflow: hidden;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
+          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription h2 {
+  color: #08FDD8;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription p {
+  padding: 0 10px;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .skills {
+  font-size: 0.8rem;
+  color: White;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a {
+  background-color: #1A203B;
+  margin: 0 10px;
+  padding: 2px 30px;
+  border-radius: 10px;
+  color: whitesmoke;
+  float: right;
+  visibility: hidden;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a:hover {
+  color: #72D8FE;
+  background-color: black;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+}
+
+main .wrapper #contact {
+  min-height: 90vh;
+  margin: 20px 0;
+  padding: 5px 20px;
+  font-family: "Golos Text", sans-serif;
+}
+main .wrapper #contact::before {
+  content: "<section>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .wrapper #contact::after {
+  content: "</section>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+}
+main .wrapper #contact h2::before {
+  content: "<h2>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+  margin-right: 5px;
+}
+main .wrapper #contact h2::after {
+  content: "</h2";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+  margin-left: 5px;
+}
+main .wrapper #contact h2 span {
+  color: #08FDD8;
+}
+main .wrapper #contact .contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+}
+main .wrapper #contact .contactContainer .contactForm {
+  width: 70%;
+  height: 50vh;
+  padding: 5px 20px;
+  background-color: #0e1222;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 10px 10px black;
+          box-shadow: 5px 10px 10px black;
+}
+main .wrapper #contact .contactContainer .contactForm::before {
+  content: "<form>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+  position: relative;
+  top: -60px;
+}
+main .wrapper #contact .contactContainer .contactForm::after {
+  content: "</form>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+  position: relative;
+  top: 10px;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm P {
+  margin: 0;
+  position: relative;
+  bottom: 25px;
+  color: rgba(255, 255, 255, 0.2549019608);
+  font-size: 0.8rem;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm input, main .wrapper #contact .contactContainer .contactForm .flexForm button, main .wrapper #contact .contactContainer .contactForm .flexForm textarea {
+  width: 80%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #08FDD8;
+  color: #fff;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm textarea {
+  height: 200px;
+  resize: none;
+  border: 2px solid #08FDD8;
+  border-radius: 10px;
+  padding: 10px;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm button {
+  color: #B0C8DD;
+  border: 1px solid #B0C8DD;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #0e1222;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm button:hover {
+  border-color: #08FDD8;
+  color: #08FDD8;
+  background-color: black;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm button:hover i {
+  color: #08FDD8;
+  text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
+  -webkit-animation: text-flicker 3s linear infinite;
+          animation: text-flicker 3s linear infinite;
+}
+main .wrapper #contact .contactContainer .personalLinks {
+  background-color: #FCA311;
+  width: 30%;
+  height: 55%;
+  padding: 20px;
+  position: relative;
+  right: 60px;
+  top: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: -10px 10px 10px black;
+          box-shadow: -10px 10px 10px black;
+}
+main .wrapper #contact .contactContainer .personalLinks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #000;
+  width: 100%;
+}
+main .wrapper #contact .contactContainer .personalLinks ul li {
+  width: 100%;
+}
+main .wrapper #contact .contactContainer .personalLinks ul li a {
+  font-family: "Golos Text", sans-serif;
+  color: #0e1222;
+  padding: 5px 0;
+}
+main .wrapper #contact .contactContainer .personalLinks ul li a:hover {
+  color: #08FDD8;
+}
+main .wrapper #contact .contactContainer .personalLinks ul li a:hover i {
+  color: white;
+}
+
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 10px;
+}
+footer .textBody::before {
+  content: "</body>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+  margin: 0 0 0 200px;
+  padding: 0;
+}
+footer p {
+  margin-bottom: 0;
+}
+footer p .textHTML::before {
+  content: "</html>";
+  font-family: "Mr Dafoe", cursive;
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(176, 200, 221, 0.2196078431);
+  margin: 0 0 0 180px;
+  padding: 0;
+}
+footer .wrapper p {
+  font-family: "Golos Text", sans-serif;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  color: rgba(176, 200, 221, 0.5960784314);
 }
 
 /* Landscape phone to portrait tablet */
@@ -692,6 +1285,7 @@ main.light #home .homeContent .styleHTML .homeSkills {
     content: "</body>";
     font-family: "Mr Dafoe", cursive;
     font-size: 1rem;
+    font-weight: normal;
     color: rgba(176, 200, 221, 0.2196078431);
     margin: 0 0 0 20px;
     padding: 0;
@@ -700,6 +1294,7 @@ main.light #home .homeContent .styleHTML .homeSkills {
     content: "</html>";
     font-family: "Mr Dafoe", cursive;
     font-size: 1rem;
+    font-weight: normal;
     color: rgba(176, 200, 221, 0.2196078431);
     margin: 0;
     padding: 0;
@@ -730,8 +1325,17 @@ main.light #home .homeContent .styleHTML .homeSkills {
   }
   main .wrapper #contact #contactContainer .contactForm {
     width: 90%;
-    height: 50vh;
-    padding: 10px;
+    min-height: 55vh;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
+  main .wrapper #contact #contactContainer .contactForm::before {
+    position: relative;
+    top: -40px;
+  }
+  main .wrapper #contact #contactContainer .contactForm::after {
+    position: relative;
+    top: 250px;
   }
   main .wrapper #contact #contactContainer .contactForm .flexForm {
     width: 100%;
@@ -745,7 +1349,7 @@ main.light #home .homeContent .styleHTML .homeSkills {
     height: 40%;
     position: relative;
     right: 0;
-    top: -50px;
+    top: -40px;
   }
 }
 /* Landscape phones and down */
@@ -919,517 +1523,151 @@ main.light #home .homeContent .styleHTML .homeSkills {
     -webkit-transition-delay: 0ms;
             transition-delay: 0ms;
   }
+  main .wrapper #contact {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 0.8rem;
+  }
+  main .wrapper #contact #contactContainer {
+    margin-bottom: 30px;
+  }
+  main .wrapper #contact #contactContainer .contactForm {
+    padding-bottom: 50px;
+  }
+  main .wrapper #contact #contactContainer .contactForm::after {
+    position: relative;
+    top: 250px;
+  }
+  main .wrapper #contact #contactContainer .personalLinks {
+    position: relative;
+    top: -30px;
+    margin-bottom: 20px;
+  }
   footer .wrapper p {
     font-size: 0.7rem;
   }
 }
-/*!
- * animate.css -https://daneden.github.io/animate.css/
- * Version - 3.7.2
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- */
-/* rubberBand animation */
-@-webkit-keyframes rubberBand {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
+body.light {
+  background-color: #EBEBD3;
 }
-@keyframes rubberBand {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
+body.light header .sideBar {
+  background-color: #083D77;
 }
-.rubberBand {
-  -webkit-animation-name: rubberBand;
-  animation-name: rubberBand;
+body.light header .sideBar .logo .switchText {
+  color: white;
 }
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-main .wrapper .aboutInfo {
-  margin: 0;
-  padding: 0 20px;
-  font-family: "Golos Text", sans-serif;
-}
-main .wrapper .aboutInfo .lgHeading {
-  margin: 0;
-  padding-top: 5px;
-  font-weight: normal;
-  font-size: 3.5rem;
-}
-main .wrapper .aboutInfo .lgHeading .textSecondary {
-  color: #08FDD8;
-}
-main .wrapper .aboutInfo .smHeading {
-  margin: 0;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.01);
-  font-size: 2rem;
-  color: #72D8FE;
-}
-main .wrapper .aboutInfo .flexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-main .wrapper .aboutInfo .flexContainer .personalCard {
-  min-width: 300px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  border-radius: 10px;
-  border: 1px solid black;
-  background-color: #1A203B;
-  margin: 10px;
-  padding-top: 10px;
-  overflow: hidden;
-  -webkit-box-shadow: 2px 10px 30px black;
-          box-shadow: 2px 10px 30px black;
-}
-main .wrapper .aboutInfo .flexContainer .personalCard .bioImageContainer {
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto;
-  width: 200px;
-  height: 200px;
-  border: 3px solid #08FDD8;
-}
-main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo {
-  font-size: 0.7rem;
-}
-main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .introduction {
-  color: #999;
-  padding: 10px 0 0 5px;
-  margin: 10px 0 5px 0;
-}
-main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details {
-  color: #e42dad;
-  font-weight: bold;
-  padding: 0 10px 10px 10px;
-}
-main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .const {
-  color: #08FDD8;
-  font-weight: normal;
-}
-main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .key {
-  color: #72D8FE;
-  margin-left: 10px;
-  font-weight: normal;
-}
-main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .value {
-  color: rgb(221, 221, 221);
-  font-weight: normal;
-}
-main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0;
-  background-color: #B0C8DD;
-  padding: 10px;
-}
-main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .buttons button {
-  width: 100%;
-  margin: 5px 0;
-  height: 30px;
-  border: 0;
-  background-color: #0e1222;
-  border-radius: 10px;
-  color: #B0C8DD;
-  cursor: pointer;
-}
-main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .buttons button:hover {
-  color: #08FDD8;
-  background-color: black;
-}
-main .wrapper .aboutInfo .flexContainer .bio .textSecondary {
-  display: inline-block;
-  font-weight: bold;
-  margin-left: 20px;
-  color: #ff5f5f;
-}
-main .wrapper .aboutInfo .flexContainer .bio p {
-  margin: 10px;
-}
-
-main .wrapper .myWorks {
-  margin: 20px 0;
-  padding: 20px;
-  font-family: "Golos Text", sans-serif;
-}
-main .wrapper .myWorks .lgHeading .textSecondary {
-  color: #08FDD8;
-}
-main .wrapper .myWorks .smHeading {
-  color: #72D8FE;
-}
-main .wrapper .myWorks .mainProjects .projectContainer {
-  margin: 20px 0 40px 0;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #11162B;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-  -webkit-transition: 0.6s ease-in;
-  transition: 0.6s ease-in;
-}
-main .wrapper .myWorks .mainProjects .projectContainer::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: -15px;
-  background: rgb(255, 255, 255);
-  height: 100%;
-  width: 25px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transition: -webkit-transform 0.25s ease-out;
-  transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
-}
-main .wrapper .myWorks .mainProjects .projectContainer:hover {
+body.light main {
   color: black;
 }
-main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription h2 {
-  color: #0093c9;
-  font-weight: bold;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
+body.light main #home p .textHTML::before, body.light main #home p .textBody::before {
+  color: rgba(0, 0, 0, 0.13);
 }
-main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription .skills {
-  color: #686868;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
+body.light main #home .homeContent .text::before, body.light main #home .homeContent .text::after {
+  color: rgba(0, 0, 0, 0.13);
 }
-main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription .projectButtons a {
-  visibility: visible;
+body.light main #home .homeContent .text .lgHeading p {
+  color: #7760fa;
 }
-main .wrapper .myWorks .mainProjects .projectContainer:hover::before {
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-  -webkit-transform: scale(60);
-          transform: scale(60);
+body.light main #home .homeContent .text .lgHeading p span {
+  color: #2876f8;
 }
-main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even)::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: -15px;
-  background: rgb(0, 105, 146);
-  height: 100%;
-  width: 25px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transition: -webkit-transform 0.25s ease-out;
-  transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+body.light main #home .homeContent .text .lgHeading .letter {
+  color: #2876f8;
 }
-main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription h2 {
-  color: #08FDD8;
+body.light main #home .homeContent .text .lgHeading .letter.textSecondary {
+  color: #ff5f5f;
 }
-main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .skills {
-  color: white;
+body.light main #home .homeContent .styleHTML::before, body.light main #home .homeContent .styleHTML::after {
+  color: rgba(0, 0, 0, 0.13);
 }
-main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .projectButtons a:hover {
-  color: #08FDD8;
+body.light main #home .homeContent .styleHTML .smHeading {
+  color: #2F9C95;
 }
-main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover::before {
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-  -webkit-transform: scale(60);
-          transform: scale(60);
+body.light main #home .homeContent .styleHTML .homeSkills {
+  color: #868586;
 }
-main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even) .projectFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+body.light main .wrapper .aboutInfo::before, body.light main .wrapper .aboutInfo::after {
+  color: rgba(0, 0, 0, 0.13);
 }
-main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even) .projectFlex .imgContainer {
-  -webkit-box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.596);
-          box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.596);
+body.light main .wrapper .aboutInfo .lgHeading {
+  color: #2876f8;
 }
-main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even) .projectFlex .projectDescription .projectButtons a {
-  float: left;
+body.light main .wrapper .aboutInfo .lgHeading .textSecondary {
+  color: #ff5f5f;
 }
-main .wrapper .myWorks .mainProjects .projectContainer .projectFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body.light main .wrapper .aboutInfo .lgHeading::before, body.light main .wrapper .aboutInfo .lgHeading::after {
+  color: rgba(0, 0, 0, 0.13);
 }
-main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .imgContainer {
-  border-radius: 10px;
-  overflow: hidden;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
-          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
+body.light main .wrapper .aboutInfo .flexContainer .bio .textSecondary {
+  color: #7760fa;
 }
-main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription {
-  margin-left: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+body.light main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::before, body.light main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::after {
+  color: rgba(0, 0, 0, 0.13);
 }
-main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription h2 {
-  color: #08FDD8;
+body.light main .wrapper .myWorks::before, body.light main .wrapper .myWorks::after {
+  color: rgba(0, 0, 0, 0.13);
 }
-main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription p {
-  padding: 0 10px;
+body.light main .wrapper .myWorks .lgHeading {
+  color: #2876f8;
 }
-main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .skills {
-  font-size: 0.8rem;
-  color: White;
+body.light main .wrapper .myWorks .lgHeading::before, body.light main .wrapper .myWorks .lgHeading::after {
+  color: rgba(0, 0, 0, 0.13);
 }
-main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a {
-  background-color: #1A203B;
-  margin: 0 10px;
-  padding: 2px 30px;
-  border-radius: 10px;
-  color: whitesmoke;
-  float: right;
-  visibility: hidden;
-  -webkit-transition-delay: 0ms;
-          transition-delay: 0ms;
+body.light main .wrapper .myWorks .lgHeading .textSecondary {
+  color: #ff5f5f;
 }
-main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a:hover {
-  color: #72D8FE;
-  background-color: black;
-  -webkit-transition-delay: 0ms;
-          transition-delay: 0ms;
+body.light main .wrapper .myWorks .smHeading {
+  color: #7760fa;
 }
-
-main .wrapper #contact {
-  height: 100vh;
-  margin: 20px 0;
-  padding: 20px;
-  font-family: "Golos Text", sans-serif;
+body.light main .wrapper .myWorks .mainProjects .projectContainer {
+  background-color: #EBEBD3;
 }
-main .wrapper #contact h2 span {
-  color: #08FDD8;
+body.light main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even)::before {
+  background-color: #083D77;
 }
-main .wrapper #contact .contactContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 70vh;
-}
-main .wrapper #contact .contactContainer .contactForm {
-  width: 70%;
-  height: 50vh;
-  padding: 20px;
-  background-color: #0e1222;
-  border-radius: 10px;
-  -webkit-box-shadow: 5px 10px 10px black;
-          box-shadow: 5px 10px 10px black;
-}
-main .wrapper #contact .contactContainer .contactForm .flexForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-main .wrapper #contact .contactContainer .contactForm .flexForm input, main .wrapper #contact .contactContainer .contactForm .flexForm button, main .wrapper #contact .contactContainer .contactForm .flexForm textarea {
-  width: 80%;
-  height: 40px;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #08FDD8;
-  color: #fff;
-}
-main .wrapper #contact .contactContainer .contactForm .flexForm textarea {
-  height: 200px;
-  resize: none;
-  border: 2px solid #08FDD8;
-  border-radius: 10px;
-  padding: 10px;
-}
-main .wrapper #contact .contactContainer .contactForm .flexForm button {
+body.light main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover {
   color: #B0C8DD;
-  border: 1px solid #B0C8DD;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: #0e1222;
 }
-main .wrapper #contact .contactContainer .contactForm .flexForm button:hover {
-  border-color: #08FDD8;
-  color: #08FDD8;
+body.light main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription h2 {
+  color: #2876f8;
+}
+body.light main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .skills {
+  color: #868586;
+}
+body.light main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a {
   background-color: black;
 }
-main .wrapper #contact .contactContainer .contactForm .flexForm button:hover i {
-  color: #08FDD8;
-  text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
-  -webkit-animation: text-flicker 3s linear infinite;
-          animation: text-flicker 3s linear infinite;
+body.light main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a:hover {
+  color: #2876f8;
 }
-main .wrapper #contact .contactContainer .personalLinks {
-  background-color: #FCA311;
-  width: 30%;
-  height: 55%;
-  padding: 20px;
-  position: relative;
-  right: 55px;
-  top: 35px;
-  border-radius: 10px;
-  -webkit-box-shadow: -10px 10px 10px black;
-          box-shadow: -10px 10px 10px black;
+body.light main .wrapper #contact::before, body.light main .wrapper #contact::after {
+  color: rgba(0, 0, 0, 0.13);
 }
-main .wrapper #contact .contactContainer .personalLinks ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: #000;
-  width: 100%;
+body.light main .wrapper #contact h2::before, body.light main .wrapper #contact h2::after {
+  color: rgba(0, 0, 0, 0.13);
 }
-main .wrapper #contact .contactContainer .personalLinks ul li {
-  width: 100%;
+body.light main .wrapper #contact .contactContainer .contactForm::before, body.light main .wrapper #contact .contactContainer .contactForm::after {
+  color: rgba(0, 0, 0, 0.13);
 }
-main .wrapper #contact .contactContainer .personalLinks ul li a {
-  font-family: "Golos Text", sans-serif;
-  color: #0e1222;
-  padding: 5px 0;
+body.light .wrapper #contact h2 {
+  color: #2876f8;
 }
-main .wrapper #contact .contactContainer .personalLinks ul li a:hover {
-  color: #08FDD8;
+body.light .wrapper #contact h2 span {
+  color: #ff5f5f;
 }
-main .wrapper #contact .contactContainer .personalLinks ul li a:hover i {
-  color: white;
+body.light .wrapper #contact .contactContainer .contactForm {
+  background-color: #083D77;
 }
-
-footer {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  line-height: 10px;
+body.light .wrapper #contact .contactContainer .contactForm .flexForm button {
+  background-color: #083D77;
 }
-footer .textBody::before {
-  content: "</body>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
-  color: rgba(176, 200, 221, 0.2196078431);
-  margin: 0 0 0 200px;
-  padding: 0;
+body.light footer .textBody::before {
+  color: rgba(0, 0, 0, 0.13);
 }
-footer .textHTML::before {
-  content: "</html>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
-  color: rgba(176, 200, 221, 0.2196078431);
-  margin: 0 0 0 180px;
-  padding: 0;
+body.light footer p .textHTML::before {
+  color: rgba(0, 0, 0, 0.13);
 }
-footer .wrapper p {
-  font-family: "Golos Text", sans-serif;
-  margin: 0;
-  padding: 10px;
-  text-align: center;
-  color: rgba(176, 200, 221, 0.5960784314);
+body.light footer .wrapper p {
+  color: rgba(0, 0, 0, 0.13);
 }

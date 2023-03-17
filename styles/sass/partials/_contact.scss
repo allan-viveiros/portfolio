@@ -1,14 +1,32 @@
 @use "./mixins" as *;
 
 main .wrapper #contact {
-    height: 100vh;
+    min-height: 90vh;
     margin: 20px 0;
-    padding: 20px;
+    padding: 5px 20px;
     font-family: 'Golos Text', sans-serif;
 
-    h2 span {
-        color: #08FDD8;
+    &::before {
+        @include htmlStyle("<section>");            
     }
+    &::after {
+        @include htmlStyle("</section>");
+    }
+
+    h2 {
+        &::before {
+            @include htmlStyle("<h2>");  
+            margin-right: 5px;          
+        }
+        &::after {
+            @include htmlStyle("</h2");
+            margin-left: 5px;
+        }
+
+        span {
+            color: #08FDD8;
+        }
+    }    
 
     .contactContainer {
         display: flex;
@@ -21,7 +39,7 @@ main .wrapper #contact {
         .contactForm {
             width: 70%;
             height: 50vh;
-            padding: 20px;
+            padding: 5px 20px;
             background-color: #0e1222;
             // background-color: #14213D;
 
@@ -29,6 +47,17 @@ main .wrapper #contact {
             border-radius: 10px;
             box-shadow: 5px 10px 10px black;
 
+            &::before {
+                @include htmlStyle("<form>");  
+                position: relative;
+                top: -60px;          
+            }
+            &::after {
+                @include htmlStyle("</form>");
+                position: relative;
+                top: 10px;
+            }
+           
             .flexForm {
                 display: flex;
                 flex-direction: column;
@@ -36,8 +65,16 @@ main .wrapper #contact {
                 // align-items: center;
                 // justify-items: center;
                 // align-content: center;
-                justify-content: center;
+                // justify-content: center;
                 // border: 5px solid green;
+
+                P {
+                    margin: 0;
+                    position: relative;
+                    bottom: 25px;
+                    color: #ffffff41;
+                    font-size: 0.8rem;
+                }
 
                 input, button, textarea {
                     width: 80%;
@@ -74,8 +111,7 @@ main .wrapper #contact {
                             @include hoverButton();
                         }
                     }
-                }
-                
+                }                
             }
         }
 
@@ -85,8 +121,8 @@ main .wrapper #contact {
             height: 55%;
             padding: 20px;
             position: relative;
-            right: 55px;
-            top: 35px;
+            right: 60px;
+            top: 30px;
 
             // border: 1px solid yellow;
             border-radius: 10px;

@@ -92,16 +92,16 @@
         </div>
 
         <!-- ABOUT ME -->
-        <div class="wrapper">        
+        <div class="wrapper">  
             <section class="aboutInfo" id="about">       
                 <h2 class="lgHeading"> 
                     About <span class="textSecondary"> Me </span> 
                 </h2>
         
-                <h3 class="smHeading"> Let me tell you a few things about me.  </h3>
+                <!-- <h4 class="smHeading"> Let me tell you a few things about me.  </h4> -->
 
                 <div class="flexContainer">                
-                    <div class="personalCard" data-tilt>
+                    <div class="personalCard">
                         <div class="bioImageContainer">
                             <img src="./images/Me-2_small.png" alt="Allan Viveiros" class="bioImage">
                         </div> 
@@ -118,32 +118,36 @@
                                 }            
                             </div>
                                 
-                            <div class="buttons"></div>                        
+                            <div class="bottomBar"></div>                        
                         </div>
                     </div>
 
                     <div class="bio">
-                        <h3 class="textSecondary"> Bio </h3>
+                        <h3 class="textSecondary"> Let me tell you a few things about me. </h3>
         
-                        <p>Hi, my name is Allan Romero de Souza Viveiros. I graduated in information systems and post-graduated in database development. I've been working in the IT sector for about 10 years in different areas such as Oracle developer and analyst, and business system analyst.</p>
-
-                        <p>At present, I live in London Ontario, and I'm trying to expand my knowledge in web development considering that it is not only a current platform but also it is on continuous expansion for the future.</p>
+                        <div class="aboutParagraph">
+                            <p>Hi, my name is Allan Romero de Souza Viveiros. I graduated in information systems and post-graduated in database development. I've been working in the IT sector for about 10 years in different areas such as Oracle developer and analyst, and business system analyst.</p>
+                            
+                            <p>At present, I live in London Ontario, and I'm trying to expand my knowledge in web development considering that it is not only a current platform but also it is on continuous expansion for the future.</p>
+                            
+                            <p>Regarding the current search I made about the programming languages for web development around the world, I became so attracted by the JavaScript language that it gave to me the motivation to study, and then I achieved tools like React-js and Node-js.</p>
+                            
+                            <p>After a journey of long hours reading and coding I can say that I feel comfortable building projects using technologies such as HTML5, CSS3, Sass, Javascript, React-js, Node-js, Hooks. It is possible to check some of my projects here.</p>
+                        </div>
                         
-                        <p>Regarding the current search I made about the programming languages for web development around the world, I became so attracted by the JavaScript language that it gave to me the motivation to study, and then I achieved tools like React-js and Node-js.</p>
-                        
-                        <p>After a journey of long hours reading and coding I can say that I feel comfortable building projects using technologies such as HTML5, CSS3, Sass, Javascript, React-js, Node-js, Hooks. It is possible to check some of my projects here.</p>
                     </div>    
                 </div>                
             </div>
         </div>
 
+        <!-- My Works -->
         <div class="wrapper">
             <section class="myWorks" id="works">
                 <h1 class="lgHeading"> 
                     My <span class="textSecondary"> Works </span> 
                 </h1>
         
-                <h2 class="smHeading"> Check out some of my projects.  </h2>
+                <h3 class="smHeading">Check out some of my projects.</h3>
                 
                 <div class="mainProjects">   
 
@@ -233,21 +237,22 @@
         </div>
 
         <div class="wrapper">
-            <section id="contact">
+            <section class="contact" id="contact">
                 <h2>How to reach <span>Me</span></h2>                
                 <div class="contactContainer" id="contactContainer">
-                    <div class="contactForm">
+                    <div class="contactForm">                        
                         <form action="https://formspree.io/f/xrgvlvgv"
                         method="POST" class="flexForm" id="formContact">
+
                             <p>* All fields are required</p>
                             <label for="formName" class="sr-only">Name</label>
-                            <input type="text" id="formName" name="name" placeholder="Name" required>
+                            <input type="text" id="formName" name="name" placeholder="Name" >
 
                             <label for="formEmail" class="sr-only">Email</label>
-                            <input type="email" id="formEmail" name="email" placeholder="Email" required>
+                            <input type="email" id="formEmail" name="email" placeholder="Email">
 
                             <label for="formMessage" class="sr-only">Leave your message</label>
-                            <textarea id="formMessage" name="message" placeholder="Leave your message" required></textarea>
+                            <textarea id="formMessage" name="message" placeholder="Leave your message"></textarea>
 
                             <button type="submit" id="submitForm">
                                 Send message
@@ -264,10 +269,10 @@
                             </li>
                             <li>
                                 <i class="fa fa-map-marker" aria-label="location"></i>
-                                London, ON, Canada
+                                 Ontario, Canada
                             </li>
                             <li>
-                                <a href="#" target="_blank">
+                                <a href="https://calendly.com/viveirosallan/15min" target="_blank">
                                     <i class="fa fa-calendar" aria-label="calendar" ></i>
                                     Book a 15min talk
                                 </a>

@@ -18,7 +18,8 @@ $text-blue: #2876f8;
     content: $text;
     font-family: 'Mr Dafoe', cursive;
     font-size: 1rem;
-    color: #b0c8dd38;
+    font-weight: normal;
+    color: #b0c8dd38;  
 }
 
 @keyframes text-flicker {

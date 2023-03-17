@@ -191,18 +191,13 @@ const switchTheme = () => {
     if(switchCheck.checked) {
         // console.log("is checked");
         switchText[0].textContent = "Good Night!"
-        body.classList.remove("light");  
-        sideBar.classList.remove("light");       
+        body.classList.remove("light");       
         menuBtn.classList.remove("light");
-        main.classList.remove("light"); 
     }
     else {
-        // console.log("not checked");
         switchText[0].textContent = "Morning!";
-        body.classList.add("light");        
-        sideBar.classList.add("light"); 
+        body.classList.add("light");
         menuBtn.classList.add("light");
-        main.classList.add("light");               
     }
 }
 
@@ -228,10 +223,17 @@ formContact.addEventListener("submit", (e) => {
         formContact.submit();
         formContact.reset();
     }
-    else {
-        alert("Please, fill all fields!");
+    else if(name.value.trim() === "") {
+        alert("Please, tell me your name!");
+        name.focus();
     }    
+    else if(email.value.trim() === "") {
+        alert("Please, tell me your email!");
+        email.focus();
+    }
+    else if(message.value.trim() === "") {
+        alert("Please, leave your message!");
+        message.focus();
+    }
 });
-
-
 
