@@ -5,6 +5,7 @@ main .wrapper #contact {
     margin: 20px 0;
     padding: 5px 20px;
     font-family: 'Golos Text', sans-serif;
+    position: relative;
 
     &::before {
         @include htmlStyle("<section>");            
@@ -13,14 +14,20 @@ main .wrapper #contact {
         @include htmlStyle("</section>");
     }
 
-    h2 {
+    h1 {
+        font-weight: normal;
+        
         &::before {
-            @include htmlStyle("<h2>");  
-            margin-right: 5px;          
+            @include htmlStyle("<h1>");  
+            position: absolute;
+            top: 35px;
+            left: 30px;              
         }
         &::after {
-            @include htmlStyle("</h2");
-            margin-left: 5px;
+            @include htmlStyle("</h1>"); 
+            position: relative;
+            top: 20px;
+            right: 50px;
         }
 
         span {

@@ -16,18 +16,17 @@ main .wrapper .aboutInfo {
     .lgHeading {
         margin: 0;
         padding-top: 5px;
-        font-weight: normal;
-        font-size: 3.5rem;  
+        font-weight: normal;  
 
         .textSecondary {
             color: $dmTextGreen;
         }
 
         &::before {
-            @include htmlStyle("<h2>");
+            @include htmlStyle("<h1>");
         }
         &::after {
-            @include htmlStyle("</h2>");
+            @include htmlStyle("</h1>");
         }
     }
 

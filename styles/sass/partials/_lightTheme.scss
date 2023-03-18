@@ -166,7 +166,7 @@ body.light {
                 color: $lmHTML;
             }
 
-            h2 {
+            h1 {
                 &::before, &::after {
                     color: $lmHTML;
                 }
@@ -181,7 +181,7 @@ body.light {
     }
 
     .wrapper #contact {
-        h2 {
+        h1 {
             color: $lmBlue;
 
             span {

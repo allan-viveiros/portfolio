@@ -679,20 +679,19 @@ main .wrapper .aboutInfo .lgHeading {
   margin: 0;
   padding-top: 5px;
   font-weight: normal;
-  font-size: 3.5rem;
 }
 main .wrapper .aboutInfo .lgHeading .textSecondary {
   color: #08FDD8;
 }
 main .wrapper .aboutInfo .lgHeading::before {
-  content: "<h2>";
+  content: "<h1>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .wrapper .aboutInfo .lgHeading::after {
-  content: "</h2>";
+  content: "</h1>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
   font-weight: normal;
@@ -816,18 +815,21 @@ main .wrapper .myWorks::after {
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
+main .wrapper .myWorks .lgHeading {
+  font-weight: normal;
+}
 main .wrapper .myWorks .lgHeading .textSecondary {
   color: #08FDD8;
 }
 main .wrapper .myWorks .lgHeading::before {
-  content: "<h2>";
+  content: "<h1>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .wrapper .myWorks .lgHeading::after {
-  content: "</h2";
+  content: "</h1";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
   font-weight: normal;
@@ -1004,6 +1006,7 @@ main .wrapper #contact {
   margin: 20px 0;
   padding: 5px 20px;
   font-family: "Golos Text", sans-serif;
+  position: relative;
 }
 main .wrapper #contact::before {
   content: "<section>";
@@ -1019,23 +1022,30 @@ main .wrapper #contact::after {
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
-main .wrapper #contact h2::before {
-  content: "<h2>";
+main .wrapper #contact h1 {
+  font-weight: normal;
+}
+main .wrapper #contact h1::before {
+  content: "<h1>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
-  margin-right: 5px;
+  position: absolute;
+  top: 35px;
+  left: 30px;
 }
-main .wrapper #contact h2::after {
-  content: "</h2";
+main .wrapper #contact h1::after {
+  content: "</h1>";
   font-family: "Mr Dafoe", cursive;
   font-size: 1rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
-  margin-left: 5px;
+  position: relative;
+  top: 20px;
+  right: 50px;
 }
-main .wrapper #contact h2 span {
+main .wrapper #contact h1 span {
   color: #08FDD8;
 }
 main .wrapper #contact .contactContainer {
@@ -1355,6 +1365,22 @@ footer .wrapper p {
     top: -40px;
   }
 }
+/* Landscape phone to portrait tablet */
+@media (max-width: 750px) {
+  main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a {
+    margin: 5px;
+    text-align: center;
+  }
+}
 /* Landscape phones and down */
 @media (max-width: 480px) {
   main .home .homeContent {
@@ -1456,9 +1482,7 @@ footer .wrapper p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    height: 100%;
   }
   main .wrapper #works .mainProjects .projectContainer .projectFlex .imgContainer {
     border-radius: 10px;
@@ -1471,6 +1495,7 @@ footer .wrapper p {
   }
   main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription {
     margin: 0;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1481,9 +1506,12 @@ footer .wrapper p {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    overflow: hidden;
+    padding-bottom: 20px;
+    font-size: 0.8rem;
   }
   main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription h2 {
-    color: #08FDD8;
+    margin: 20px 0;
   }
   main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription p {
     padding: 0 10px;
@@ -1491,8 +1519,7 @@ footer .wrapper p {
   }
   main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription .skills {
     font-size: 0.8rem;
-    color: White;
-    margin: 20px 0;
+    margin: 0;
   }
   main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons {
     width: 100%;
@@ -1504,9 +1531,7 @@ footer .wrapper p {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0;
-    margin: 20px 0 10px 0;
-    position: relative;
-    bottom: 20px;
+    margin: 0;
   }
   main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a {
     background-color: #1A203B;
@@ -1653,16 +1678,16 @@ body.light main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .
 body.light main .wrapper #contact::before, body.light main .wrapper #contact::after {
   color: rgba(0, 0, 0, 0.13);
 }
-body.light main .wrapper #contact h2::before, body.light main .wrapper #contact h2::after {
+body.light main .wrapper #contact h1::before, body.light main .wrapper #contact h1::after {
   color: rgba(0, 0, 0, 0.13);
 }
 body.light main .wrapper #contact .contactContainer .contactForm::before, body.light main .wrapper #contact .contactContainer .contactForm::after {
   color: rgba(0, 0, 0, 0.13);
 }
-body.light .wrapper #contact h2 {
+body.light .wrapper #contact h1 {
   color: #2876f8;
 }
-body.light .wrapper #contact h2 span {
+body.light .wrapper #contact h1 span {
   color: #ff5f5f;
 }
 body.light .wrapper #contact .contactContainer .contactForm {
