@@ -109,19 +109,19 @@ main .wrapper #contact {
                         border: 4px solid transparent;
                         border-top-color: $dmTextGreen;
                         border-radius: 50%;
-                        animation: button-load-spinner 1s linear infinite;
+                        animation: buttonLoad 1s linear infinite;
                         visibility: hidden;
                     }
 
-                    @keyframes button-load-spinner {
-                        from {
-                            transform: rotate(0turn);
-                        }
+                    // @keyframes button-load-spinner {
+                    //     from {
+                    //         transform: rotate(0turn);
+                    //     }
 
-                        to {
-                            transform: rotate(1turn);
-                        }
-                    }
+                    //     to {
+                    //         transform: rotate(1turn);
+                    //     }
+                    // }
 
                     &:hover {
                         border-color: $dmTextGreen;

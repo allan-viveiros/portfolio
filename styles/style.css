@@ -265,7 +265,7 @@ figure {
   margin-left: 180px;
 }
 
-@-webkit-keyframes text-flicker {
+@-webkit-keyframes textFlicker {
   0% {
     opacity: 0.1;
   }
@@ -304,7 +304,7 @@ figure {
   }
 }
 
-@keyframes text-flicker {
+@keyframes textFlicker {
   0% {
     opacity: 0.1;
   }
@@ -340,6 +340,26 @@ figure {
   }
   100% {
     opacity: 0.9;
+  }
+}
+@-webkit-keyframes buttonLoad {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+@keyframes buttonLoad {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
   }
 }
 header {
@@ -431,8 +451,8 @@ header .sideBar .logo .active span {
   color: #08FDD8;
   color: #08FDD8;
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
-  -webkit-animation: text-flicker 3s linear infinite;
-          animation: text-flicker 3s linear infinite;
+  -webkit-animation: textFlicker 3s linear infinite;
+          animation: textFlicker 3s linear infinite;
 }
 header .sideBar ul {
   width: 100%;
@@ -457,8 +477,8 @@ header .sideBar ul li a {
 header .sideBar ul li a:hover {
   color: #08FDD8;
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
-  -webkit-animation: text-flicker 3s linear infinite;
-          animation: text-flicker 3s linear infinite;
+  -webkit-animation: textFlicker 3s linear infinite;
+          animation: textFlicker 3s linear infinite;
 }
 header .sideBar ul li a .arrow {
   text-align: right;
@@ -468,8 +488,8 @@ header .sideBar ul li .active span {
   color: #08FDD8;
   color: #08FDD8;
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
-  -webkit-animation: text-flicker 3s linear infinite;
-          animation: text-flicker 3s linear infinite;
+  -webkit-animation: textFlicker 3s linear infinite;
+          animation: textFlicker 3s linear infinite;
 }
 header .sideBar .icons {
   text-align: center;
@@ -481,8 +501,8 @@ header .sideBar .icons a {
 header .sideBar .icons a:hover {
   color: #08FDD8;
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
-  -webkit-animation: text-flicker 3s linear infinite;
-          animation: text-flicker 3s linear infinite;
+  -webkit-animation: textFlicker 3s linear infinite;
+          animation: textFlicker 3s linear infinite;
 }
 
 main .home p {
@@ -1144,29 +1164,9 @@ main .wrapper #contact .contactContainer .contactForm .flexForm button .load::af
   border: 4px solid transparent;
   border-top-color: #08FDD8;
   border-radius: 50%;
-  -webkit-animation: button-load-spinner 1s linear infinite;
-          animation: button-load-spinner 1s linear infinite;
+  -webkit-animation: buttonLoad 1s linear infinite;
+          animation: buttonLoad 1s linear infinite;
   visibility: hidden;
-}
-@-webkit-keyframes button-load-spinner {
-  from {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
-  }
-  to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
-}
-@keyframes button-load-spinner {
-  from {
-    -webkit-transform: rotate(0turn);
-            transform: rotate(0turn);
-  }
-  to {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
-  }
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm button:hover {
   border-color: #08FDD8;
@@ -1176,8 +1176,8 @@ main .wrapper #contact .contactContainer .contactForm .flexForm button:hover {
 main .wrapper #contact .contactContainer .contactForm .flexForm button:hover i {
   color: #08FDD8;
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
-  -webkit-animation: text-flicker 3s linear infinite;
-          animation: text-flicker 3s linear infinite;
+  -webkit-animation: textFlicker 3s linear infinite;
+          animation: textFlicker 3s linear infinite;
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm button.sending .load::after {
   visibility: visible;

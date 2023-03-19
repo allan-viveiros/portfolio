@@ -20,7 +20,7 @@ $lmHTML: rgba(0, 0, 0, 0.13);
     color: #b0c8dd38;  
 }
 
-@keyframes text-flicker {
+@keyframes textFlicker {
     0% {
       opacity: 0.1;
     }
@@ -64,9 +64,19 @@ $lmHTML: rgba(0, 0, 0, 0.13);
       opacity: 0.9;
     }
   }
-
+  
 @mixin hoverButton {
     color: $dmTextGreen;
     text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
-    animation: text-flicker 3s linear infinite;
+    animation: textFlicker 3s linear infinite;
+}
+
+@keyframes buttonLoad {
+  from {
+      transform: rotate(0turn);
+  }
+
+  to {
+      transform: rotate(1turn);
+  }
 }
