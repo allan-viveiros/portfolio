@@ -71,8 +71,11 @@ formContact.addEventListener("submit", (e) => {
     const inputName = document.getElementById("formName");
     const inputEmail = document.getElementById("formEmail");
     const inputMessage = document.getElementById("formMessage");
+    const submitButton = document.getElementById("submitForm");
 
-    if(inputName.value.trim() && inputEmail.value.trim() && inputMessage.value.trim()){
+    if(inputName.value.trim() && inputEmail.value.trim() && inputMessage.value.trim()){ 
+        submitButton.classList.add("sending");
+
         const url = new URL("https://emailvalidation.abstractapi.com/v1/");
         url.search = new URLSearchParams ({
             api_key: "763a7706a10048b785b5c501ea3b088e",
@@ -90,31 +93,29 @@ formContact.addEventListener("submit", (e) => {
         })
         .then((responseJson) => {
             if(responseJson.deliverability === "DELIVERABLE") {
-                // formContact.submit();
-                // formContact.reset();           
-                
-                console.log("submited");
+                formContact.submit();
+                submitButton.classList.remove("sending"); 
+                formContact.reset();
             }
             else {
                 alert("Please, type an valid email!");
-                inputEmail.focus();                
+                inputEmail.focus(); 
+                submitButton.classList.remove("sending");                
             }
         })
         .catch((e) => {
-            if(e.code >= 400) {
+            if(e.code >= 400) {                
                 //the is some problem occur.
                 //could be too many request or month limit reached
                 //Submit the form to the formspree verification
-                // formContact.submit();
-                // formContact.reset();
-                console.log(e);
-
+                formContact.submit();
+                submitButton.classList.remove("sending");
+                formContact.reset();
             }
             else {
-                alert("This email was not verified!");
+                alert("This email was not sent!");
             }            
-        })
-        
+        });        
     }
     else if(inputName.value.trim() === "") {
         alert("Please, tell me your name!");

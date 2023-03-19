@@ -1095,6 +1095,7 @@ main .wrapper #contact .contactContainer .contactForm .flexForm {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
+  position: relative;
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm P {
   margin: 0;
@@ -1127,6 +1128,39 @@ main .wrapper #contact .contactContainer .contactForm .flexForm button {
   padding: 5px;
   background-color: #0e1222;
 }
+main .wrapper #contact .contactContainer .contactForm .flexForm button .load::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #08FDD8;
+  border-radius: 50%;
+  -webkit-animation: button-load-spinner 1s linear infinite;
+          animation: button-load-spinner 1s linear infinite;
+  visibility: hidden;
+}
+@-webkit-keyframes button-load-spinner {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+@keyframes button-load-spinner {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
 main .wrapper #contact .contactContainer .contactForm .flexForm button:hover {
   border-color: #08FDD8;
   color: #08FDD8;
@@ -1137,6 +1171,12 @@ main .wrapper #contact .contactContainer .contactForm .flexForm button:hover i {
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
   -webkit-animation: text-flicker 3s linear infinite;
           animation: text-flicker 3s linear infinite;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm button.sending .load::after {
+  visibility: visible;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm button.sending i {
+  visibility: hidden;
 }
 main .wrapper #contact .contactContainer .personalLinks {
   background-color: #FCA311;
@@ -1565,7 +1605,7 @@ footer .wrapper p {
   }
   main .wrapper #contact #contactContainer .contactForm::after {
     position: relative;
-    top: 250px;
+    top: 255px;
   }
   main .wrapper #contact #contactContainer .personalLinks {
     position: relative;

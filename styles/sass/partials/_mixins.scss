@@ -66,7 +66,7 @@ $lmHTML: rgba(0, 0, 0, 0.13);
   }
 
 @mixin hoverButton {
-    color: #08FDD8;
+    color: $dmTextGreen;
     text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
     animation: text-flicker 3s linear infinite;
 }

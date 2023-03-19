@@ -64,6 +64,7 @@ main .wrapper #contact {
                 display: flex;
                 flex-direction: column;
                 height: 100%;
+                position: relative;
 
                 P {
                     margin: 0;
@@ -99,6 +100,29 @@ main .wrapper #contact {
                     padding: 5px;
                     background-color: $dmDarkBlue;
 
+                    .load::after {
+                        content: "";
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        margin:auto;
+                        border: 4px solid transparent;
+                        border-top-color: $dmTextGreen;
+                        border-radius: 50%;
+                        animation: button-load-spinner 1s linear infinite;
+                        visibility: hidden;
+                    }
+
+                    @keyframes button-load-spinner {
+                        from {
+                            transform: rotate(0turn);
+                        }
+
+                        to {
+                            transform: rotate(1turn);
+                        }
+                    }
+
                     &:hover {
                         border-color: $dmTextGreen;
                         color: $dmTextGreen;
@@ -108,7 +132,17 @@ main .wrapper #contact {
                             @include hoverButton();
                         }
                     }
-                }                
+                }             
+                
+                button.sending {
+                    .load::after {
+                        visibility: visible;
+                    }
+
+                    i {
+                        visibility: hidden;
+                    }
+                }
             }
         }
 
