@@ -27,15 +27,18 @@ header {
             .switch {
                 .switchCheck {
                     position: absolute;
-                    opacity: 0;
+                    opacity: 0;    
+                    cursor: pointer;                
                     
                     &:checked + .switchLabel {
                         background-color: black;
+                        cursor: pointer;
                         
                         .switchButton {
                             transform: translateX(25px);
                             transition: 0.2s;
                             background-color: rgb(85, 85, 85);
+                            cursor: pointer;
                         }
                     } 
                 }
@@ -49,12 +52,15 @@ header {
                     width: 50px;
                     border-radius: 50px;
                     padding: 2px;
+                    cursor: pointer;
 
                     .fa-moon {
                         color: #f1c40f;
+                        cursor: pointer;
                     }
                     .fa-sun {
                         color: orange;
+                        cursor: pointer;
                     }
 
                     .switchButton {
@@ -64,6 +70,7 @@ header {
                         border-radius: 50%;
                         position: absolute;
                         transition: 0.2s;
+                        cursor: pointer;
                     }
                 }
             }

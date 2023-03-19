@@ -378,9 +378,11 @@ header .sideBar .logo {
 header .sideBar .logo .switch .switchCheck {
   position: absolute;
   opacity: 0;
+  cursor: pointer;
 }
 header .sideBar .logo .switch .switchCheck:checked + .switchLabel {
   background-color: black;
+  cursor: pointer;
 }
 header .sideBar .logo .switch .switchCheck:checked + .switchLabel .switchButton {
   -webkit-transform: translateX(25px);
@@ -388,6 +390,7 @@ header .sideBar .logo .switch .switchCheck:checked + .switchLabel .switchButton 
   -webkit-transition: 0.2s;
   transition: 0.2s;
   background-color: rgb(85, 85, 85);
+  cursor: pointer;
 }
 header .sideBar .logo .switch .switchLabel {
   background-color: rgb(0, 144, 180);
@@ -404,12 +407,15 @@ header .sideBar .logo .switch .switchLabel {
   width: 50px;
   border-radius: 50px;
   padding: 2px;
+  cursor: pointer;
 }
 header .sideBar .logo .switch .switchLabel .fa-moon {
   color: #f1c40f;
+  cursor: pointer;
 }
 header .sideBar .logo .switch .switchLabel .fa-sun {
   color: orange;
+  cursor: pointer;
 }
 header .sideBar .logo .switch .switchLabel .switchButton {
   background-color: white;
@@ -419,6 +425,7 @@ header .sideBar .logo .switch .switchLabel .switchButton {
   position: absolute;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  cursor: pointer;
 }
 header .sideBar .logo .active span {
   color: #08FDD8;
@@ -1439,12 +1446,12 @@ footer .wrapper p {
     font-size: 1rem;
   }
   main .wrapper #works .mainProjects .projectContainer {
-    height: 90vh;
+    height: 90dvh;
   }
   main .wrapper #works .mainProjects .projectContainer::before {
     content: "";
     position: absolute;
-    top: calc(90vh - 20px);
+    top: calc(90dvh - 20px);
     right: 0;
     background: rgb(255, 255, 255);
     height: 25px;
@@ -1476,7 +1483,7 @@ footer .wrapper p {
   main .wrapper #works .mainProjects .projectContainer:nth-child(even)::before {
     content: "";
     position: absolute;
-    top: calc(90vh - 20px);
+    top: calc(90dvh - 20px);
     left: 0;
     height: 25px;
     width: 100%;

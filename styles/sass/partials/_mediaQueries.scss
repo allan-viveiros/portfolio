@@ -207,12 +207,12 @@
         // My work section cards to mobile
         .wrapper #works .mainProjects {
             .projectContainer {
-                height: 90vh;
+                height: 90dvh;
         
                 &::before {
                     content: "";
                     position: absolute; 
-                    top: calc(90vh - 20px);
+                    top: calc(90dvh - 20px);
                     right: 0;
                     background: rgb(255, 255, 255);
                     height: 25px;
@@ -249,7 +249,7 @@
                     &::before {
                         content: "";
                         position: absolute;
-                        top: calc(90vh - 20px);
+                        top: calc(90dvh - 20px);
                         left: 0;                   
                         height: 25px;
                         width: 100%;                        
