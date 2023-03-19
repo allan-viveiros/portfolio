@@ -65,27 +65,68 @@ sideMenu.addEventListener("click", function() {
 
 // Form submission
 const formContact = document.getElementById("formContact");
+
 formContact.addEventListener("submit", (e) => {
     e.preventDefault();
-    const name = document.getElementById("formName");
-    const email = document.getElementById("formEmail");
-    const message = document.getElementById("formMessage");
+    const inputName = document.getElementById("formName");
+    const inputEmail = document.getElementById("formEmail");
+    const inputMessage = document.getElementById("formMessage");
 
-    if(name.value.trim() && email.value.trim() && message.value.trim()){
-        formContact.submit();
-        formContact.reset();
+    if(inputName.value.trim() && inputEmail.value.trim() && inputMessage.value.trim()){
+        const url = new URL("https://emailvalidation.abstractapi.com/v1/");
+        url.search = new URLSearchParams ({
+            api_key: "763a7706a10048b785b5c501ea3b088e",
+            email: inputEmail.value
+        });
+
+        fetch(url)
+        .then((resp) => {
+            if(resp.ok) {
+                return resp.json();
+            }
+            else {
+                throw new Error(resp);
+            }            
+        })
+        .then((responseJson) => {
+            if(responseJson.deliverability === "DELIVERABLE") {
+                // formContact.submit();
+                // formContact.reset();           
+                
+                console.log("submited");
+            }
+            else {
+                alert("Please, type an valid email!");
+                inputEmail.focus();                
+            }
+        })
+        .catch((e) => {
+            if(e.code >= 400) {
+                //the is some problem occur.
+                //could be too many request or month limit reached
+                //Submit the form to the formspree verification
+                // formContact.submit();
+                // formContact.reset();
+                console.log(e);
+
+            }
+            else {
+                alert("This email was not verified!");
+            }            
+        })
+        
     }
-    else if(name.value.trim() === "") {
+    else if(inputName.value.trim() === "") {
         alert("Please, tell me your name!");
-        name.focus();
+        inputName.focus();
     }    
-    else if(email.value.trim() === "") {
+    else if(inputEmail.value.trim() === "") {
         alert("Please, tell me your email!");
-        email.focus();
+        inputEmail.focus();
     }
-    else if(message.value.trim() === "") {
+    else if(inputMessage.value.trim() === "") {
         alert("Please, leave your message!");
-        message.focus();
+        inputMessage.focus();
     }
 });
 

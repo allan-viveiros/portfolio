@@ -1065,8 +1065,8 @@ main .wrapper #contact .contactContainer .contactForm {
   padding: 5px 20px;
   background-color: #0e1222;
   border-radius: 10px;
-  -webkit-box-shadow: 5px 10px 10px black;
-          box-shadow: 5px 10px 10px black;
+  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.774);
+          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.774);
 }
 main .wrapper #contact .contactContainer .contactForm::before {
   content: "<form>";
@@ -1147,8 +1147,8 @@ main .wrapper #contact .contactContainer .personalLinks {
   right: 60px;
   top: 30px;
   border-radius: 10px;
-  -webkit-box-shadow: -10px 10px 10px black;
-          box-shadow: -10px 10px 10px black;
+  -webkit-box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.61);
+          box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.61);
 }
 main .wrapper #contact .contactContainer .personalLinks ul {
   display: -webkit-box;

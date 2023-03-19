@@ -47,7 +47,7 @@ main .wrapper #contact {
             padding: 5px 20px;
             background-color: $dmDarkBlue;
             border-radius: 10px;
-            box-shadow: 5px 10px 10px black;
+            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.774);
 
             &::before {
                 @include htmlStyle("<form>");  
@@ -121,7 +121,7 @@ main .wrapper #contact {
             right: 60px;
             top: 30px;
             border-radius: 10px;
-            box-shadow: -10px 10px 10px black;
+            box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.61);
 
             ul {
                 display: flex;
