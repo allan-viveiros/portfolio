@@ -938,8 +938,11 @@ main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even)::before {
 main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription h2 {
   color: #08FDD8;
 }
-main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .skills {
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription p {
   color: white;
+}
+main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .skills {
+  color: rgba(255, 255, 255, 0.5960784314);
 }
 main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .projectButtons a:hover {
   color: #08FDD8;
