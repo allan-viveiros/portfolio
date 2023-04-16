@@ -882,7 +882,7 @@ main .wrapper .myWorks .mainProjects .projectContainer::before {
   z-index: -1;
   top: 0;
   right: -15px;
-  background: #686868;
+  background-color: #686868;
   height: 100%;
   width: 30px;
   -webkit-transform: scale(1);
@@ -1715,6 +1715,12 @@ body.light main .wrapper .myWorks .smHeading {
 body.light main .wrapper .myWorks .mainProjects .projectContainer {
   background-color: #EBEBD3;
 }
+body.light main .wrapper .myWorks .mainProjects .projectContainer::before {
+  background-color: rgb(249, 252, 255);
+}
+body.light main .wrapper .myWorks .mainProjects .projectContainer:hover {
+  color: black;
+}
 body.light main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even)::before {
   background-color: #083D77;
 }
@@ -1731,7 +1737,7 @@ body.light main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .
   background-color: black;
 }
 body.light main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a:hover {
-  color: #2876f8;
+  color: #72D8FE;
 }
 body.light main .wrapper #contact::before, body.light main .wrapper #contact::after {
   color: rgba(0, 0, 0, 0.13);

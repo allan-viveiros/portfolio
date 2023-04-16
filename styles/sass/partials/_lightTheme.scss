@@ -129,6 +129,14 @@ body.light {
             .mainProjects .projectContainer {
                 background-color: #EBEBD3;
 
+                &::before {
+                    background-color: rgb(249, 252, 255);
+                }
+
+                &:hover {
+                    color: black;
+                }
+
                 &:nth-child(even) {
                     &::before {
                         background-color: $lmDarkBlue;
@@ -154,7 +162,7 @@ body.light {
                                 background-color: black;
 
                                 &:hover {
-                                    color: $lmBlue;
+                                    color: $dmSmallHeading;
                                 }
                             }
                         }
