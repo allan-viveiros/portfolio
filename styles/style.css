@@ -512,7 +512,7 @@ main .home p {
 main .home p .textHTML::before {
   content: "<html>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
   margin: 0;
@@ -523,7 +523,7 @@ main .home p .textHTML::before {
 main .home p .textBody::before {
   content: "<body>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
   margin: 0;
@@ -541,14 +541,14 @@ main .home .homeContent .text {
 main .home .homeContent .text::before {
   content: "<h1>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .home .homeContent .text::after {
   content: "</h1>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
@@ -580,14 +580,14 @@ main .home .homeContent .text .lgHeading .textSecondary {
 main .home .homeContent .styleHTML::before {
   content: "<p>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .home .homeContent .styleHTML::after {
   content: "</p>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
@@ -691,14 +691,14 @@ main .wrapper .aboutInfo {
 main .wrapper .aboutInfo::before {
   content: "<section>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .wrapper .aboutInfo::after {
   content: "</section>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
@@ -713,14 +713,14 @@ main .wrapper .aboutInfo .lgHeading .textSecondary {
 main .wrapper .aboutInfo .lgHeading::before {
   content: "<h1>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .wrapper .aboutInfo .lgHeading::after {
   content: "</h1>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
@@ -811,14 +811,14 @@ main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph p:nth-child(even) {
 main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::before {
   content: "<p>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::after {
   content: "</p>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
@@ -831,14 +831,14 @@ main .wrapper .myWorks {
 main .wrapper .myWorks::before {
   content: "<section>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .wrapper .myWorks::after {
   content: "</section>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
@@ -851,14 +851,14 @@ main .wrapper .myWorks .lgHeading .textSecondary {
 main .wrapper .myWorks .lgHeading::before {
   content: "<h1>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .wrapper .myWorks .lgHeading::after {
   content: "</h1";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
@@ -882,7 +882,7 @@ main .wrapper .myWorks .mainProjects .projectContainer::before {
   z-index: -1;
   top: 0;
   right: -15px;
-  background: rgb(255, 255, 255);
+  background: #686868;
   height: 100%;
   width: 30px;
   -webkit-transform: scale(1);
@@ -895,18 +895,22 @@ main .wrapper .myWorks .mainProjects .projectContainer::before {
   transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
 main .wrapper .myWorks .mainProjects .projectContainer:hover {
-  color: black;
+  color: #fff;
 }
 main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription h2 {
-  color: #0093c9;
+  color: #72D8FE;
   font-weight: bold;
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
 }
 main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription .skills {
-  color: #686868;
+  color: #000;
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
 main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription .projectButtons a {
   visibility: visible;
@@ -984,11 +988,11 @@ main .wrapper .myWorks .mainProjects .projectContainer .projectFlex {
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .imgContainer {
   border-radius: 10px;
   overflow: hidden;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
           box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
+  min-width: 400px;
+  max-width: 400px;
+  height: auto;
 }
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription {
   margin-left: 10px;
@@ -1041,14 +1045,14 @@ main .wrapper #contact {
 main .wrapper #contact::before {
   content: "<section>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
 main .wrapper #contact::after {
   content: "</section>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
@@ -1058,7 +1062,7 @@ main .wrapper #contact h1 {
 main .wrapper #contact h1::before {
   content: "<h1>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
   position: absolute;
@@ -1068,7 +1072,7 @@ main .wrapper #contact h1::before {
 main .wrapper #contact h1::after {
   content: "</h1>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
   position: relative;
@@ -1101,7 +1105,7 @@ main .wrapper #contact .contactContainer .contactForm {
 main .wrapper #contact .contactContainer .contactForm::before {
   content: "<form>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
   position: relative;
@@ -1110,7 +1114,7 @@ main .wrapper #contact .contactContainer .contactForm::before {
 main .wrapper #contact .contactContainer .contactForm::after {
   content: "</form>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
   position: relative;
@@ -1143,6 +1147,10 @@ main .wrapper #contact .contactContainer .contactForm .flexForm input, main .wra
   border: none;
   border-bottom: 2px solid #08FDD8;
   color: #fff;
+}
+main .wrapper #contact .contactContainer .contactForm .flexForm input:focus, main .wrapper #contact .contactContainer .contactForm .flexForm button:focus, main .wrapper #contact .contactContainer .contactForm .flexForm textarea:focus {
+  color: #08FDD8;
+  border: 1px solid #08FDD8;
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm textarea {
   height: 200px;
@@ -1239,7 +1247,7 @@ footer {
 footer .textBody::before {
   content: "</body>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
   margin: 0 0 0 200px;
@@ -1251,7 +1259,7 @@ footer p {
 footer p .textHTML::before {
   content: "</html>";
   font-family: "Mr Dafoe", cursive;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
   margin: 0 0 0 180px;
@@ -1347,7 +1355,7 @@ footer .wrapper p {
   footer p .textBody::before {
     content: "</body>";
     font-family: "Mr Dafoe", cursive;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: normal;
     color: rgba(176, 200, 221, 0.2196078431);
     margin: 0 0 0 20px;
@@ -1356,7 +1364,7 @@ footer .wrapper p {
   footer p .textHTML::before {
     content: "</html>";
     font-family: "Mr Dafoe", cursive;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: normal;
     color: rgba(176, 200, 221, 0.2196078431);
     margin: 0;

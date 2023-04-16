@@ -15,7 +15,7 @@ $lmHTML: rgba(0, 0, 0, 0.13);
 @mixin htmlStyle($text) {
     content: $text;
     font-family: 'Mr Dafoe', cursive;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: normal;
     color: #b0c8dd38;  
 }

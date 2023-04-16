@@ -83,6 +83,11 @@ main .wrapper #contact {
                     border: none;
                     border-bottom: 2px solid $dmTextGreen;
                     color: #fff;
+
+                    &:focus {
+                        color: $dmTextGreen;
+                        border: 1px solid $dmTextGreen;
+                    }
                 }
 
                 textarea {

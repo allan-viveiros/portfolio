@@ -48,7 +48,7 @@ main .wrapper .myWorks {
                 z-index: -1;
                 top: 0;
                 right: -15px;
-                background: rgb(255, 255, 255);
+                background: #686868;
                 height: 100%;
                 width: 30px;
                 transform: scale(1);
@@ -57,18 +57,19 @@ main .wrapper .myWorks {
             }
 
             &:hover {
-                color: black;
+                color: #fff;
 
                 .projectFlex .projectDescription {
                     h2 {
-                        color: #0093c9;
+                        color: $dmSmallHeading;
                         font-weight: bold;
                         transition-delay: 0.6s;  
                     }
 
                     .skills {
-                        color: #686868;
+                        color: #000;
                         transition-delay: 0.6s;
+                        transition: transform 0.25s ease-out;
                     }
 
                     .projectButtons a {
@@ -144,8 +145,10 @@ main .wrapper .myWorks {
                 .imgContainer {
                     border-radius: 10px;
                     overflow: hidden;
-                    height: fit-content;
                     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
+                    min-width: 400px;
+                    max-width: 400px;
+                    height: auto;
                 }
 
                 .projectDescription {
