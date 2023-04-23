@@ -1,5 +1,21 @@
 @use "./mixins" as * ;
 
+/* My works card buttons tweak */
+@media (max-width: 1025px) {
+    main .wrapper #works .mainProjects {
+        .projectContainer .projectFlex .projectDescription {
+            .projectButtons {
+                display: flex;
+                flex-direction: column;
+                a {  
+                    margin: 5px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 940px) {
     .wrapper {
@@ -112,6 +128,22 @@
 }
 
 /* Landscape phone to portrait tablet */
+@media (max-width: 845px) {
+    main .wrapper #works .mainProjects {
+        .projectContainer .projectFlex .projectDescription {
+            .projectButtons {
+                display: flex;
+                flex-direction: column;
+                a {  
+                    margin: 5px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
     main {
         .aboutInfo {
@@ -163,24 +195,8 @@
     }
 }
 
-/* Landscape phone to portrait tablet */
-@media (max-width: 750px) {
-    main .wrapper #works .mainProjects {
-        .projectContainer .projectFlex .projectDescription {
-            .projectButtons {
-                display: flex;
-                flex-direction: column;
-                a {  
-                    margin: 5px;
-                    text-align: center;
-                }
-            }
-        }
-    }
-}
-
 /* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 680px) {
     main { 
         .home .homeContent {
             margin-top: 80px;
@@ -207,41 +223,44 @@
         // My work section cards to mobile
         .wrapper #works .mainProjects {
             .projectContainer {
-                height: 90dvh;
+                height: 70dvh;
+                text-align: center;
         
                 &::before {
                     content: "";
                     position: absolute; 
-                    top: calc(90dvh - 20px);
+                    top: calc(70dvh - 20px);
                     right: 0;
-                    background: rgb(255, 255, 255);
+                    background: #686868;
                     height: 25px;
                     width: 100%;
                 }
         
                 &:hover {
-                    color: black;
+                    color: #fff;
         
-                    .projectFlex .projectDescription {
-                        h2 {
-                            color: #0093c9;
-                            font-weight: bold;
-                            transition-delay: 0.6s;  
-                        }
-        
-                        .skills {
-                            color: #686868;
-                            transition-delay: 0.6s;
-                        }
-        
-                        .projectButtons a {
-                            visibility: visible;
+                    .projectFlex {                           
+                        .projectDescription {
+                            h2 {
+                                color: $dmTextGreen;
+                                font-weight: bold;
+                                transition-delay: 0.6s;  
+                            }
+            
+                            .skills {
+                                color: #000;
+                                transition-delay: 0.6s;
+                            }
+            
+                            .projectButtons a {
+                                visibility: visible;
+                            }
                         }
                     }
         
                     &::before {
                         transition-delay: 0.2s;          
-                        transform: scale(60);
+                        transform: scale(100);
                     }
                 }
         
@@ -249,7 +268,7 @@
                     &::before {
                         content: "";
                         position: absolute;
-                        top: calc(90dvh - 20px);
+                        top: calc(70dvh - 20px);
                         left: 0;                   
                         height: 25px;
                         width: 100%;                        
@@ -266,7 +285,7 @@
                             }
         
                             .skills {
-                                color: white;
+                                color: #000;
                             }
         
                             .projectButtons a:hover {
@@ -275,7 +294,7 @@
                         }
                         &::before {
                             transition-delay: 0.2s;          
-                            transform: scale(60);
+                            transform: scale(100);
                         }
                     }
         
@@ -288,12 +307,15 @@
                 .projectFlex {
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-between;
                     height: 100%;
-                    
-                    .imgContainer {  
+       
+                    .imgContainer {                          
+                        max-width: 95%;
+                        min-width: 95%;
                         border-radius: 10px;
                         overflow: hidden;
-                        height: fit-content;
+                        // height: fit-content;
                         box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
                     }
         

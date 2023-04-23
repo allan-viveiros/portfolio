@@ -59,21 +59,40 @@ main .wrapper .myWorks {
             &:hover {
                 color: #fff;
 
-                .projectFlex .projectDescription {
-                    h2 {
-                        color: $dmSmallHeading;
-                        font-weight: bold;
-                        transition-delay: 0.6s;  
-                    }
+                .projectFlex {
+                    // .imgContainer {
+                    //     .imgTop {
+                    //         display: block;
+                    //         opacity: 100%;
+                    //         visibility: visible;
+                    //         transition-delay: 0.6s;
+                    //         animation-delay: 0.6s;
+                    //     }
+                    //     .imgSwap {
+                    //         display: none;
+                    //         opacity: 0%;
+                    //         visibility: hidden;
+                    //         transition-delay: 0.6s;
+                    //         animation-delay: 0.6s;
+                    //     }
+                    // }
 
-                    .skills {
-                        color: #000;
-                        transition-delay: 0.6s;
-                        transition: transform 0.25s ease-out;
-                    }
+                    .projectDescription {
+                        h2 {
+                            color: $dmSmallHeading;
+                            font-weight: bold;
+                            transition-delay: 0.6s;  
+                        }
 
-                    .projectButtons a {
-                        visibility: visible;
+                        .skills {
+                            color: #000;
+                            transition-delay: 0.6s;
+                            transition: transform 0.25s ease-out;
+                        }
+
+                        .projectButtons a {
+                            visibility: visible;
+                        }
                     }
                 }
 
@@ -81,6 +100,7 @@ main .wrapper .myWorks {
                     transition-delay: 0.2s;          
                     transform: scale(60);
                 }
+                
             }
 
             &:nth-child(even) {
@@ -149,6 +169,32 @@ main .wrapper .myWorks {
                     min-width: 400px;
                     max-width: 400px;
                     height: auto;
+
+                    .imgTop {
+                        display: none;
+                        opacity: 0%;
+                        visibility: hidden;
+                        animation-delay: 0.6s;
+                        transition-delay: 0.6s;
+                    }
+
+                    &:hover {
+                        .imgTop {
+                            display: block;
+                            opacity: 100%;
+                            visibility: visible;
+                            transition-delay: 0.6s;
+                            animation-delay: 0.6s;
+                        }
+                        .imgSwap {
+                            display: none;
+                            opacity: 0%;
+                            visibility: hidden;
+                            transition-delay: 0.6s;
+                            animation-delay: 0.6s;
+                        }
+
+                    }
                 }
 
                 .projectDescription {
