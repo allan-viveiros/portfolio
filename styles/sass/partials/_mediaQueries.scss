@@ -223,13 +223,13 @@
         // My work section cards to mobile
         .wrapper #works .mainProjects {
             .projectContainer {
-                height: 70dvh;
+                height: 90dvh;
                 text-align: center;
         
                 &::before {
                     content: "";
                     position: absolute; 
-                    top: calc(70dvh - 20px);
+                    top: calc(90dvh - 20px);
                     right: 0;
                     background: #686868;
                     height: 25px;
@@ -268,7 +268,7 @@
                     &::before {
                         content: "";
                         position: absolute;
-                        top: calc(70dvh - 20px);
+                        top: calc(90dvh - 20px);
                         left: 0;                   
                         height: 25px;
                         width: 100%;                        
@@ -311,12 +311,12 @@
                     height: 100%;
        
                     .imgContainer {                          
-                        max-width: 95%;
-                        min-width: 95%;
+                        max-width: 80%;
+                        min-width: 80%;
                         border-radius: 10px;
                         overflow: hidden;
                         // height: fit-content;
-                        box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
+                        // box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
                     }
         
                     .projectDescription {

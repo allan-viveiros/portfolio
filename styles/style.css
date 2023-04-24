@@ -240,7 +240,6 @@ html body {
 
 img {
   width: 100%;
-  height: 100%;
   display: block;
 }
 
@@ -918,8 +917,8 @@ main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .proje
 main .wrapper .myWorks .mainProjects .projectContainer:hover::before {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
-  -webkit-transform: scale(60);
-          transform: scale(60);
+  -webkit-transform: scale(100);
+          transform: scale(100);
 }
 main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even)::before {
   content: "";
@@ -954,8 +953,8 @@ main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .pr
 main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover::before {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
-  -webkit-transform: scale(60);
-          transform: scale(60);
+  -webkit-transform: scale(100);
+          transform: scale(100);
 }
 main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even) .projectFlex {
   display: -webkit-box;
@@ -988,38 +987,9 @@ main .wrapper .myWorks .mainProjects .projectContainer .projectFlex {
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .imgContainer {
   border-radius: 10px;
   overflow: hidden;
-  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
-          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
   min-width: 400px;
   max-width: 400px;
   height: auto;
-}
-main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .imgContainer .imgTop {
-  display: none;
-  opacity: 0%;
-  visibility: hidden;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-}
-main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .imgContainer:hover .imgTop {
-  display: block;
-  opacity: 100%;
-  visibility: visible;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .imgContainer:hover .imgSwap {
-  display: none;
-  opacity: 0%;
-  visibility: hidden;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
 }
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription {
   margin-left: 10px;
@@ -1500,13 +1470,13 @@ footer .wrapper p {
     font-size: 1rem;
   }
   main .wrapper #works .mainProjects .projectContainer {
-    height: 70dvh;
+    height: 90dvh;
     text-align: center;
   }
   main .wrapper #works .mainProjects .projectContainer::before {
     content: "";
     position: absolute;
-    top: calc(70dvh - 20px);
+    top: calc(90dvh - 20px);
     right: 0;
     background: #686868;
     height: 25px;
@@ -1538,7 +1508,7 @@ footer .wrapper p {
   main .wrapper #works .mainProjects .projectContainer:nth-child(even)::before {
     content: "";
     position: absolute;
-    top: calc(70dvh - 20px);
+    top: calc(90dvh - 20px);
     left: 0;
     height: 25px;
     width: 100%;
@@ -1590,12 +1560,10 @@ footer .wrapper p {
     height: 100%;
   }
   main .wrapper #works .mainProjects .projectContainer .projectFlex .imgContainer {
-    max-width: 95%;
-    min-width: 95%;
+    max-width: 80%;
+    min-width: 80%;
     border-radius: 10px;
     overflow: hidden;
-    -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
-            box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.596);
   }
   main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription {
     margin: 0;
