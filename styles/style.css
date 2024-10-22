@@ -235,7 +235,7 @@ html {
   padding: 0;
 }
 html body {
-  background-color: #11162B;
+  background-color: #0c0c0c;
 }
 
 img {
@@ -259,9 +259,20 @@ figure {
 }
 
 .wrapper {
-  max-width: 1100px;
   padding: 0;
   margin-left: 180px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0;
 }
 
 @-webkit-keyframes textFlicker {
@@ -367,7 +378,7 @@ header {
   line-height: 1.5;
 }
 header .sideBar {
-  background-color: #0e1222;
+  background-color: #000;
   min-width: 180px;
   height: 100%;
   position: fixed;
@@ -400,7 +411,7 @@ header .sideBar .logo .switch .switchCheck {
   cursor: pointer;
 }
 header .sideBar .logo .switch .switchCheck:checked + .switchLabel {
-  background-color: black;
+  background-color: #3d3c3c;
   cursor: pointer;
 }
 header .sideBar .logo .switch .switchCheck:checked + .switchLabel .switchButton {
@@ -408,7 +419,7 @@ header .sideBar .logo .switch .switchCheck:checked + .switchLabel .switchButton 
           transform: translateX(25px);
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  background-color: rgb(85, 85, 85);
+  background-color: rgb(133, 128, 128);
   cursor: pointer;
 }
 header .sideBar .logo .switch .switchLabel {
@@ -447,25 +458,28 @@ header .sideBar .logo .switch .switchLabel .switchButton {
   cursor: pointer;
 }
 header .sideBar .logo .active span {
-  color: #08FDD8;
-  color: #08FDD8;
+  color: #00e5ff;
+  color: #00e5ff;
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
   -webkit-animation: textFlicker 3s linear infinite;
           animation: textFlicker 3s linear infinite;
 }
-header .sideBar ul {
+header .sideBar .sidemenu {
+  width: 95%;
+}
+header .sideBar .sidemenu ul {
   width: 100%;
   margin-bottom: 20px;
 }
-header .sideBar ul li {
+header .sideBar .sidemenu ul li {
   border-top: 1px solid rgba(176, 200, 221, 0.3019607843);
   padding-right: 2px;
   width: 100%;
 }
-header .sideBar ul li:last-child {
+header .sideBar .sidemenu ul li:last-child {
   border-bottom: 1px solid rgba(176, 200, 221, 0.3019607843);
 }
-header .sideBar ul li a {
+header .sideBar .sidemenu ul li a {
   display: inline-block;
   color: #B0C8DD;
   width: 100%;
@@ -473,32 +487,32 @@ header .sideBar ul li a {
   padding: 10px 0;
   text-align: center;
 }
-header .sideBar ul li a:hover {
-  color: #08FDD8;
+header .sideBar .sidemenu ul li a:hover {
+  color: #00e5ff;
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
   -webkit-animation: textFlicker 3s linear infinite;
           animation: textFlicker 3s linear infinite;
 }
-header .sideBar ul li a .arrow {
+header .sideBar .sidemenu ul li a .arrow {
   text-align: right;
   float: right;
 }
-header .sideBar ul li .active span {
-  color: #08FDD8;
-  color: #08FDD8;
+header .sideBar .sidemenu ul li .active span {
+  color: #00e5ff;
+  color: #00e5ff;
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
   -webkit-animation: textFlicker 3s linear infinite;
           animation: textFlicker 3s linear infinite;
 }
-header .sideBar .icons {
+header .sideBar .sidemenu .icons {
   text-align: center;
 }
-header .sideBar .icons a {
+header .sideBar .sidemenu .icons a {
   color: #B0C8DD;
   margin: 5px;
 }
-header .sideBar .icons a:hover {
-  color: #08FDD8;
+header .sideBar .sidemenu .icons a:hover {
+  color: #00e5ff;
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
   -webkit-animation: textFlicker 3s linear infinite;
           animation: textFlicker 3s linear infinite;
@@ -531,7 +545,7 @@ main .home p .textBody::before {
 main .home .homeContent {
   margin-top: 200px;
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   padding: 0 20px;
 }
 main .home .homeContent .text {
@@ -558,7 +572,7 @@ main .home .homeContent .text .lgHeading {
   font-size: 3.5rem;
 }
 main .home .homeContent .text .lgHeading p {
-  color: #08FDD8;
+  color: #00e5ff;
   margin: 0;
   line-height: 40px;
 }
@@ -576,25 +590,11 @@ main .home .homeContent .text .lgHeading .textSecondary {
   margin-left: 20px;
   color: #ff5f5f;
 }
-main .home .homeContent .styleHTML::before {
-  content: "<p>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
-}
-main .home .homeContent .styleHTML::after {
-  content: "</p>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
-}
 main .home .homeContent .styleHTML .smHeading {
   margin: 0;
   font-weight: 500;
   font-size: 2rem;
-  color: #72D8FE;
+  color: #B0C8DD;
   font-family: "Golos Text";
 }
 main .home .homeContent .styleHTML .smHeading .homeSkills {
@@ -686,6 +686,7 @@ main .wrapper .aboutInfo {
   padding: 5px 20px;
   font-family: "Golos Text", sans-serif;
   min-height: 100vh;
+  /* Bento box */
 }
 main .wrapper .aboutInfo::before {
   content: "<section>";
@@ -707,27 +708,13 @@ main .wrapper .aboutInfo .lgHeading {
   font-weight: normal;
 }
 main .wrapper .aboutInfo .lgHeading .textSecondary {
-  color: #08FDD8;
-}
-main .wrapper .aboutInfo .lgHeading::before {
-  content: "<h1>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
-}
-main .wrapper .aboutInfo .lgHeading::after {
-  content: "</h1>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
+  color: #00e5ff;
 }
 main .wrapper .aboutInfo .smHeading {
   margin: 0;
   font-weight: 500;
   background: rgba(255, 255, 255, 0.01);
-  color: #72D8FE;
+  color: #B0C8DD;
 }
 main .wrapper .aboutInfo .flexContainer {
   display: -webkit-box;
@@ -758,7 +745,7 @@ main .wrapper .aboutInfo .flexContainer .personalCard .bioImageContainer {
   margin: 0 auto;
   width: 200px;
   height: 200px;
-  border: 3px solid #72D8FE;
+  border: 3px solid #B0C8DD;
 }
 main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo {
   font-size: 0.7rem;
@@ -778,11 +765,11 @@ main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details {
   border-radius: 10px;
 }
 main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .const {
-  color: #08FDD8;
+  color: #00e5ff;
   font-weight: normal;
 }
 main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .key {
-  color: #72D8FE;
+  color: #B0C8DD;
   margin-left: 10px;
   font-weight: normal;
 }
@@ -792,14 +779,13 @@ main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .details .va
 }
 main .wrapper .aboutInfo .flexContainer .personalCard .personalInfo .bottomBar {
   margin: 0;
-  background-color: #08FDD8;
+  background-color: #00e5ff;
   padding: 10px;
 }
 main .wrapper .aboutInfo .flexContainer .bio .textSecondary {
   display: inline-block;
   font-weight: bold;
-  margin: 0 0 0 20px;
-  color: #ff5f5f;
+  color: #00e5ff;
 }
 main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph p {
   margin: 10px;
@@ -807,21 +793,143 @@ main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph p {
 main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph p:nth-child(even) {
   color: white;
 }
-main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::before {
-  content: "<p>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
+main .wrapper .aboutInfo .about-grid {
+  display: grid;
+  grid-template-areas: "box-picture box-content box-content box-content box-content" "box-details box-content box-content box-content box-content" "box-details box-content box-content box-content box-content" "box-details box-content box-content box-content box-content" "box-details box-skills box-skills box-skills box-skills";
+  gap: 10px;
+  width: 100%;
+  padding: 20px 0;
 }
-main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::after {
-  content: "</p>";
-  font-family: "Mr Dafoe", cursive;
+main .wrapper .aboutInfo .about-grid .bento-box {
+  border: 1px solid #333;
+  border-radius: 20px;
+  background-color: #1e1e1e;
+  padding: 20px;
+}
+main .wrapper .aboutInfo .about-grid .box1 {
+  grid-area: box-picture;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .wrapper .aboutInfo .about-grid .box1 .img-wrapper {
+  background-color: #ff6f61;
+  border-radius: 10px;
+  -webkit-transform: perspective(400px) rotate(10deg);
+          transform: perspective(400px) rotate(10deg);
+  margin-top: 20px;
+}
+main .wrapper .aboutInfo .about-grid .box1 .img-wrapper img {
+  border: 1px solid #333;
+  border-radius: 10px;
+  width: 200px;
+  -webkit-transform: perspective(400px) rotate(-10deg);
+          transform: perspective(400px) rotate(-10deg);
+}
+main .wrapper .aboutInfo .about-grid .box2 {
+  grid-area: box-details;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .wrapper .aboutInfo .about-grid .box2 .about-details a {
+  color: #fff;
+  text-decoration: underline;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+main .wrapper .aboutInfo .about-grid .box2 .about-details a:hover {
+  color: #ff6f61;
+  margin-left: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+main .wrapper .aboutInfo .about-grid .box3 {
+  grid-area: box-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .wrapper .aboutInfo .about-grid .box3 h3 {
   font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
+  font-weight: 500;
+  color: #00e5ff;
+}
+main .wrapper .aboutInfo .about-grid .box3 p {
+  width: 100%;
+}
+main .wrapper .aboutInfo .about-grid .box6 {
+  grid-area: box-skills;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .wrapper .aboutInfo .about-grid .box6 img.bg-white {
+  background-color: #fff;
+}
+main .wrapper .aboutInfo .about-grid .box6 img {
+  max-width: 100px;
+  height: auto;
 }
 
+/* TODO - Check aspect-ratio to improve the MyWork img */
 main .wrapper .myWorks {
   margin: 20px 0;
   padding: 5px 20px;
@@ -841,28 +949,8 @@ main .wrapper .myWorks::after {
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
-main .wrapper .myWorks .lgHeading {
-  font-weight: normal;
-}
 main .wrapper .myWorks .lgHeading .textSecondary {
-  color: #08FDD8;
-}
-main .wrapper .myWorks .lgHeading::before {
-  content: "<h1>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
-}
-main .wrapper .myWorks .lgHeading::after {
-  content: "</h1";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
-}
-main .wrapper .myWorks .smHeading {
-  color: #72D8FE;
+  color: #00e5ff;
 }
 main .wrapper .myWorks .mainProjects .projectContainer {
   margin: 20px 0 40px 0;
@@ -897,7 +985,7 @@ main .wrapper .myWorks .mainProjects .projectContainer:hover {
   color: #fff;
 }
 main .wrapper .myWorks .mainProjects .projectContainer:hover .projectFlex .projectDescription h2 {
-  color: #72D8FE;
+  color: #B0C8DD;
   font-weight: bold;
   -webkit-transition-delay: 0.6s;
           transition-delay: 0.6s;
@@ -939,7 +1027,7 @@ main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even)::before {
   transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
 main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription h2 {
-  color: #08FDD8;
+  color: #00e5ff;
 }
 main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription p {
   color: white;
@@ -948,7 +1036,7 @@ main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .pr
   color: rgba(255, 255, 255, 0.5960784314);
 }
 main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .projectButtons a:hover {
-  color: #08FDD8;
+  color: #00e5ff;
 }
 main .wrapper .myWorks .mainProjects .projectContainer:nth-child(even):hover::before {
   -webkit-transition-delay: 0.2s;
@@ -1005,7 +1093,7 @@ main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDesc
           justify-content: space-between;
 }
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription h2 {
-  color: #08FDD8;
+  color: #00e5ff;
 }
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription p {
   padding: 0 10px;
@@ -1026,10 +1114,303 @@ main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDesc
           transition-delay: 0ms;
 }
 main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a:hover {
-  color: #72D8FE;
+  color: #B0C8DD;
   background-color: black;
   -webkit-transition-delay: 0ms;
           transition-delay: 0ms;
+}
+
+.wrapper .myWorks .myworks-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card.flipped .myworks-card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card {
+  margin: 5px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  width: 32%;
+  min-width: 335px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  z-index: 10;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front, .wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background: #1e1e1e;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back h2, .wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back h3 {
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #00e5ff;
+  font-size: 1.2rem;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back .back-button {
+  width: 100%;
+  text-align: right;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back .back-button a {
+  color: #00e5ff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.8rem;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  background: #111214;
+  border: 1px solid #333;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.89);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.89);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back .back-button a:hover {
+  color: #ff6f61;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back .back-button a i {
+  margin-right: 5px;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-img figure {
+  margin: 8px;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-img img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #333;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-footer {
+  padding: 0 3px 15px 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: -webkit-fill-available;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-footer .skill-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-footer .skill-wrapper .work-skill {
+  background: #111214;
+  border: 1px solid #333;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.89);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.89);
+  color: rgba(255, 255, 255, 0.6705882353);
+  padding: 3px 6px;
+  margin: 5px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-footer .work-links {
+  padding-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-footer .work-links a {
+  color: #00e5ff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.8rem;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  background: #111214;
+  border: 1px solid #333;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.89);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.89);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-footer .work-links a i {
+  margin-right: 5px;
+}
+.wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-footer .work-links a:hover {
+  color: #ff6f61;
+}
+.wrapper .myWorks .other-works {
+  margin: 80px 0;
+  padding-bottom: 75px;
+}
+.wrapper .myWorks .other-works .portfolio-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.wrapper .myWorks .other-works .portfolio-gallery .portfolio-item {
+  position: relative;
+  width: 300px;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  overflow: visible;
+  margin: 10px;
+  -webkit-transform: perspective(400px) rotateX(-8deg);
+          transform: perspective(400px) rotateX(-8deg);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #2c2c2c;
+  -webkit-animation: fadeIn 0.5s ease-in-out;
+          animation: fadeIn 0.5s ease-in-out;
+}
+.wrapper .myWorks .other-works .portfolio-gallery .portfolio-item:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.wrapper .myWorks .other-works .portfolio-gallery .portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.wrapper .myWorks .other-works .portfolio-gallery .portfolio-item .portfolio-details {
+  background-color: #000;
+  height: 0px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 10;
+  -webkit-box-shadow: 0px 6px 71px 83px #000000;
+          box-shadow: 0px 6px 71px 83px #000000;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 main .wrapper #contact {
@@ -1053,69 +1434,40 @@ main .wrapper #contact::after {
   font-weight: normal;
   color: rgba(176, 200, 221, 0.2196078431);
 }
-main .wrapper #contact h1 {
+main .wrapper #contact .lgHeading {
+  margin: 0;
+  padding-top: 5px;
   font-weight: normal;
 }
-main .wrapper #contact h1::before {
-  content: "<h1>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
-  position: absolute;
-  top: 35px;
-  left: 30px;
-}
-main .wrapper #contact h1::after {
-  content: "</h1>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
-  position: relative;
-  top: 20px;
-  right: 50px;
-}
-main .wrapper #contact h1 span {
-  color: #08FDD8;
+main .wrapper #contact .lgHeading .textSecondary {
+  color: #00e5ff;
 }
 main .wrapper #contact .contactContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 70vh;
 }
 main .wrapper #contact .contactContainer .contactForm {
-  width: 70%;
+  width: 65%;
   height: 50vh;
   padding: 5px 20px;
-  background-color: #0e1222;
+  background-color: #1e1e1e;
   border-radius: 10px;
   -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.774);
           box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.774);
-}
-main .wrapper #contact .contactContainer .contactForm::before {
-  content: "<form>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
-  position: relative;
-  top: -60px;
-}
-main .wrapper #contact .contactContainer .contactForm::after {
-  content: "</form>";
-  font-family: "Mr Dafoe", cursive;
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: rgba(176, 200, 221, 0.2196078431);
-  position: relative;
-  top: 10px;
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm {
   display: -webkit-box;
@@ -1129,10 +1481,8 @@ main .wrapper #contact .contactContainer .contactForm .flexForm {
   position: relative;
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm P {
-  margin: 0;
-  position: relative;
-  bottom: 25px;
-  color: rgba(255, 255, 255, 0.2549019608);
+  margin: 0 0 15px 0;
+  color: #cd0800;
   font-size: 0.8rem;
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm input, main .wrapper #contact .contactContainer .contactForm .flexForm button, main .wrapper #contact .contactContainer .contactForm .flexForm textarea {
@@ -1142,17 +1492,17 @@ main .wrapper #contact .contactContainer .contactForm .flexForm input, main .wra
   padding-left: 10px;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #08FDD8;
+  border-bottom: 2px solid #00e5ff;
   color: #fff;
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm input:focus, main .wrapper #contact .contactContainer .contactForm .flexForm button:focus, main .wrapper #contact .contactContainer .contactForm .flexForm textarea:focus {
-  color: #08FDD8;
-  border: 1px solid #08FDD8;
+  color: #00e5ff;
+  border: 1px solid #00e5ff;
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm textarea {
   height: 200px;
   resize: none;
-  border: 2px solid #08FDD8;
+  border: 2px solid #00e5ff;
   border-radius: 10px;
   padding: 10px;
 }
@@ -1161,7 +1511,7 @@ main .wrapper #contact .contactContainer .contactForm .flexForm button {
   border: 1px solid #B0C8DD;
   border-radius: 10px;
   padding: 5px;
-  background-color: #0e1222;
+  background-color: #1e1e1e;
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm button .load::after {
   content: "";
@@ -1170,19 +1520,19 @@ main .wrapper #contact .contactContainer .contactForm .flexForm button .load::af
   height: 30px;
   margin: auto;
   border: 4px solid transparent;
-  border-top-color: #08FDD8;
+  border-top-color: #00e5ff;
   border-radius: 50%;
   -webkit-animation: buttonLoad 1s linear infinite;
           animation: buttonLoad 1s linear infinite;
   visibility: hidden;
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm button:hover {
-  border-color: #08FDD8;
-  color: #08FDD8;
+  border-color: #00e5ff;
+  color: #00e5ff;
   background-color: black;
 }
 main .wrapper #contact .contactContainer .contactForm .flexForm button:hover i {
-  color: #08FDD8;
+  color: #00e5ff;
   text-shadow: 0 0 5px #B0C8DD, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 10px #00b69b, 0 0 10px #00b69b, 0 0 20px #00b69b, 0 0 20px #00b69b;
   -webkit-animation: textFlicker 3s linear infinite;
           animation: textFlicker 3s linear infinite;
@@ -1195,11 +1545,11 @@ main .wrapper #contact .contactContainer .contactForm .flexForm button.sending i
 }
 main .wrapper #contact .contactContainer .personalLinks {
   background-color: #FCA311;
-  width: 30%;
+  width: 240px;
   height: 55%;
   padding: 20px;
   position: relative;
-  right: 60px;
+  right: 100px;
   top: 30px;
   border-radius: 10px;
   -webkit-box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.61);
@@ -1225,11 +1575,18 @@ main .wrapper #contact .contactContainer .personalLinks ul li {
 }
 main .wrapper #contact .contactContainer .personalLinks ul li a {
   font-family: "Golos Text", sans-serif;
-  color: #0e1222;
+  color: #1e1e1e;
+  font-weight: 500;
+  text-decoration: underline;
   padding: 5px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 main .wrapper #contact .contactContainer .personalLinks ul li a:hover {
-  color: #08FDD8;
+  color: #00e5ff;
+  margin-left: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 main .wrapper #contact .contactContainer .personalLinks ul li a:hover i {
   color: white;
@@ -1287,12 +1644,17 @@ footer .wrapper p {
   }
 }
 /* Landscape phone to portrait tablet */
-@media (max-width: 940px) {
-  .wrapper {
+@media (max-width: 1000px) {
+  main .wrapper {
     margin: 0;
   }
+  main .wrapper .aboutInfo .about-grid {
+    display: grid;
+    grid-template-areas: "box-picture box-picture box-details box-details box-details" "box-picture box-picture box-details box-details box-details" "box-content box-content box-content box-content box-content" "box-content box-content box-content box-content box-content" "box-skills box-skills box-skills box-skills box-skills";
+    gap: 10px;
+  }
   header .menuBtn {
-    background-color: rgba(14, 18, 34, 0.3490196078);
+    background-color: #0c0c0c;
     padding: 10px 5px 5px 5px;
     border-radius: 5px;
     position: fixed;
@@ -1307,7 +1669,7 @@ footer .wrapper p {
     width: 23px;
     height: 2px;
     margin: 0 0 5px 0;
-    background: #72D8FE;
+    background: #00e5ff;
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
   }
@@ -1365,6 +1727,9 @@ footer .wrapper p {
   header .sideBar.show {
     visibility: visible;
   }
+  footer .wrapper {
+    margin: 0;
+  }
   footer p .textBody::before {
     content: "</body>";
     font-family: "Mr Dafoe", cursive;
@@ -1402,7 +1767,7 @@ footer .wrapper p {
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-  main .aboutInfo .flexContainer {
+  main .wrapper .aboutInfo .flexContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1466,6 +1831,11 @@ footer .wrapper p {
   main .home .homeContent .text .lgHeading .textSecondary {
     margin: 0;
   }
+  main .wrapper .aboutInfo .about-grid {
+    display: grid;
+    grid-template-areas: "box-picture box-picture box-picture box-picture box-picture" "box-details box-details box-details box-details box-details" "box-content box-content box-content box-content box-content" "box-content box-content box-content box-content box-content" "box-skills box-skills box-skills box-skills box-skills";
+    gap: 10px;
+  }
   main .wrapper .aboutInfo h3.smHeading {
     font-size: 1rem;
   }
@@ -1486,7 +1856,7 @@ footer .wrapper p {
     color: #fff;
   }
   main .wrapper #works .mainProjects .projectContainer:hover .projectFlex .projectDescription h2 {
-    color: #08FDD8;
+    color: #00e5ff;
     font-weight: bold;
     -webkit-transition-delay: 0.6s;
             transition-delay: 0.6s;
@@ -1523,13 +1893,13 @@ footer .wrapper p {
     transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
   }
   main .wrapper #works .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription h2 {
-    color: #08FDD8;
+    color: #00e5ff;
   }
   main .wrapper #works .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .skills {
     color: #000;
   }
   main .wrapper #works .mainProjects .projectContainer:nth-child(even):hover .projectFlex .projectDescription .projectButtons a:hover {
-    color: #08FDD8;
+    color: #00e5ff;
   }
   main .wrapper #works .mainProjects .projectContainer:nth-child(even):hover::before {
     -webkit-transition-delay: 0.2s;
@@ -1618,7 +1988,7 @@ footer .wrapper p {
     text-align: center;
   }
   main .wrapper #works .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a:hover {
-    color: #72D8FE;
+    color: #B0C8DD;
     background-color: black;
     -webkit-transition-delay: 0ms;
             transition-delay: 0ms;
@@ -1667,7 +2037,7 @@ body.light main #home .homeContent .text::before, body.light main #home .homeCon
   color: rgba(0, 0, 0, 0.13);
 }
 body.light main #home .homeContent .text .lgHeading p {
-  color: #7760fa;
+  color: #555;
 }
 body.light main #home .homeContent .text .lgHeading p span {
   color: #2876f8;
@@ -1703,7 +2073,7 @@ body.light main .wrapper .aboutInfo .flexContainer .personalCard {
   background-color: #083D77;
 }
 body.light main .wrapper .aboutInfo .flexContainer .bio .textSecondary {
-  color: #7760fa;
+  color: #555;
 }
 body.light main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::before, body.light main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::after {
   color: rgba(0, 0, 0, 0.13);
@@ -1711,20 +2081,44 @@ body.light main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph::before,
 body.light main .wrapper .aboutInfo .flexContainer .bio .aboutParagraph p:nth-child(even) {
   color: #023770;
 }
+body.light main .wrapper .aboutInfo .about-grid .bento-box {
+  border: 1px solid #d1d1bd;
+  background-color: #ebebe0;
+}
+body.light main .wrapper .aboutInfo .about-grid .box3 h3 {
+  color: #000;
+  font-weight: 500;
+}
+body.light main .wrapper .aboutInfo .about-grid .box2 .about-details h3 {
+  font-weight: 600;
+}
+body.light main .wrapper .aboutInfo .about-grid .box2 .about-details a {
+  color: #ff6f61;
+  font-weight: 500;
+}
+body.light main .wrapper .aboutInfo .lgHeading {
+  color: #000;
+  font-weight: 500;
+}
+body.light main .wrapper .aboutInfo .lgHeading .textSecondary {
+  color: #ff6f61;
+}
 body.light main .wrapper .myWorks::before, body.light main .wrapper .myWorks::after {
   color: rgba(0, 0, 0, 0.13);
 }
 body.light main .wrapper .myWorks .lgHeading {
-  color: #2876f8;
+  color: #000;
+  font-weight: 500 !important;
 }
 body.light main .wrapper .myWorks .lgHeading::before, body.light main .wrapper .myWorks .lgHeading::after {
   color: rgba(0, 0, 0, 0.13);
 }
 body.light main .wrapper .myWorks .lgHeading .textSecondary {
-  color: #ff5f5f;
+  color: #ff6f61;
+  font-weight: 500 !important;
 }
 body.light main .wrapper .myWorks .smHeading {
-  color: #7760fa;
+  color: #555;
 }
 body.light main .wrapper .myWorks .mainProjects .projectContainer {
   background-color: #EBEBD3;
@@ -1751,7 +2145,53 @@ body.light main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .
   background-color: black;
 }
 body.light main .wrapper .myWorks .mainProjects .projectContainer .projectFlex .projectDescription .projectButtons a:hover {
-  color: #72D8FE;
+  color: #B0C8DD;
+}
+body.light main .wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner {
+  background: #fff;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+body.light main .wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-footer .skill-wrapper .work-skill {
+  background: #ff6f61;
+  color: #fff;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+body.light main .wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-footer .work-links a {
+  background-color: #EBEBD3;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-weight: 400;
+}
+body.light main .wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-front .card-footer .work-links a:hover {
+  color: #ff6f61;
+}
+body.light main .wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back {
+  background-color: #fff;
+}
+body.light main .wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back h2, body.light main .wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back h3 {
+  color: #ff6f61;
+}
+body.light main .wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back .back-button a {
+  background-color: #EBEBD3;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-weight: 400;
+}
+body.light main .wrapper .myWorks .myworks-wrapper .myworks-card .myworks-card-inner .card-back .back-button a:hover {
+  color: #ff6f61;
+}
+body.light main .wrapper .myWorks .other-works .portfolio-gallery .portfolio-item .portfolio-details {
+  background-color: #EBEBD3;
+  -webkit-box-shadow: 0px 6px 71px 83px #EBEBD3;
+          box-shadow: 0px 6px 71px 83px #EBEBD3;
 }
 body.light main .wrapper #contact::before, body.light main .wrapper #contact::after {
   color: rgba(0, 0, 0, 0.13);
@@ -1761,6 +2201,21 @@ body.light main .wrapper #contact h1::before, body.light main .wrapper #contact 
 }
 body.light main .wrapper #contact .contactContainer .contactForm::before, body.light main .wrapper #contact .contactContainer .contactForm::after {
   color: rgba(0, 0, 0, 0.13);
+}
+body.light main .wrapper #contact .contactContainer .contactForm .flexForm button {
+  cursor: pointer;
+}
+body.light main .wrapper #contact .contactContainer .contactForm .flexForm button:hover {
+  background-color: #000;
+}
+body.light main .wrapper #contact .lgHeading {
+  font-weight: 500;
+}
+body.light main .wrapper #contact .lgHeading .textSecondary {
+  color: #ff6f61;
+}
+body.light main .wrapper #contact .contactContainer .contactForm .flexForm p {
+  color: #ff0000;
 }
 body.light .wrapper #contact h1 {
   color: #2876f8;
@@ -1781,5 +2236,5 @@ body.light footer p .textHTML::before {
   color: rgba(0, 0, 0, 0.13);
 }
 body.light footer .wrapper p {
-  color: rgba(0, 0, 0, 0.13);
+  color: #000;
 }

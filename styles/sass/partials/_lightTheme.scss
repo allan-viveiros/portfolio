@@ -102,6 +102,40 @@ body.light {
                     }
                 } 
             }
+
+            // New Style 
+            .about-grid {
+                .bento-box {
+                    border: 1px solid #d1d1bd;
+                    background-color: #ebebe0;
+                }
+
+                .box3 h3 {
+                    color: #000;
+                    font-weight: 500;
+                }
+
+                .box2 .about-details {
+                    h3 {
+                        font-weight: 600;
+                    }
+
+                    a {
+                        color: #ff6f61;
+                        font-weight: 500;                        
+                    }
+
+                }
+            }
+
+            .lgHeading {
+                color: #000;
+                font-weight: 500;
+
+                .textSecondary {
+                    color: #ff6f61;
+                }
+            }
         }
 
         // My works 
@@ -110,15 +144,19 @@ body.light {
                 color: $lmHTML;
             }
 
+            
+
             .lgHeading {
-                color: $lmBlue;
+                color: #000;
+                font-weight: 500 !important;
 
                 &::before, &::after {
                     color: $lmHTML;
                 }
 
                 .textSecondary {
-                    color: $lmPink;
+                    color: #ff6f61;
+                    font-weight: 500 !important;
                 }
             }
 
@@ -169,6 +207,61 @@ body.light {
                     }
                 }
             }
+
+            // New Design
+            .myworks-wrapper .myworks-card {
+                .myworks-card-inner {
+                    background: #fff;
+                    border: 1px solid #ddd;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+                    .card-front .card-footer {
+                        .skill-wrapper .work-skill {
+                            background: #ff6f61;
+                            color: #fff;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            border: none;
+                        }
+
+                        .work-links a {
+                            background-color: #EBEBD3;
+                            border: 1px solid rgba(0, 0, 0, 0.1);;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            color: #333;
+                            font-weight: 400;
+
+                            &:hover {
+                                color:#ff6f61;
+                            }
+                        }
+                    }
+                    
+                    .card-back {
+                        background-color: #fff;
+
+                        h2, h3 {
+                            color: #ff6f61;
+                        }
+
+                        .back-button a {
+                            background-color: #EBEBD3;
+                            border: 1px solid rgba(0, 0, 0, 0.1);;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            color: #333;
+                            font-weight: 400;
+
+                            &:hover {
+                                color:#ff6f61;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .other-works .portfolio-gallery .portfolio-item .portfolio-details { 
+                background-color: #EBEBD3;
+                box-shadow: 0px 6px 71px 83px #EBEBD3;      
+            }
         }
 
         // Contact
@@ -187,6 +280,26 @@ body.light {
                 &::before, &::after {
                     color: $lmHTML;
                 }
+
+                .flexForm button {
+                    cursor: pointer;
+                    
+                    &:hover {
+                        background-color: #000;
+                    }
+                }                
+            }
+
+            .lgHeading {
+                font-weight: 500;
+
+                .textSecondary {
+                    color: #ff6f61;
+                }
+            }
+
+            .contactContainer .contactForm .flexForm p {
+                color: #ff0000;
             }
         }
     }
@@ -221,7 +334,7 @@ body.light {
         }
 
         .wrapper p {
-            color: $lmHTML;
+            color: #000;
         }
     }
 }

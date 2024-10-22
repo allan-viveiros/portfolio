@@ -15,7 +15,8 @@ html {
     padding: 0;
 
     body {
-        background-color: #11162B;
+        // background-color: #11162B;
+        background-color: #0c0c0c;
     }
 }
 
@@ -40,7 +41,19 @@ figure {
 }
 
 .wrapper {
-    max-width: 1100px; 
+    // max-width: 1100px; 
     padding: 0;
     margin-left: 180px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-top: 0;
 }

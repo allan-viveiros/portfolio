@@ -14,51 +14,42 @@ main .wrapper #contact {
         @include htmlStyle("</section>");
     }
 
-    h1 {
-        font-weight: normal;
-        
-        &::before {
-            @include htmlStyle("<h1>");  
-            position: absolute;
-            top: 35px;
-            left: 30px;              
-        }
-        &::after {
-            @include htmlStyle("</h1>"); 
-            position: relative;
-            top: 20px;
-            right: 50px;
-        }
+    .lgHeading {
+        margin: 0;
+        padding-top: 5px;
+        font-weight: normal;  
 
-        span {
+        .textSecondary {
             color: $dmTextGreen;
         }
-    }    
+    }
 
     .contactContainer {
         display: flex;
-        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
         align-items: center;
         height: 70vh;
 
         .contactForm {
-            width: 70%;
+            width: 65%;
             height: 50vh;
             padding: 5px 20px;
             background-color: $dmDarkBlue;
             border-radius: 10px;
             box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.774);
 
-            &::before {
-                @include htmlStyle("<form>");  
-                position: relative;
-                top: -60px;          
-            }
-            &::after {
-                @include htmlStyle("</form>");
-                position: relative;
-                top: 10px;
-            }
+            // &::before {
+            //     @include htmlStyle("<form>");  
+            //     position: relative;
+            //     top: -60px;          
+            // }
+            // &::after {
+            //     @include htmlStyle("</form>");
+            //     position: relative;
+            //     top: 10px;
+            // }
            
             .flexForm {
                 display: flex;
@@ -67,10 +58,10 @@ main .wrapper #contact {
                 position: relative;
 
                 P {
-                    margin: 0;
-                    position: relative;
-                    bottom: 25px;
-                    color: #ffffff41;
+                    margin: 0 0 15px 0;
+                    // position: relative;
+                    // bottom: 25px;
+                    color: #cd0800;
                     font-size: 0.8rem;
                 }
 
@@ -153,11 +144,11 @@ main .wrapper #contact {
 
         .personalLinks {
             background-color: #FCA311;
-            width: 30%;
+            width: 240px;
             height: 55%;
             padding: 20px;
             position: relative;
-            right: 60px;
+            right: 100px;
             top: 30px;
             border-radius: 10px;
             box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.61);
@@ -174,11 +165,16 @@ main .wrapper #contact {
                     width: 100%;
                     a {
                         font-family: "Golos Text", sans-serif;
-                        color: $dmDarkBlue;                         
+                        color: $dmDarkBlue;       
+                        font-weight: 500;
+                        text-decoration: underline;           
                         padding: 5px 0;
+                        transition: 0.3s;
                         
                         &:hover {
                             color:$dmTextGreen;
+                            margin-left: 5px;
+                            transition: 0.3s;
 
                             i {
                                 color: white;

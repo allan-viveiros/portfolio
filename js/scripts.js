@@ -63,6 +63,25 @@ sideMenu.addEventListener("click", function() {
     }
 });
 
+// MyWorks Card Flip
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.myworks-card');
+    cards.forEach(card => {
+        const detailsLink = card.querySelector('.card-front .work-details');
+        const backLink = card.querySelector('.card-back .work-details');
+
+        detailsLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            card.classList.toggle('flipped');
+        });
+
+        backLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            card.classList.toggle('flipped');
+        });
+    });
+});
+
 // Form submission
 const formContact = document.getElementById("formContact");
 

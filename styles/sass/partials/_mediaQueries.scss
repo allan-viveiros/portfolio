@@ -17,14 +17,27 @@
 }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 940px) {
-    .wrapper {
+@media (max-width: 1000px) {
+    main .wrapper {
         margin: 0;
+
+        .aboutInfo {
+            .about-grid {
+                display: grid;
+                grid-template-areas: 
+                    'box-picture box-picture box-details box-details box-details'
+                    'box-picture box-picture box-details box-details box-details'
+                    'box-content box-content box-content box-content box-content'
+                    'box-content box-content box-content box-content box-content'
+                    'box-skills box-skills box-skills box-skills box-skills';
+                gap: 10px;
+            }
+        }
     }
 
     header {
         .menuBtn {
-            background-color: #0e122259;
+            background-color: #0c0c0c;
             padding: 10px 5px 5px 5px;
             border-radius: 5px;
             position: fixed;
@@ -39,7 +52,7 @@
                 width: 23px;
                 height: 2px;
                 margin: 0 0 5px 0;
-                background: $dmSmallHeading;
+                background: $dmTextGreen;
                 -webkit-transition: all 0.5s ease-out;
                 transition: all 0.5s ease-out;
             }
@@ -111,6 +124,10 @@
     }
 
     footer {
+        .wrapper {
+            margin: 0;
+        }
+
         p {
             .textBody::before {
                 @include htmlStyle("</body>");
@@ -146,7 +163,7 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
     main {
-        .aboutInfo {
+        .wrapper .aboutInfo {
             .flexContainer {
                 display: flex;
                 flex-direction: column;
@@ -215,6 +232,17 @@
         }             
         
         .wrapper .aboutInfo {
+            .about-grid {
+                display: grid;
+                grid-template-areas: 
+                    'box-picture box-picture box-picture box-picture box-picture'
+                    'box-details box-details box-details box-details box-details'
+                    'box-content box-content box-content box-content box-content'
+                    'box-content box-content box-content box-content box-content'
+                    'box-skills box-skills box-skills box-skills box-skills';
+                gap: 10px;
+            }
+
             h3.smHeading {
                 font-size: 1rem;
             }            

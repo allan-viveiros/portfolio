@@ -22,12 +22,12 @@ main .wrapper .aboutInfo {
             color: $dmTextGreen;
         }
 
-        &::before {
-            @include htmlStyle("<h1>");
-        }
-        &::after {
-            @include htmlStyle("</h1>");
-        }
+        // &::before {
+        //     @include htmlStyle("<h2>");
+        // }
+        // &::after {
+        //     @include htmlStyle("</h2>");
+        // }
     }
 
     .smHeading {
@@ -109,8 +109,9 @@ main .wrapper .aboutInfo {
             .textSecondary {
                 display: inline-block;
                 font-weight: bold;
-                margin: 0 0 0 20px;
-                color: $lmPink;
+                // margin: 0 0 0 20px;
+                // color: $lmPink;
+                color: $dmTextGreen;
             }
 
             .aboutParagraph {
@@ -122,12 +123,121 @@ main .wrapper .aboutInfo {
                     }
                 }               
 
-                &::before {
-                    @include htmlStyle("<p>");
+                // &::before {
+                //     @include htmlStyle("<p>");
+                // }
+                // &::after {
+                //     @include htmlStyle("</p>");
+                // }                
+            }
+        }
+    }
+
+    /* Bento box */
+    .about-grid {
+        display: grid;
+        grid-template-areas: 
+            'box-picture box-content box-content box-content box-content'
+            'box-details box-content box-content box-content box-content'
+            'box-details box-content box-content box-content box-content'
+            'box-details box-content box-content box-content box-content'
+            'box-details box-skills box-skills box-skills box-skills';
+        gap: 10px;
+        width: 100%;
+        padding: 20px 0;
+    
+        .bento-box {
+            border: 1px solid #333;
+            border-radius: 20px;
+            background-color: #1e1e1e;
+            padding: 20px;
+        }
+
+        .box1 {
+            grid-area: box-picture;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+
+            .img-wrapper {
+                background-color: #ff6f61;
+                border-radius: 10px;
+                transform: perspective(400px) rotate(10deg);
+                margin-top: 20px;
+
+                img {
+                    border: 1px solid #333;
+                    border-radius: 10px;
+                    width: 200px;
+                    transform: perspective(400px) rotate(-10deg);
                 }
-                &::after {
-                    @include htmlStyle("</p>");
-                }                
+            }
+        }
+
+        .box2 { 
+            grid-area: box-details;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+
+            .about-details a {
+                color: #fff;
+                text-decoration: underline;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #ff6f61;
+                    margin-left: 5px;
+                    transition: 0.3s;
+                }
+            }
+        }
+
+        .box3 { 
+            grid-area: box-content;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: $dmTextGreen;
+            }
+
+            p {
+                width: 100%;
+            }
+        }
+    
+        .box6 {
+            grid-area: box-skills;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: row; 
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-evenly;
+            gap: 20px;
+            align-items: center;
+
+            img.bg-white {
+                background-color: #fff;
+            }
+
+            img {
+                max-width: 100px;
+                height: auto;
             }
         }
     }    
