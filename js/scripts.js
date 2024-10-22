@@ -168,6 +168,15 @@ const switchTheme = () => {
         body.classList.add("light");
         menuBtn.classList.add("light");
     }
+
+    let div = document.getElementById("works");
+    let content = div.innerHTML;
+    div.innerHTML = "";
+    setTimeout(() => {
+        div.innerHTML = content;
+        // call a function to reactivate the listeners on this section
+        initializeFlipFunctionality();
+    }, 0);
 }
 
 // Event listener to switch
@@ -178,6 +187,29 @@ switchButton.addEventListener("change", (e) => {
 
 // Verify the current switch button position on refresh
 switchTheme();
+
+
+// Function to flip myWorks cards
+function initializeFlipFunctionality() {
+    const cards = document.querySelectorAll('.myworks-card');
+    cards.forEach(card => {
+      const detailsLink = card.querySelector('.card-front .work-details');
+      const backLink = card.querySelector('.card-back .work-details');
+      detailsLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        card.classList.toggle('flipped');
+      });
+      backLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        card.classList.toggle('flipped');
+      });
+    });
+}
+
+// // Call the function at the page load
+// document.addEventListener('DOMContentLoaded', function() {
+//     initializeFlipFunctionality();
+// });
 
 
 // Copyright year update
